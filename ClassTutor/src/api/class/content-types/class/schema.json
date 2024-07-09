@@ -1,0 +1,157 @@
+{
+  "kind": "collectionType",
+  "collectionName": "classes",
+  "info": {
+    "singularName": "class",
+    "pluralName": "classes",
+    "displayName": "Class",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "group",
+        "private"
+      ],
+      "required": true,
+      "default": "group"
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "zoomAccount": {
+      "type": "string"
+    },
+    "zoomPassword": {
+      "type": "string"
+    },
+    "zoomLink": {
+      "type": "string"
+    },
+    "zoomMeetingId": {
+      "type": "string"
+    },
+    "zoomMeetingPasscode": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "time",
+      "required": true
+    },
+    "endTime": {
+      "type": "time",
+      "required": true
+    },
+    "rate": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "archived"
+      ],
+      "default": "active",
+      "required": true
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "year": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::year.year"
+    },
+    "progress": {
+      "type": "decimal"
+    },
+    "dayOfWeek": {
+      "type": "enumeration",
+      "enum": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ],
+      "required": true
+    },
+    "yearDisplay": {
+      "type": "string"
+    },
+    "rateCalculated": {
+      "type": "decimal"
+    },
+    "meeting_account": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::meeting-account.meeting-account"
+    },
+    "nextRegisterGenerateDate": {
+      "type": "date"
+    },
+    "class_topics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-topic.class-topic",
+      "mappedBy": "class"
+    },
+    "solutionRequired": {
+      "type": "boolean"
+    },
+    "meetingTopic": {
+      "type": "string"
+    },
+    "lessonAbility": {
+      "type": "enumeration",
+      "enum": [
+        "advanced",
+        "expected",
+        "emerging"
+      ]
+    },
+    "isSummerClass": {
+      "type": "boolean",
+      "default": false
+    },
+     "subject_level": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject-level.subject-level"
+    },
+    "exam_boards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam-board.exam-board"
+    },
+    "subject_topics":{
+        "type": "relation",
+        "relation": "oneToMany",
+        "target": "api::subject-topic.subject-topic"
+    }
+  }
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Drama Maker",
+  "description": "Drama Maker",
+  "type": "drama_maker",
+  "permissions": [
+    {
+      "action": "api::about-us.about-us.find"
+    },
+    {
+      "action": "api::ad.ad.find"
+    },
+    {
+      "action": "api::ad.ad.findOne"
+    },
+    {
+      "action": "api::authority-board.authority-board.find"
+    },
+    {
+      "action": "api::authority-board.authority-board.findOne"
+    },
+    {
+      "action": "api::category.category.find"
+    },
+    {
+      "action": "api::category.category.findOne"
+    },
+    {
+      "action": "api::connection-list.connection-list.create"
+    },
+    {
+      "action": "api::connection-list.connection-list.find"
+    },
+    {
+      "action": "api::connection-list.connection-list.findOne"
+    },
+    {
+      "action": "api::contact-us.contact-us.find"
+    },
+    {
+      "action": "api::drama-maker.drama-maker.find"
+    },
+    {
+      "action": "api::drama-maker.drama-maker.findOne"
+    },
+    {
+      "action": "api::drama-maker.drama-maker.update"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
+      "action": "api::home-page.home-page.find"
+    },
+    {
+      "action": "api::new.new.find"
+    },
+    {
+      "action": "api::new.new.findOne"
+    },
+    {
+      "action": "api::notification.custom-controller.readNotification"
+    },
+    {
+      "action": "api::notification.notification.find"
+    },
+    {
+      "action": "api::notification.notification.findOne"
+    },
+    {
+      "action": "api::otp.otp.resend"
+    },
+    {
+      "action": "api::otp.otp.verify"
+    },
+    {
+      "action": "api::portfolio.portfolio.find"
+    },
+    {
+      "action": "api::portfolio.portfolio.findOne"
+    },
+    {
+      "action": "api::profile.profile.find"
+    },
+    {
+      "action": "api::profile.profile.findOne"
+    },
+    {
+      "action": "api::project.project.find"
+    },
+    {
+      "action": "api::project.project.findOne"
+    },
+    {
+      "action": "api::push-token.custom-controller.userPreferences"
+    },
+    {
+      "action": "api::syndicate-member.syndicate-member.find"
+    },
+    {
+      "action": "api::syndicate-member.syndicate-member.findOne"
+    },
+    {
+      "action": "api::tag.tag.find"
+    },
+    {
+      "action": "api::tag.tag.findOne"
+    },
+    {
+      "action": "plugin::menus.menu-item.find"
+    },
+    {
+      "action": "plugin::menus.menu-item.findOne"
+    },
+    {
+      "action": "plugin::menus.menu.find"
+    },
+    {
+      "action": "plugin::menus.menu.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.role.find"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.changeMobileNumber"
+    },
+    {
+      "action": "plugin::users-permissions.user.count"
+    },
+    {
+      "action": "plugin::users-permissions.user.deleteAccount"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.logout"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

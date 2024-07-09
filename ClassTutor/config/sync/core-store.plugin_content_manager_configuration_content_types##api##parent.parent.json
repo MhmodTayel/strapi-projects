@@ -1,0 +1,516 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::parent.parent",
+  "value": {
+    "uid": "api::parent.parent",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "parentId",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parentId": {
+        "edit": {
+          "label": "parentId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parentId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastName": {
+        "edit": {
+          "label": "lastName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lastName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email2": {
+        "edit": {
+          "label": "email2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phoneCountryCode": {
+        "edit": {
+          "label": "phoneCountryCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phoneCountryCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phone": {
+        "edit": {
+          "label": "phone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phone",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phoneCountryCode2": {
+        "edit": {
+          "label": "phoneCountryCode2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phoneCountryCode2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phone2": {
+        "edit": {
+          "label": "phone2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phone2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "stripeCustomerId": {
+        "edit": {
+          "label": "stripeCustomerId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "stripeCustomerId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "receiveMarkettingEmails": {
+        "edit": {
+          "label": "receiveMarkettingEmails",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "receiveMarkettingEmails",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "students": {
+        "edit": {
+          "label": "students",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "studentId"
+        },
+        "list": {
+          "label": "students",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "gender": {
+        "edit": {
+          "label": "gender",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "gender",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "avatarImageName": {
+        "edit": {
+          "label": "avatarImageName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "avatarImageName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "addressLine1": {
+        "edit": {
+          "label": "addressLine1",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "addressLine1",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "city": {
+        "edit": {
+          "label": "city",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "city",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "country": {
+        "edit": {
+          "label": "country",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "country",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postcode": {
+        "edit": {
+          "label": "postcode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postcode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeReason": {
+        "edit": {
+          "label": "postponeReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeDate": {
+        "edit": {
+          "label": "postponeDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "parentId",
+        "name",
+        "lastName"
+      ],
+      "edit": [
+        [
+          {
+            "name": "parentId",
+            "size": 6
+          },
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "lastName",
+            "size": 6
+          },
+          {
+            "name": "status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "email",
+            "size": 6
+          },
+          {
+            "name": "email2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phoneCountryCode",
+            "size": 6
+          },
+          {
+            "name": "phone",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phoneCountryCode2",
+            "size": 6
+          },
+          {
+            "name": "phone2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "stripeCustomerId",
+            "size": 6
+          },
+          {
+            "name": "receiveMarkettingEmails",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "gender",
+            "size": 6
+          },
+          {
+            "name": "avatarImageName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "addressLine1",
+            "size": 6
+          },
+          {
+            "name": "city",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "country",
+            "size": 6
+          },
+          {
+            "name": "postcode",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "postponeReason",
+            "size": 6
+          },
+          {
+            "name": "postponeDate",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "students",
+            "size": 6
+          },
+          {
+            "name": "user",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

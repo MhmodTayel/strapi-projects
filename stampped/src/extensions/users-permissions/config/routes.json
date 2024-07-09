@@ -1,0 +1,34 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/connect/:provider/callback",
+      "handler": "Auth.connect",
+      "config": {
+        "policies": [
+          "plugins::users-permissions.ratelimit"
+        ],
+        "prefix": "",
+        "description": "Connect a provider",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/auth/:provider/callback/:locale/:customer_type/:auth_method",
+      "handler": "Auth.callback",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Successfull redirection after approving a provider",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User"
+        }
+      }
+    }
+  ]
+}

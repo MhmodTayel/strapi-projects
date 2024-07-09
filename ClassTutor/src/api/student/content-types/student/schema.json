@@ -1,0 +1,167 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+      "singularName": "student",
+      "pluralName": "students",
+      "displayName": "Student",
+      "description": ""
+  },
+  "options": {
+      "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+      "studentId": {
+          "type": "string",
+          "required": true,
+          "unique": true
+      },
+      "name": {
+          "type": "string",
+          "required": true
+      },
+      "lastName": {
+          "type": "string"
+      },
+      "email": {
+          "type": "string"
+      },
+      "phoneCountryCode": {
+          "type": "string"
+      },
+      "phone": {
+          "type": "string"
+      },
+      "isPhonePrimary1": {
+          "type": "boolean",
+          "default": false
+      },
+      "phoneCountryCode2": {
+          "type": "string"
+      },
+      "phone2": {
+          "type": "string"
+      },
+      "isPhonePrimary2": {
+          "type": "boolean",
+          "default": false
+      },
+      "y11GraduationYear": {
+          "type": "string"
+      },
+      "parents": {
+          "type": "relation",
+          "relation": "manyToMany",
+          "target": "api::parent.parent",
+          "inversedBy": "students"
+      },
+      "schoolName": {
+          "type": "string"
+      },
+      "learningEducationAuthority": {
+          "type": "string"
+      },
+      "subjectsIntro": {
+          "type": "text"
+      },
+      "isSen": {
+          "type": "boolean"
+      },
+      "senRequirements": {
+          "type": "text"
+      },
+      "subjects": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::subject.subject"
+      },
+      "year": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::year.year"
+      },
+      "user": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "plugin::users-permissions.user",
+          "mappedBy": "student"
+      },
+      "gender": {
+          "type": "string"
+      },
+      "avatarImageName": {
+          "type": "string"
+      },
+      "student_classes": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::student-class.student-class",
+          "mappedBy": "student"
+      },
+      "status": {
+          "type": "enumeration",
+          "enum": ["new", "actionRequired", "inProcess", "postponed", "active", "inactive"],
+          "default": "new",
+          "required": false
+      },
+      "howDidYouHearAboutUsQuestion": {
+          "type": "string"
+      },
+      "howDidYouHearAboutUsAnswer": {
+          "type": "string"
+      },
+      "how_did_you_hear_parent": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::parent.parent"
+      },
+      "how_did_you_hear_agent": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::admin.admin"
+      },
+      "dateOfBirth": {
+          "type": "date"
+      },
+      "postponeReason": {
+          "type": "text"
+      },
+      "postponeDate": {
+          "type": "datetime"
+      },
+      "reports": {
+          "type": "media",
+          "multiple": true,
+          "required": false,
+          "allowedTypes": ["images", "files"]
+      },
+      "isPupilPremium": {
+          "type": "boolean"
+      },
+      "isFsm": {
+          "type": "boolean"
+      },
+      "isEal": {
+          "type": "boolean"
+      },
+      "agents": {
+          "type": "relation",
+          "relation": "oneToMany",
+          "target": "api::admin.admin"
+      },
+      "primary_parent": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::parent.parent"
+      },
+      "postponeNotifyDate": {
+          "type": "datetime"
+      },
+    "group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::group.group"
+    }
+  }
+}

@@ -1,0 +1,764 @@
+{
+  "name": "Author",
+  "code": "strapi-author",
+  "description": "Authors can manage the content they have created.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::about-us.about-us",
+      "properties": {
+        "fields": [
+          "Title",
+          "Date",
+          "Description",
+          "Address.text",
+          "Address.url",
+          "present_authority_board",
+          "other_authority_boards"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::about-us.about-us",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::about-us.about-us",
+      "properties": {
+        "fields": [
+          "Title",
+          "Date",
+          "Description",
+          "Address.text",
+          "Address.url",
+          "present_authority_board",
+          "other_authority_boards"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::about-us.about-us",
+      "properties": {
+        "fields": [
+          "Title",
+          "Date",
+          "Description",
+          "Address.text",
+          "Address.url",
+          "present_authority_board",
+          "other_authority_boards"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::authority-board.authority-board",
+      "properties": {
+        "fields": [
+          "boardDate.from",
+          "boardDate.to",
+          "soaHead.name",
+          "soaHead.image",
+          "firstAgent.name",
+          "firstAgent.image",
+          "secondAgent.name",
+          "secondAgent.image",
+          "financialSecretary.name",
+          "financialSecretary.image",
+          "soaTreasurer.name",
+          "soaTreasurer.image",
+          "restBoardMembers.name",
+          "restBoardMembers.image"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::authority-board.authority-board",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::authority-board.authority-board",
+      "properties": {
+        "fields": [
+          "boardDate.from",
+          "boardDate.to",
+          "soaHead.name",
+          "soaHead.image",
+          "firstAgent.name",
+          "firstAgent.image",
+          "secondAgent.name",
+          "secondAgent.image",
+          "financialSecretary.name",
+          "financialSecretary.image",
+          "soaTreasurer.name",
+          "soaTreasurer.image",
+          "restBoardMembers.name",
+          "restBoardMembers.image"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::authority-board.authority-board",
+      "properties": {
+        "fields": [
+          "boardDate.from",
+          "boardDate.to",
+          "soaHead.name",
+          "soaHead.image",
+          "firstAgent.name",
+          "firstAgent.image",
+          "secondAgent.name",
+          "secondAgent.image",
+          "financialSecretary.name",
+          "financialSecretary.image",
+          "soaTreasurer.name",
+          "soaTreasurer.image",
+          "restBoardMembers.name",
+          "restBoardMembers.image"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "Title",
+          "Parent",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::category.category",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "Title",
+          "Parent",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::category.category",
+      "properties": {
+        "fields": [
+          "Title",
+          "Parent",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::contact-us.contact-us",
+      "properties": {
+        "fields": [
+          "Address.text",
+          "Address.url",
+          "phone",
+          "email",
+          "socialMediaAccounts.text",
+          "socialMediaAccounts.link",
+          "socialMediaAccounts.icon"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::contact-us.contact-us",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::contact-us.contact-us",
+      "properties": {
+        "fields": [
+          "Address.text",
+          "Address.url",
+          "phone",
+          "email",
+          "socialMediaAccounts.text",
+          "socialMediaAccounts.link",
+          "socialMediaAccounts.icon"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::contact-us.contact-us",
+      "properties": {
+        "fields": [
+          "Address.text",
+          "Address.url",
+          "phone",
+          "email",
+          "socialMediaAccounts.text",
+          "socialMediaAccounts.link",
+          "socialMediaAccounts.icon"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "Name",
+          "Source",
+          "Image",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::event.event",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "Name",
+          "Source",
+          "Image",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::event.event",
+      "properties": {
+        "fields": [
+          "Name",
+          "Source",
+          "Image",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "slider",
+          "latestNews",
+          "NewsTitle1.Title",
+          "NewsTitle1.category",
+          "NewsTitle2.Title",
+          "NewsTitle2.category",
+          "NewsTitle3.Title",
+          "NewsTitle3.category",
+          "NewsTitle4.Title",
+          "NewsTitle4.category"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "slider",
+          "latestNews",
+          "NewsTitle1.Title",
+          "NewsTitle1.category",
+          "NewsTitle2.Title",
+          "NewsTitle2.category",
+          "NewsTitle3.Title",
+          "NewsTitle3.category",
+          "NewsTitle4.Title",
+          "NewsTitle4.category"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::home-page.home-page",
+      "properties": {
+        "fields": [
+          "slider",
+          "latestNews",
+          "NewsTitle1.Title",
+          "NewsTitle1.category",
+          "NewsTitle2.Title",
+          "NewsTitle2.category",
+          "NewsTitle3.Title",
+          "NewsTitle3.category",
+          "NewsTitle4.Title",
+          "NewsTitle4.category"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::new.new",
+      "properties": {
+        "fields": [
+          "Title",
+          "description",
+          "Link",
+          "tags",
+          "categories",
+          "featuredMedia",
+          "type"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::new.new",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::new.new",
+      "properties": {
+        "fields": [
+          "Title",
+          "description",
+          "Link",
+          "tags",
+          "categories",
+          "featuredMedia",
+          "type"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::new.new",
+      "properties": {
+        "fields": [
+          "Title",
+          "description",
+          "Link",
+          "tags",
+          "categories",
+          "featuredMedia",
+          "type"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::portfolio.portfolio",
+      "properties": {
+        "fields": [
+          "Name",
+          "description",
+          "Link",
+          "image",
+          "nickName",
+          "placeOfBirth",
+          "dateOfBirth",
+          "dateOfDeath",
+          "theirWork.film",
+          "theirWork.role",
+          "theirWork.year",
+          "shortDescription"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::portfolio.portfolio",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::portfolio.portfolio",
+      "properties": {
+        "fields": [
+          "Name",
+          "description",
+          "Link",
+          "image",
+          "nickName",
+          "placeOfBirth",
+          "dateOfBirth",
+          "dateOfDeath",
+          "theirWork.film",
+          "theirWork.role",
+          "theirWork.year",
+          "shortDescription"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::portfolio.portfolio",
+      "properties": {
+        "fields": [
+          "Name",
+          "description",
+          "Link",
+          "image",
+          "nickName",
+          "placeOfBirth",
+          "dateOfBirth",
+          "dateOfDeath",
+          "theirWork.film",
+          "theirWork.role",
+          "theirWork.year",
+          "shortDescription"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "projectName",
+          "description",
+          "categories",
+          "videos",
+          "featuredImage"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::project.project",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "projectName",
+          "description",
+          "categories",
+          "videos",
+          "featuredImage"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::project.project",
+      "properties": {
+        "fields": [
+          "projectName",
+          "description",
+          "categories",
+          "videos",
+          "featuredImage"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "Title",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::tag.tag",
+      "properties": {
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "Title",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::tag.tag",
+      "properties": {
+        "fields": [
+          "Title",
+          "Link"
+        ],
+        "locales": [
+          "en",
+          "ar-EG"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::menus.read",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::menus.update",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unique_renewal_requests",
+  "info": {
+    "singularName": "unique-renewal-request",
+    "pluralName": "unique-renewal-requests",
+    "displayName": "uniqueRenewalRequest"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "memberId": {
+      "type": "string"
+    }
+  }
+}

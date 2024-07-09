@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sources",
+  "info": {
+    "singularName": "source",
+    "pluralName": "sources",
+    "displayName": "مصادر الإعلانات",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "regex": "[A-Za-z\\u0621-\\u064A]+",
+      "maxLength": 100
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_components_email_templates",
+  "info": {
+    "icon": "mail-bulk",
+    "description": "",
+    "displayName": "email_template"
+  },
+  "options": {},
+  "attributes": {
+    "sender_address": {
+      "type": "string",
+      "required": true
+    },
+    "sender_label": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "content_html": {
+      "type": "richtext"
+    },
+    "reply_address": {
+      "type": "string"
+    },
+    "reply_label": {
+      "type": "string"
+    }
+  }
+}

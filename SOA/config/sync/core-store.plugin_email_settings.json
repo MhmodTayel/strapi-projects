@@ -1,0 +1,15 @@
+{
+  "key": "plugin_email_settings",
+  "value": {
+    "defaultFrom": "soa-noreply@serversadmins.com",
+    "defaultReplyTo": "soa-noreply@serversadmins.com",
+    "testAddress": "soa-noreply@serversadmins.com",
+    "host": "mx.serversadmins.net",
+    "port": "587",
+    "user": "soa-noreply@serversadmins.com",
+    "pass": "P@ssw0rd"
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

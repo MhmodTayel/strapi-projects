@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "syndicate_members_files",
+  "info": {
+    "singularName": "syndicate-members-file",
+    "pluralName": "syndicate-members-files",
+    "displayName": "ملف اعضاء النقابة",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

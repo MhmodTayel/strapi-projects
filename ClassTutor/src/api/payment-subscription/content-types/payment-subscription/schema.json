@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_subscriptions",
+  "info": {
+    "singularName": "payment-subscription",
+    "pluralName": "payment-subscriptions",
+    "displayName": "PaymentSubscription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "paymentDate": {
+      "type": "integer"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "billing_parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parent.parent"
+    },
+    "payment_subscription_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment-subscription-item.payment-subscription-item",
+      "mappedBy": "payment_subscription"
+    },
+    "invoiceDate": {
+      "type": "datetime"
+    }
+  }
+}

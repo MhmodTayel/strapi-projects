@@ -1,0 +1,122 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meeting_recordings",
+  "info": {
+    "singularName": "meeting-recording",
+    "pluralName": "meeting-recordings",
+    "displayName": "MeetingRecording",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "meetingType": {
+      "type": "enumeration",
+      "enum": [
+        "lesson",
+        "coaching",
+        "meeting",
+        "interview",
+        "client_call",
+        "tutorial",
+        "other"
+      ]
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "register": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register.register"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "recordingLink": {
+      "type": "string"
+    },
+    "account": {
+      "type": "enumeration",
+      "enum": [
+        "account01",
+        "account02",
+        "account03",
+        "account04"
+      ]
+    },
+    "noRecording": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "incomplete",
+        "complete",
+        "stuck"
+      ],
+      "default": "incomplete"
+    },
+    "meetingChat": {
+      "type": "text"
+    },
+    "meetingTranscript": {
+      "type": "text"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::admin.admin"
+    },
+    "teachers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::teacher.teacher"
+    },
+    "systemGenerated": {
+      "type": "boolean",
+      "default": false
+    },
+    "reason": {
+      "type": "text"
+    },
+    "transcriptFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "chatFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

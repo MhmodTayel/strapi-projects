@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_teachers",
+  "info": {
+    "singularName": "class-teacher",
+    "pluralName": "class-teachers",
+    "displayName": "ClassTeacher"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classId": {
+      "type": "string",
+      "required": true
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "cover",
+        "archive"
+      ],
+      "default": "active",
+      "required": true
+    }
+  }
+}

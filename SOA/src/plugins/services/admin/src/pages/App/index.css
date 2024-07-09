@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'loewNext';
+  src: url('../public/Fonts/Loew-Next-Arabic-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'loewNext';
+  src: url('../public/Fonts/Loew-Next-Arabic-Bold.ttf');
+  font-weight: Bold;
+  font-style: Bold;
+}
+
+.services *,
+.MuiTooltip-tooltip,
+.MuiButton-text,
+.MuiTypography-root,
+.MuiMenuItem-root {
+  font-family: 'loewNext' !important;
+  direction: rtl !important;
+}
+
+.MuiFormLabel-root,
+.MuiTypography-root,
+.MuiInputBase-input,
+.MuiMenuItem-root {
+  font-size: 14px !important;
+  margin-right: 15px !important;
+}
+.Mui-TableHeadCell-Content-Labels {
+  margin-right: 50px !important;
+}
+.services td,
+th,
+tr {
+  text-align: center !important;
+}
+.Mui-TableHeadCell-Content {
+  justify-content: center !important;
+}
+
+.services .MuiBox-root:has(> button) {
+  direction: ltr !important;
+}
+.preview * {
+  direction: ltr;
+}
+
+.controller-modal .modal-title {
+  font-size: 20px;
+}
+.controller-modal label {
+  font-size: 14px;
+}
+
+.controller-modal .modal-title {
+  font-size: 20px;
+}
+.controller-modal {
+  direction: rtl;
+  font-family: 'loewNext';
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.displayFieldValue *,
+.displayFieldHint {
+  word-wrap: break-word;
+  margin-right: 5px;
+  color: #737b8c;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appHeader button {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.owner {
+  direction: ltr !important;
+}
+
+.history-flex {
+  z-index: 3;
+  position: relative;
+}
+.history-flex::before {
+  width: 6px;
+  background: #d9d8ff;
+  border-radius: 0;
+  content: '';
+  position: absolute;
+  top: -1rem;
+  right: 1rem;
+  bottom: 0;
+  z-index: -1;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.history-status {
+  font-weight: bolder;
+  color: #b72b1a;
+}
+.createRequest {
+  display: flex;
+  justify-content: end;
+  margin-left: 55px;
+  margin-bottom: 20px;
+}
+
+.checkBox::after {
+  left: 10% !important;
+}
+.sc-jcFjpl.gcVpzx {
+  font-size: 12px;
+}
+.field * {
+  font-family: 'loewNext' !important;
+
+}
+
+
+.file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-input__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #4245a8;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+  gap: 10px;
+}
+
+.file-input__label svg {
+  height: 16px;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+.file-input {
+  margin: 10px;
+}
+
+
+.closeButton {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

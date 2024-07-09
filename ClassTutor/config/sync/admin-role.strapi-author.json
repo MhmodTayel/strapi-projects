@@ -1,0 +1,1408 @@
+{
+  "name": "Author",
+  "code": "strapi-author",
+  "description": "Authors can manage the content they have created.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::admin.admin",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::class.class",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::contractor.contractor",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::curriculum.curriculum",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::education-level.education-level",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::id-config.id-config",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::parent.parent",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::register-student.register-student",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::register.register",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student.student",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::subject.subject",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "teacher",
+          "date",
+          "paidDate",
+          "class",
+          "status",
+          "transactions.type",
+          "transactions.amount",
+          "name",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "teacher",
+          "date",
+          "paidDate",
+          "class",
+          "status",
+          "transactions.type",
+          "transactions.amount",
+          "name",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "teacher",
+          "date",
+          "paidDate",
+          "class",
+          "status",
+          "transactions.type",
+          "transactions.amount",
+          "name",
+          "type"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher.teacher",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::user-type.user-type",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::year.year",
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber"
+        ]
+      },
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [
+        "admin::is-creator"
+      ],
+      "actionParameters": null
+    }
+  ]
+}

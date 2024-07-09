@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_class_logs",
+  "info": {
+    "singularName": "student-class-log",
+    "pluralName": "student-class-logs",
+    "displayName": "StudentClassLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "rawData": {
+      "type": "json"
+    },
+    "student_class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student-class.student-class"
+    },
+    "previousRawData": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::meeting-recording.meeting-recording",
+  "value": {
+    "uid": "api::meeting-recording.meeting-recording",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meetingType": {
+        "edit": {
+          "label": "meetingType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meetingType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "class": {
+        "edit": {
+          "label": "class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "classId"
+        },
+        "list": {
+          "label": "class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register": {
+        "edit": {
+          "label": "register",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "register",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "date": {
+        "edit": {
+          "label": "date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "recordingLink": {
+        "edit": {
+          "label": "recordingLink",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "recordingLink",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "account": {
+        "edit": {
+          "label": "account",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "account",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "noRecording": {
+        "edit": {
+          "label": "noRecording",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "noRecording",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meetingChat": {
+        "edit": {
+          "label": "meetingChat",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meetingChat",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "meetingTranscript": {
+        "edit": {
+          "label": "meetingTranscript",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "meetingTranscript",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "visible": {
+        "edit": {
+          "label": "visible",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "visible",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "students": {
+        "edit": {
+          "label": "students",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "studentId"
+        },
+        "list": {
+          "label": "students",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "agents": {
+        "edit": {
+          "label": "agents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "agents",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "teachers": {
+        "edit": {
+          "label": "teachers",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "teachers",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "systemGenerated": {
+        "edit": {
+          "label": "systemGenerated",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "systemGenerated",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "reason": {
+        "edit": {
+          "label": "reason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "reason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "transcriptFiles": {
+        "edit": {
+          "label": "transcriptFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "transcriptFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "chatFiles": {
+        "edit": {
+          "label": "chatFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "chatFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "meetingType",
+        "class"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "meetingType",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "date",
+            "size": 6
+          },
+          {
+            "name": "recordingLink",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "account",
+            "size": 6
+          },
+          {
+            "name": "noRecording",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "status",
+            "size": 6
+          },
+          {
+            "name": "meetingChat",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "meetingTranscript",
+            "size": 6
+          },
+          {
+            "name": "visible",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "reason",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "class",
+            "size": 6
+          },
+          {
+            "name": "register",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "students",
+            "size": 6
+          },
+          {
+            "name": "agents",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "teachers",
+            "size": 6
+          },
+          {
+            "name": "systemGenerated",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "chatFiles",
+            "size": 6
+          },
+          {
+            "name": "transcriptFiles",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,40 @@
+{
+    "kind": "collectionType",
+    "collectionName": "teacher_capabilities",
+    "info": {
+        "singularName": "teacher-capability",
+        "pluralName": "teacher-capabilities",
+        "displayName": "TeacherCapability",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "teacher": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::teacher.teacher"
+        },
+        "education_level": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::education-level.education-level"
+        },
+        "subject": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::subject.subject"
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": ["teach", "supply", "mark"]
+        },
+        "coverPriority": {
+            "type": "enumeration",
+            "enum": ["priority1", "priority2", "priority3"],
+            "default": null
+        }
+    }
+}

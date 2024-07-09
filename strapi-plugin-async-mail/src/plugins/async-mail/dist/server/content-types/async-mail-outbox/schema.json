@@ -1,0 +1,60 @@
+{
+    "kind": "collectionType",
+    "collectionName": "async_mail_outboxes",
+    "info": {
+        "singularName": "async-mail-outbox",
+        "pluralName": "async-mail-outboxes",
+        "displayName": "Async Mail Outbox",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "subject": {
+            "type": "string",
+            "required": true
+        },
+        "message": {
+            "type": "text",
+            "required": true
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": ["new", "draft", "sent", "failed"]
+        },
+        "from": {
+            "type": "email",
+            "required": false
+        },
+        "recipient": {
+            "type": "email",
+            "required": true
+        },
+        "attachments": {
+            "allowedTypes": ["images", "files", "videos", "audios"],
+            "type": "media",
+            "multiple": true
+        },
+        "sentAt": {
+            "type": "datetime"
+        },
+        "replyTo": {
+            "type": "email",
+            "required": false
+        },
+        "priority": {
+            "type": "enumeration",
+            "enum": ["high", "normal", "low"]
+        },
+        "isTemplated": {
+            "type": "boolean"
+        },
+        "uid": {
+            "type": "string"
+        },
+        "meta": {
+            "type": "json"
+        }
+    }
+}

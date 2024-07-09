@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "connection_lists",
+  "info": {
+    "singularName": "connection-list",
+    "pluralName": "connection-lists",
+    "displayName": "قائمة الاتصال",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "dramaMakerName": {
+      "type": "string",
+      "required": false,
+      "regex":"^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "talentName": {
+      "type": "string",
+      "required": false,
+      "regex":"^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+      
+    },
+    "talentInfo": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "connectionDate": {
+      "type": "date"
+    },
+    "connectionTime": {
+      "type": "time"
+    }
+  }
+}

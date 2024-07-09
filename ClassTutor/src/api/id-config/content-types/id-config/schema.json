@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "id_configs",
+  "info": {
+    "singularName": "id-config",
+    "pluralName": "id-configs",
+    "displayName": "IdConfig"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classId": {
+      "type": "string"
+    },
+    "studentId": {
+      "type": "string"
+    },
+    "teacherId": {
+      "type": "string"
+    },
+    "parentId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_messages",
+  "info": {
+    "singularName": "event-message",
+    "pluralName": "event-messages",
+    "displayName": "EventMessage"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventCode": {
+      "type": "string",
+      "required": true
+    },
+    "receiverId": {
+      "type": "string",
+      "required": true
+    },
+    "message": {
+      "type": "string",
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "required": true
+    },
+    "entity": {
+      "type": "string"
+    },
+    "entityId": {
+      "type": "string"
+    },
+    "eventType": {
+      "type": "enumeration",
+      "enum": [
+        "info",
+        "success",
+        "warning",
+        "error",
+        "question"
+      ],
+      "default": "info",
+      "required": true
+    },
+    "persist": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "messageValues": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+diff --git a/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js b/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
+index 8ad4d27..5e9717e 100644
+--- a/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
++++ b/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
+@@ -4,7 +4,7 @@ const _ = require('lodash');
+ const { ApplicationError } = require('@strapi/utils').errors;
+ const { mapAsync } = require('@strapi/utils');
+ const { getService } = require('../utils');
+-const { ACTIONS, FILE_MODEL_UID } = require('../constants');
++const { ACTIONS, FILE_MODEL_UID, FOLDER_MODEL_UID } = require('../constants');
+ const validateUploadBody = require('./validation/admin/upload');
+ const { findEntityAndCheckPermissions } = require('./utils/find-entity-and-check-permissions');
+ 
+@@ -90,6 +90,33 @@ module.exports = {
+       request: { files: { files } = {} },
+     } = ctx;
+ 
++    const fileInfo = JSON.parse(ctx.request.body.fileInfo)
++    const folderId = fileInfo.folder
++
++    const folder = await strapi.entityService.findOne(FOLDER_MODEL_UID, folderId)
++
++    async function getFolderPathNames(obj) {
++      if (!obj || !obj.path) {
++        return '';
++      }
++      const pathSegments = obj.path.split('/').filter(segment => segment !== '');
++      const folderNames = [];
++
++      for (const folderId of pathSegments) {
++        const folderInfo = await await strapi.query('plugin::upload.folder').findOne({
++          where: {
++            pathId: folderId,
++          },
++        });
++        if (folderInfo) {
++          folderNames.push(folderInfo.name);
++        }
++      }
++
++      return folderNames.join('/');
++    }
++    const path = await getFolderPathNames(folder)
++    ctx.request.body.path = path
+     if (_.isEmpty(files) || files.size === 0) {
+       if (id) {
+         return this.updateFileInfo(ctx);
+diff --git a/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js b/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
+index 0d47663..3fe7658 100644
+--- a/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
++++ b/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
+@@ -7,6 +7,7 @@ const { getService } = require('../../../utils');
+ const fileInfoSchema = yup.object({
+   name: yup.string().nullable(),
+   alternativeText: yup.string().nullable(),
++  path: yup.string().nullable(),
+   caption: yup.string().nullable(),
+   folder: yup
+     .strapiID()
+diff --git a/node_modules/@strapi/plugin-upload/server/services/upload.js b/node_modules/@strapi/plugin-upload/server/services/upload.js
+index e29246d..b2c2aa2 100644
+--- a/node_modules/@strapi/plugin-upload/server/services/upload.js
++++ b/node_modules/@strapi/plugin-upload/server/services/upload.js
+@@ -61,6 +61,27 @@ const createAndAssignTmpWorkingDirectoryToFiles = async (files) => {
+   return tmpWorkingDirectory;
+ };
+ 
++async function getFolderPathNames(folderPath) {
++  if (!folderPath) {
++    return '';
++  }
++  const pathSegments = folderPath.split('/').filter(segment => segment !== '');
++  const folderNames = [];
++
++  for (const folderId of pathSegments) {
++    const folderInfo = await await strapi.query('plugin::upload.folder').findOne({
++      where: {
++        pathId: folderId,
++      },
++    });
++    if (folderInfo) {
++      folderNames.push(folderInfo.name);
++    }
++  }
++
++  return folderNames.join('/');
++}
++
+ function filenameReservedRegex() {
+   // eslint-disable-next-line no-control-regex
+   return /[<>:"/\\|?*\u0000-\u001F]/g;
+@@ -426,6 +447,7 @@ module.exports = ({ strapi }) => ({
+   async remove(file) {
+     const config = strapi.config.get('plugin.upload');
+ 
++    file.path = file.path || await getFolderPathNames(file.folderPath)
+     // execute delete function of the provider
+     if (file.provider === config.provider) {
+       await strapi.plugin('upload').provider.delete(file);

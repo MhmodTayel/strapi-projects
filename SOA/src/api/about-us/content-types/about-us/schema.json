@@ -1,0 +1,71 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_us_pages",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-us-pages",
+    "displayName": "عن النقابة",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Date": {
+      "type": "date",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 3000,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "Address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom-fields.address",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "present_authority_board": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::authority-board.authority-board"
+    },
+    "other_authority_boards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::authority-board.authority-board"
+    }
+  }
+}

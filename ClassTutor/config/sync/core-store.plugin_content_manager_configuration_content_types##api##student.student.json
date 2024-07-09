@@ -1,0 +1,753 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::student.student",
+  "value": {
+    "uid": "api::student.student",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "studentId",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "studentId": {
+        "edit": {
+          "label": "studentId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "studentId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastName": {
+        "edit": {
+          "label": "lastName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lastName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phoneCountryCode": {
+        "edit": {
+          "label": "phoneCountryCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phoneCountryCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phone": {
+        "edit": {
+          "label": "phone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phone",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "y11GraduationYear": {
+        "edit": {
+          "label": "y11GraduationYear",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "y11GraduationYear",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parents": {
+        "edit": {
+          "label": "parents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "parentId"
+        },
+        "list": {
+          "label": "parents",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "schoolName": {
+        "edit": {
+          "label": "schoolName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "schoolName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "learningEducationAuthority": {
+        "edit": {
+          "label": "learningEducationAuthority",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "learningEducationAuthority",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subjectsIntro": {
+        "edit": {
+          "label": "subjectsIntro",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subjectsIntro",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isSen": {
+        "edit": {
+          "label": "isSen",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isSen",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "senRequirements": {
+        "edit": {
+          "label": "senRequirements",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "senRequirements",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subjects": {
+        "edit": {
+          "label": "subjects",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "subjects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "year": {
+        "edit": {
+          "label": "year",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "year",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "gender": {
+        "edit": {
+          "label": "gender",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "gender",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "avatarImageName": {
+        "edit": {
+          "label": "avatarImageName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "avatarImageName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student_classes": {
+        "edit": {
+          "label": "student_classes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "student_classes",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "howDidYouHearAboutUsQuestion": {
+        "edit": {
+          "label": "howDidYouHearAboutUsQuestion",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "howDidYouHearAboutUsQuestion",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "howDidYouHearAboutUsAnswer": {
+        "edit": {
+          "label": "howDidYouHearAboutUsAnswer",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "howDidYouHearAboutUsAnswer",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "how_did_you_hear_parent": {
+        "edit": {
+          "label": "how_did_you_hear_parent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "parentId"
+        },
+        "list": {
+          "label": "how_did_you_hear_parent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "how_did_you_hear_agent": {
+        "edit": {
+          "label": "how_did_you_hear_agent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "how_did_you_hear_agent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dateOfBirth": {
+        "edit": {
+          "label": "dateOfBirth",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dateOfBirth",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeReason": {
+        "edit": {
+          "label": "postponeReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeDate": {
+        "edit": {
+          "label": "postponeDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "reports": {
+        "edit": {
+          "label": "reports",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "reports",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "isPupilPremium": {
+        "edit": {
+          "label": "isPupilPremium",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isPupilPremium",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isFsm": {
+        "edit": {
+          "label": "isFsm",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isFsm",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isEal": {
+        "edit": {
+          "label": "isEal",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isEal",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "agents": {
+        "edit": {
+          "label": "agents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "agents",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "primary_parent": {
+        "edit": {
+          "label": "primary_parent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "parentId"
+        },
+        "list": {
+          "label": "primary_parent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeNotifyDate": {
+        "edit": {
+          "label": "postponeNotifyDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeNotifyDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "studentId",
+        "name",
+        "lastName"
+      ],
+      "edit": [
+        [
+          {
+            "name": "studentId",
+            "size": 6
+          },
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "lastName",
+            "size": 6
+          },
+          {
+            "name": "email",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phoneCountryCode",
+            "size": 6
+          },
+          {
+            "name": "phone",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "y11GraduationYear",
+            "size": 6
+          },
+          {
+            "name": "schoolName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "learningEducationAuthority",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "isSen",
+            "size": 4
+          },
+          {
+            "name": "senRequirements",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "gender",
+            "size": 6
+          },
+          {
+            "name": "avatarImageName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "status",
+            "size": 6
+          },
+          {
+            "name": "howDidYouHearAboutUsQuestion",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "howDidYouHearAboutUsAnswer",
+            "size": 6
+          },
+          {
+            "name": "dateOfBirth",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "postponeReason",
+            "size": 6
+          },
+          {
+            "name": "postponeDate",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "reports",
+            "size": 6
+          },
+          {
+            "name": "isPupilPremium",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "isFsm",
+            "size": 4
+          },
+          {
+            "name": "isEal",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "parents",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "subjects",
+            "size": 6
+          },
+          {
+            "name": "year",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "user",
+            "size": 6
+          },
+          {
+            "name": "student_classes",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "how_did_you_hear_parent",
+            "size": 6
+          },
+          {
+            "name": "how_did_you_hear_agent",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "agents",
+            "size": 6
+          },
+          {
+            "name": "primary_parent",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "subjectsIntro",
+            "size": 6
+          },
+          {
+            "name": "postponeNotifyDate",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

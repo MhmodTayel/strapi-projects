@@ -1,0 +1,250 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::invoice-item.invoice-item",
+  "value": {
+    "uid": "api::invoice-item.invoice-item",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student_class": {
+        "edit": {
+          "label": "student_class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "student_class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "multiClassDiscount": {
+        "edit": {
+          "label": "multiClassDiscount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "multiClassDiscount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "scholarshipDiscount": {
+        "edit": {
+          "label": "scholarshipDiscount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "scholarshipDiscount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "managementDiscount": {
+        "edit": {
+          "label": "managementDiscount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "managementDiscount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classRate": {
+        "edit": {
+          "label": "classRate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classRate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "total": {
+        "edit": {
+          "label": "total",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "total",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "invoice": {
+        "edit": {
+          "label": "invoice",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "invoice",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "student_class",
+        "multiClassDiscount"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "student_class",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "multiClassDiscount",
+            "size": 4
+          },
+          {
+            "name": "scholarshipDiscount",
+            "size": 4
+          },
+          {
+            "name": "managementDiscount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "classRate",
+            "size": 4
+          },
+          {
+            "name": "total",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "invoice",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

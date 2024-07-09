@@ -1,0 +1,199 @@
+{
+  "kind": "collectionType",
+  "collectionName": "register_students",
+  "info": {
+    "singularName": "register-student",
+    "pluralName": "register-students",
+    "displayName": "RegisterStudent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "register": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::register.register",
+      "inversedBy": "register_students"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "freeTrial": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "engagement": {
+      "type": "enumeration",
+      "enum": [
+        "proactive",
+        "attentive",
+        "distracted",
+        "unknown",
+        "absent"
+      ]
+    },
+    "understanding": {
+      "type": "enumeration",
+      "enum": [
+        "mastered",
+        "understood",
+        "struggled",
+        "unknown",
+        "absent"
+      ]
+    },
+    "issueDescription": {
+      "type": "text"
+    },
+    "starStudent": {
+      "type": "boolean"
+    },
+    "feedbackTodaysLesson": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "feedbackBeforeLessonTopic": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "feedbackAfterLessonTopic": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "feedbackTodayTeacher": {
+      "type": "integer",
+      "max": 5,
+      "min": 0
+    },
+    "internalNotes": {
+      "type": "string"
+    },
+    "parentNotes": {
+      "type": "string"
+    },
+    "markerPaid": {
+      "type": "boolean"
+    },
+    "hasAttended": {
+      "type": "boolean"
+    },
+    "hasLeftEarly": {
+      "type": "boolean"
+    },
+    "isLate": {
+      "type": "boolean"
+    },
+    "issue_reasons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::issue-reason.issue-reason"
+    },
+    "homeworkMarkingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "marked",
+        "error"
+      ]
+    },
+    "homeworkSubmissionFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "homeworkCompletionDate": {
+      "type": "datetime"
+    },
+    "homeworkComment": {
+      "type": "string"
+    },
+    "homeworkMark": {
+      "type": "integer"
+    },
+    "homeworkUnderstanding": {
+      "type": "enumeration",
+      "enum": [
+        "struggled",
+        "understood",
+        "mastered"
+      ]
+    },
+    "homework_marking_teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "homeworkMarkedFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "homeworkErrorReason": {
+      "type": "string"
+    },
+    "homeworkSubmitted": {
+      "type": "boolean"
+    },
+    "homeworkSubmittedLate": {
+      "type": "boolean"
+    },
+    "freeTrialCancelled": {
+      "type": "boolean"
+    },
+    "student_class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student-class.student-class"
+    },
+    "issueStatus": {
+      "type": "enumeration",
+      "enum": [
+        "not_applicable",
+        "pending",
+        "sent",
+        "rejected"
+      ]
+    },
+    "dateSentIssue": {
+      "type": "datetime"
+    },
+    "homeworkErrorDate": {
+      "type": "datetime"
+    },
+    "homework_error_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "issue_resolved_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::admin.admin"
+    },
+    "issueSendToParent": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

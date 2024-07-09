@@ -1,0 +1,13 @@
+diff --git a/node_modules/@strapi/plugin-content-manager/server/controllers/relations.js b/node_modules/@strapi/plugin-content-manager/server/controllers/relations.js
+index 8134d58..0382d60 100644
+--- a/node_modules/@strapi/plugin-content-manager/server/controllers/relations.js
++++ b/node_modules/@strapi/plugin-content-manager/server/controllers/relations.js
+@@ -92,7 +92,7 @@ module.exports = {
+       sort: mainField,
+       ...query,
+       fields: fieldsToSelect, // cannot select other fields as the user may not have the permissions
+-      filters: {}, // cannot filter for RBAC reasons
++      // filters: {}, // cannot filter for RBAC reasons
+     };
+ 
+     if (!isEmpty(idsToOmit)) {

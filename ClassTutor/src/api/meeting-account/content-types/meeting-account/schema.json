@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "meeting_accounts",
+  "info": {
+    "singularName": "meeting-account",
+    "pluralName": "meeting-accounts",
+    "displayName": "MeetingAccount",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "password": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "family_links",
+  "info": {
+    "singularName": "family-link",
+    "pluralName": "family-links",
+    "displayName": "FamilyLink"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "parents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::parent.parent"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::student.student"
+    }
+  }
+}

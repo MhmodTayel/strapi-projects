@@ -1,0 +1,131 @@
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js b/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
+index 02821f7..231b2e2 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
+@@ -110,11 +110,21 @@ module.exports = {
+       throw new ApplicationError('You must be authenticated to reset your password');
+     }
+ 
++    const userModels = {
++      talent: 'plugin::users-permissions.user',
++      drama_maker: 'api::drama-maker.drama-maker',
++    };
++
++    const {
++      role: { type },
++    } = ctx.state.user;
++
++    const userId = ctx.state.user.id
+     const { currentPassword, password } = await validateChangePasswordBody(ctx.request.body);
+ 
+     const user = await strapi.entityService.findOne(
+-      'plugin::users-permissions.user',
+-      ctx.state.user.id
++      userModels[type],
++      userId
+     );
+ 
+     const validPassword = await getService('user').validatePassword(currentPassword, user.password);
+@@ -127,7 +137,11 @@ module.exports = {
+       throw new ValidationError('Your new password must be different than your current password');
+     }
+ 
+-    await getService('user').edit(user.id, { password });
++
++    await strapi.entityService.update(userModels[type], userId, {
++      data: { password, jwtKey: null },
++      populate: ['role'],
++    });
+ 
+     ctx.send({
+       jwt: getService('jwt').issue({ id: user.id }),
+@@ -328,6 +342,8 @@ module.exports = {
+         throw new ApplicationError('Email or Username are already taken');
+       }
+     }
++    const jwtKey = crypto.randomBytes(8).toString('hex');
++
+ 
+     const newUser = {
+       ...params,
+@@ -335,11 +351,12 @@ module.exports = {
+       email: email.toLowerCase(),
+       username,
+       confirmed: !settings.email_confirmation,
++      jwtKey
+     };
+ 
+     const user = await getService('user').add(newUser);
+-
+-    const sanitizedUser = await sanitizeUser(user, ctx);
++    const response = await strapi.query('plugin::users-permissions.user').findOne({ where: { id: user.id }, populate:['role', 'avatar'] });
++    const sanitizedUser = await sanitizeUser(response, ctx);
+ 
+     if (settings.email_confirmation) {
+       try {
+@@ -351,8 +368,7 @@ module.exports = {
+       return ctx.send({ user: sanitizedUser });
+     }
+ 
+-    const jwt = getService('jwt').issue(_.pick(user, ['id']));
+-
++    const jwt = getService('jwt').issue({ id: user.id, role: 'talent', jwtKey });
+     return ctx.send({
+       jwt,
+       user: sanitizedUser,
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js b/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
+index a303cc9..e031f8f 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
+@@ -12,26 +12,47 @@ const getAdvancedSettings = () => {
+ const authenticate = async (ctx) => {
+   try {
+     const token = await getService('jwt').getToken(ctx);
+-
++    const userModels = {
++      talent: 'plugin::users-permissions.user',
++      drama_maker: 'api::drama-maker.drama-maker',
++    };
+     if (token) {
+-      const { id } = token;
++      const { id, role, jwtKey } = token;
+ 
+       // Invalid token
+       if (id === undefined) {
+         return { authenticated: false };
+       }
++      // Blacklisted token  
++      const {
++        header: { authorization },
++      } = ctx.request;
++      const blackListedToken = await strapi
++      .query('api::black-listed-token.black-listed-token')
++      .findOne({ where: {token: authorization} });
++      if (blackListedToken){
++        return { error: 'Invalid token' };
++      }
++      const user = await strapi
++      .query(userModels[role])
++      .findOne({ where: { id }, populate:['role', 'profile'] });
+ 
+-      const user = await getService('user').fetchAuthenticatedUser(id);
++      // const user = await getService('user').fetchAuthenticatedUser(id);
+ 
+       // No user associated to the token
+       if (!user) {
+         return { error: 'Invalid credentials' };
+       }
+             
++      if(user.jwtKey != jwtKey) {
++         return { error: 'Expired credentials' };
++      }
++
++
+       const advancedSettings = await getAdvancedSettings();
+ 
+       // User not confirmed
+-      if (advancedSettings.email_confirmation && !user.confirmed) {
++      if (!user.confirmed) {
+         return { error: 'Invalid credentials' };
+       }
+ 

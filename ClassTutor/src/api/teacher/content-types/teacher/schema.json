@@ -1,0 +1,248 @@
+{
+    "kind": "collectionType",
+    "collectionName": "teachers",
+    "info": {
+        "singularName": "teacher",
+        "pluralName": "teachers",
+        "displayName": "Teacher",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "teacherId": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "new",
+                "interviewee",
+                "reapplied",
+                "offered",
+                "active",
+                "inactive",
+                "rejected",
+                "barred",
+                "offerRejected",
+                "offerAccepted"
+            ],
+            "required": true,
+            "default": "new"
+        },
+        "country": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string"
+        },
+        "email2": {
+            "type": "string"
+        },
+        "phoneCountryCode": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "isPhonePrimary1": {
+            "type": "boolean",
+            "default": false
+        },
+        "phoneCountryCode2": {
+            "type": "string"
+        },
+        "phone2": {
+            "type": "string"
+        },
+        "isPhonePrimary2": {
+            "type": "boolean",
+            "default": false
+        },
+        "cv": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "coverLetter": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "photo": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images"]
+        },
+        "bio": {
+            "type": "text"
+        },
+        "linkedInProfile": {
+            "type": "string"
+        },
+        "interviewRecording": {
+            "type": "string"
+        },
+        "qts": {
+            "type": "enumeration",
+            "enum": ["qualified", "training", "unqualified"],
+            "required": false
+        },
+        "dbsCertification": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "university": {
+            "type": "string"
+        },
+        "degree": {
+            "type": "string"
+        },
+        "degreeGrade": {
+            "type": "string"
+        },
+        "signedContract": {
+            "type": "string"
+        },
+        "passport": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "niNumber": {
+            "type": "string"
+        },
+        "address1": {
+            "type": "text"
+        },
+        "proofOfAddress": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "bankAccountNumber": {
+            "type": "string"
+        },
+        "bankSortCode": {
+            "type": "string"
+        },
+        "joinedDate": {
+            "type": "date"
+        },
+        "utr": {
+            "type": "string"
+        },
+        "rate": {
+            "type": "decimal"
+        },
+        "degreeCertificate": {
+            "type": "media",
+            "multiple": true,
+            "required": false,
+            "allowedTypes": ["images", "files"]
+        },
+        "contractor": {
+            "type": "relation",
+            "relation": "manyToOne",
+            "target": "api::contractor.contractor",
+            "inversedBy": "teachers"
+        },
+        "user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user",
+            "mappedBy": "teacher"
+        },
+        "subjects": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::subject.subject"
+        },
+        "city": {
+            "type": "string"
+        },
+        "postcode": {
+            "type": "string"
+        },
+        "dbsCode": {
+            "type": "string"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "shortBio": {
+            "type": "text"
+        },
+        "dbsDate": {
+            "type": "date"
+        },
+        "interviewDate": {
+            "type": "date"
+        },
+        "offerDate": {
+            "type": "date"
+        },
+        "rejectedDate": {
+            "type": "date"
+        },
+        "barredDate": {
+            "type": "date"
+        },
+        "reapplyDate": {
+            "type": "date"
+        },
+        "offerRejectedDate": {
+            "type": "date"
+        },
+        "offerAcceptedDate": {
+            "type": "date"
+        },
+        "contractLink": {
+            "type": "string"
+        },
+        "supplyTeacher": {
+            "type": "boolean",
+            "default": false,
+            "required": true
+        },
+        "currentCountry": {
+            "type": "string"
+        },
+        "isContractSigned": {
+            "type": "boolean",
+            "default": false
+        },
+        "leaveDate": {
+            "type": "date"
+        },
+        "hmrcStatus": {
+            "type": "string"
+        },
+        "companiesHouseStatus": {
+            "type": "string"
+        },
+        "qualification": {
+            "type": "enumeration",
+            "enum": ["trainee", "junior", "associate", "senior"],
+            "required": false
+        }
+    }
+}

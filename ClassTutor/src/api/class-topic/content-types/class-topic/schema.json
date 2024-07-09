@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_topics",
+  "info": {
+    "singularName": "class-topic",
+    "pluralName": "class-topics",
+    "displayName": "ClassTopic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::topic.topic"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class.class",
+      "inversedBy": "class_topics"
+    },
+    "register": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::register.register",
+      "inversedBy": "class_topics"
+    },
+    "disabled": {
+      "type": "boolean"
+    },
+    "taught": {
+      "type": "boolean"
+    }
+  }
+}

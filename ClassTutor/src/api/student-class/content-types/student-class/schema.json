@@ -1,0 +1,178 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_classes",
+  "info": {
+    "singularName": "student-class",
+    "pluralName": "student-classes",
+    "displayName": "StudentClass",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::student.student",
+      "inversedBy": "student_classes"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "trial",
+        "awaitingFeedback",
+        "firstPaymentPending",
+        "active",
+        "paymentOverdue",
+        "paused",
+        "cancelled",
+        "inactive"
+      ],
+      "default": "new"
+    },
+    "billing_parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parent.parent"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::admin.admin"
+    },
+    "trialDate": {
+      "type": "date"
+    },
+    "classDate": {
+      "type": "date"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "year": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::year.year"
+    },
+    "cancelReason": {
+      "type": "string"
+    },
+    "payment": {
+      "type": "decimal"
+    },
+    "trialMissedReason": {
+      "type": "string"
+    },
+    "scholarshipDiscount": {
+      "type": "decimal"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "agent",
+        "websiteForm",
+        "portal"
+      ],
+      "default": "agent"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "trial",
+        "booking"
+      ],
+      "default": "trial"
+    },
+    "postponeReason": {
+      "type": "text"
+    },
+    "postponeDate": {
+      "type": "datetime"
+    },
+    "changeRequestDate": {
+      "type": "date"
+    },
+    "changedDate": {
+      "type": "date"
+    },
+    "cancellationRequestDate": {
+      "type": "date"
+    },
+    "cancelledDate": {
+      "type": "date"
+    },
+    "student_scholarship": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student-scholarship.student-scholarship"
+    },
+    "paymentFailed": {
+      "type": "boolean"
+    },
+    "paymentWriteOff": {
+      "type": "boolean"
+    },
+    "invalid": {
+      "type": "boolean"
+    },
+    "firstPaymentDate": {
+      "type": "date"
+    },
+    "invoiceSentDate": {
+      "type": "date"
+    },
+    "restartDate": {
+      "type": "date"
+    },
+    "cancellationPending": {
+      "type": "boolean"
+    },
+    "joinedDate": {
+      "type": "date"
+    },
+    "paymentOverdueDate": {
+      "type": "date"
+    },
+    "paymentFailedDate": {
+      "type": "date"
+    },
+    "changeReason": {
+      "type": "string"
+    },
+    "classType": {
+      "type": "enumeration",
+      "enum": [
+        "group",
+        "private"
+      ],
+      "default": "group"
+    },
+    "paymentFrequency": {
+      "type": "enumeration",
+      "enum": [
+        "weekly",
+        "monthly",
+        "weekly4",
+        "weekly5",
+        "weekly2",
+        "monthly3"
+      ],
+      "required": true,
+      "default": "monthly"
+    }
+  }
+}

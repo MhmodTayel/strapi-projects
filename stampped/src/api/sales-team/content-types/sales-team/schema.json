@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_teams",
+  "info": {
+    "singularName": "sales-team",
+    "pluralName": "sales-teams",
+    "displayName": "Sales-team",
+    "name": "sales-team"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "website_url": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "language": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::language.language"
+    }
+  }
+}

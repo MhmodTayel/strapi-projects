@@ -1,0 +1,172 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::id-config.id-config",
+  "value": {
+    "uid": "api::id-config.id-config",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "classId",
+      "defaultSortBy": "classId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classId": {
+        "edit": {
+          "label": "classId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "studentId": {
+        "edit": {
+          "label": "studentId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "studentId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "teacherId": {
+        "edit": {
+          "label": "teacherId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "teacherId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parentId": {
+        "edit": {
+          "label": "parentId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parentId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "classId",
+        "studentId",
+        "teacherId"
+      ],
+      "edit": [
+        [
+          {
+            "name": "classId",
+            "size": 6
+          },
+          {
+            "name": "studentId",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "teacherId",
+            "size": 6
+          },
+          {
+            "name": "parentId",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

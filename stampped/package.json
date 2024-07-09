@@ -1,0 +1,58 @@
+{
+  "name": "api-stamped-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stamped.app strapi CMS backend",
+  "license": "MIT",
+  "author": {
+    "name": "RedHot Coding"
+  },
+  "scripts": {
+    "build": "./setenv.sh production strapi build",
+    "build-dev": "env-cmd -f .env.development strapi build --no-optimization",
+    "develop": "env-cmd -f .env.development strapi develop -- --watch-admin",
+    "postinstall": "patch-package",
+    "start": "./setenv.sh production strapi start",
+    "strapi": "strapi"
+  },
+  "resolutions": {
+    "@strapi/design-system": "^1.6.5",
+    "codemirror": "5.65.12"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.433.0",
+    "@aws-sdk/s3-request-presigner": "^3.433.0",
+    "@strapi/plugin-i18n": "^4.14.5",
+    "@strapi/plugin-users-permissions": "^4.14.5",
+    "@strapi/provider-email-nodemailer": "^4.14.5",
+    "@strapi/provider-upload-aws-s3": "^4.14.5",
+    "@strapi/strapi": "^4.14.5",
+    "axios": "^1.5.1",
+    "codemirror": "^5.65.15",
+    "crypto": "^1.0.1",
+    "gatsby-source-strapi": "^3.3.1",
+    "knex": "3.0.1",
+    "mysql": "2.18.1",
+    "patch-package": "^8.0.0",
+    "react-dom": "^18.2.0",
+    "semver": "^7.5.4",
+    "slugify": "^1.6.6",
+    "strapi-plugin-ckeditor5": "^1.15.1",
+    "strapi-plugin-import-export-content": "^0.4.2",
+    "strapi-plugin-sync-roles-permissions": "^0.4.3",
+    "strapi-wechat-miniprogram-auth": "^0.0.5",
+    "stripe": "^14.1.0",
+    "winston": "^3.11.0",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "strapi": {
+    "uuid": "12287441-19f5-4e64-b94c-a6e23e86d49d"
+  }
+}

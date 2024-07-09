@@ -1,0 +1,49 @@
+diff --git a/node_modules/@strapi/admin/server/controllers/authentication.js b/node_modules/@strapi/admin/server/controllers/authentication.js
+index b4dd7d3..dcd64aa 100644
+--- a/node_modules/@strapi/admin/server/controllers/authentication.js
++++ b/node_modules/@strapi/admin/server/controllers/authentication.js
+@@ -21,7 +21,6 @@ module.exports = {
+           strapi.eventHub.emit('admin.auth.error', { error: err, provider: 'local' });
+           return ctx.notImplemented();
+         }
+-
+         if (!user) {
+           strapi.eventHub.emit('admin.auth.error', {
+             error: new Error(info.message),
+@@ -158,9 +157,14 @@ module.exports = {
+     };
+   },
+ 
+-  logout(ctx) {
++  async logout(ctx) {
+     const sanitizedUser = getService('user').sanitizeUser(ctx.state.user);
+     strapi.eventHub.emit('admin.logout', { user: sanitizedUser });
+     ctx.body = { data: {} };
++    await strapi.service('api::black-listed-token.black-listed-token').create({
++      data: {
++        token:ctx.request.headers.authorization,
++      },
++    });
+   },
+ };
+diff --git a/node_modules/@strapi/admin/server/strategies/admin.js b/node_modules/@strapi/admin/server/strategies/admin.js
+index 10b933d..b298153 100644
+--- a/node_modules/@strapi/admin/server/strategies/admin.js
++++ b/node_modules/@strapi/admin/server/strategies/admin.js
+@@ -26,8 +26,14 @@ const authenticate = async (ctx) => {
+   const user = await strapi
+     .query('admin::user')
+     .findOne({ where: { id: payload.id }, populate: ['roles'] });
+-
+-  if (!user || !(user.isActive === true)) {
++  // Blacklisted token  
++  const {
++    header: { authorization: authToken },
++  } = ctx.request;
++  const blackListedToken = await strapi
++    .query('api::black-listed-token.black-listed-token')
++    .findOne({ where: { token: authToken } });
++  if (!user || !(user.isActive === true) || blackListedToken) {
+     return { authenticated: false };
+   }
+ 

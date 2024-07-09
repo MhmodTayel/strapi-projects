@@ -1,0 +1,118 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::about-us.about-us.find"
+    },
+    {
+      "action": "api::ad.ad.find"
+    },
+    {
+      "action": "api::ad.ad.findOne"
+    },
+    {
+      "action": "api::authority-board.authority-board.find"
+    },
+    {
+      "action": "api::authority-board.authority-board.findOne"
+    },
+    {
+      "action": "api::category.category.find"
+    },
+    {
+      "action": "api::category.category.findOne"
+    },
+    {
+      "action": "api::contact-us.contact-us.find"
+    },
+    {
+      "action": "api::event.event.find"
+    },
+    {
+      "action": "api::event.event.findOne"
+    },
+    {
+      "action": "api::home-page.home-page.find"
+    },
+    {
+      "action": "api::new.new.find"
+    },
+    {
+      "action": "api::new.new.findOne"
+    },
+    {
+      "action": "api::portfolio.portfolio.find"
+    },
+    {
+      "action": "api::portfolio.portfolio.findOne"
+    },
+    {
+      "action": "api::project.project.find"
+    },
+    {
+      "action": "api::project.project.findOne"
+    },
+    {
+      "action": "api::tag.tag.find"
+    },
+    {
+      "action": "api::tag.tag.findOne"
+    },
+    {
+      "action": "plugin::menus.menu-item.find"
+    },
+    {
+      "action": "plugin::menus.menu-item.findOne"
+    },
+    {
+      "action": "plugin::menus.menu.find"
+    },
+    {
+      "action": "plugin::menus.menu.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.changePassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.connect"
+    },
+    {
+      "action": "plugin::users-permissions.auth.emailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.auth.forgotPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.register"
+    },
+    {
+      "action": "plugin::users-permissions.auth.resetPassword"
+    },
+    {
+      "action": "plugin::users-permissions.auth.sendEmailConfirmation"
+    },
+    {
+      "action": "plugin::users-permissions.role.find"
+    },
+    {
+      "action": "plugin::users-permissions.role.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.create"
+    }
+  ]
+}

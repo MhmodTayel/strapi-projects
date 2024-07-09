@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contractors",
+  "info": {
+    "singularName": "contractor",
+    "pluralName": "contractors",
+    "displayName": "Contractor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "teachers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::teacher.teacher",
+      "mappedBy": "contractor"
+    }
+  }
+}

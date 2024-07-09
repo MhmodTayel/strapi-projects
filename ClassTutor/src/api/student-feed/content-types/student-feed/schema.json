@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_feeds",
+  "info": {
+    "singularName": "student-feed",
+    "pluralName": "student-feeds",
+    "displayName": "StudentFeed"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "homeworkMarked",
+        "newHomework",
+        "missingHomework",
+        "lessonMissed",
+        "reviewLesson",
+        "starStudent",
+        "behaviourIssue"
+      ]
+    },
+    "register": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register.register"
+    },
+    "register_student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register-student.register-student"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    }
+  }
+}

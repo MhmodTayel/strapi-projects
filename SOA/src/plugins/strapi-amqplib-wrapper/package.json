@@ -1,0 +1,27 @@
+{
+  "name": "strapi-amqplib-wrapper",
+  "version": "0.0.0",
+  "description": "Wrapper for amqplib package",
+  "strapi": {
+    "name": "strapi-amqplib-wrapper",
+    "description": "Wrapper for amqplib package",
+    "kind": "plugin",
+    "displayName": "Strapi amqplib Wrapper"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  },
+  "author": {
+    "name": "Mohamed Tarek"
+  },
+  "maintainers": [
+    {
+      "name": "Mohamed Tarek"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

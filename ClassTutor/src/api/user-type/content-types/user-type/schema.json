@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_types",
+  "info": {
+    "singularName": "user-type",
+    "pluralName": "user-types",
+    "displayName": "UserType"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

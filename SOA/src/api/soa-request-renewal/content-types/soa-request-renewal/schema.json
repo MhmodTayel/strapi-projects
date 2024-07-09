@@ -1,0 +1,177 @@
+{
+  "kind": "collectionType",
+  "collectionName": "soa_request_renewals",
+  "info": {
+    "singularName": "soa-request-renewal",
+    "pluralName": "soa-request-renewals",
+    "displayName": "soaRequestRenewal",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "renewWithClub": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "renewWithMedical": {
+      "type": "boolean",
+      "default": false
+    },
+    "medicalMembers": {
+      "type": "customField",
+      "options": ["wife", "children"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "children": {
+      "type": "integer",
+      "max": 2,
+      "min": 1
+    },
+    "renewalAmount": {
+      "type": "decimal",
+      "min": 1
+    },
+    "childrenAttachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "reviewing",
+        "rejected",
+        "cancelled",
+        "paid",
+        "waitForPayment",
+        "missingData",
+        "readyToPick",
+        "picked"
+      ],
+      "default": "reviewing"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "default": "api::soa-request-renewal.soa-request-renewal",
+      "private": true
+    },
+    "serviceName": {
+      "type": "string",
+      "default": "تجديد اشتراك النقابة"
+    },
+    "talent_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "syndicateID": {
+      "type": "string",
+      "regex": "^[0-9]+$",
+      "unique": false
+    },
+    "newSyndicateID": {
+      "type": "string",
+      "regex": "^[0-9]+$"
+    },
+    "division": {
+      "type": "enumeration",
+      "enum": [
+        "نقد",
+        "مكياج",
+        "مساعد اخراج مسرحى",
+        "كتاب مسرح",
+        "فنون شعبية",
+        "عرائس",
+        "سيرك",
+        "ديكور",
+        "تمثيل",
+        "تلقين",
+        "باليه",
+        "اخراج مسرحى",
+        "اخراج اذاعى",
+        "ادارة مسرحية"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "renewalRequests"
+    },
+    "userId": {
+      "type": "string",
+      "required": false,
+      "private": true
+    },
+    "wifeAttachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "nationalIDFront": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "nationalIDBack": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "rejectComment": {
+      "type": "string",
+      "private": true
+    },
+    "editComment": {
+      "type": "string"
+    },
+    "paymentCheckout": {
+      "type": "json"
+    },
+    "history": {
+      "type": "json",
+      "private": true
+    },
+    "invoice": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "private": true,
+      "allowedTypes": ["images"]
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": ["offline", "credit"]
+    },
+    "member": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::syndicate-member.syndicate-member",
+      "inversedBy": "renewalRequests"
+    },
+    "memberId": {
+      "type": "string",
+      "unique": false,
+      "required": false
+    },
+    "year": {
+      "type": "string",
+      "private": true
+    }
+  }
+}

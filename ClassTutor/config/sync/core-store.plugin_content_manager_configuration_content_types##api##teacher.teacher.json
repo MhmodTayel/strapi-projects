@@ -1,0 +1,1047 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::teacher.teacher",
+  "value": {
+    "uid": "api::teacher.teacher",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "teacherId",
+      "defaultSortBy": "teacherId",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "teacherId": {
+        "edit": {
+          "label": "teacherId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "teacherId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lastName": {
+        "edit": {
+          "label": "lastName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lastName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "country": {
+        "edit": {
+          "label": "country",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "country",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email": {
+        "edit": {
+          "label": "email",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "email2": {
+        "edit": {
+          "label": "email2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "email2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phoneCountryCode": {
+        "edit": {
+          "label": "phoneCountryCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phoneCountryCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phone": {
+        "edit": {
+          "label": "phone",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phone",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phoneCountryCode2": {
+        "edit": {
+          "label": "phoneCountryCode2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phoneCountryCode2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "phone2": {
+        "edit": {
+          "label": "phone2",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "phone2",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cv": {
+        "edit": {
+          "label": "cv",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cv",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "coverLetter": {
+        "edit": {
+          "label": "coverLetter",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "coverLetter",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "photo": {
+        "edit": {
+          "label": "photo",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "photo",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bio": {
+        "edit": {
+          "label": "bio",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bio",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "linkedInProfile": {
+        "edit": {
+          "label": "linkedInProfile",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "linkedInProfile",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "interviewRecording": {
+        "edit": {
+          "label": "interviewRecording",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "interviewRecording",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "qts": {
+        "edit": {
+          "label": "qts",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "qts",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dbsCertification": {
+        "edit": {
+          "label": "dbsCertification",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dbsCertification",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "university": {
+        "edit": {
+          "label": "university",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "university",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "degree": {
+        "edit": {
+          "label": "degree",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "degree",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "degreeGrade": {
+        "edit": {
+          "label": "degreeGrade",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "degreeGrade",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "signedContract": {
+        "edit": {
+          "label": "signedContract",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "signedContract",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "passport": {
+        "edit": {
+          "label": "passport",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "passport",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "niNumber": {
+        "edit": {
+          "label": "niNumber",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "niNumber",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "address1": {
+        "edit": {
+          "label": "address1",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "address1",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "proofOfAddress": {
+        "edit": {
+          "label": "proofOfAddress",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "proofOfAddress",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "bankAccountNumber": {
+        "edit": {
+          "label": "bankAccountNumber",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bankAccountNumber",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "bankSortCode": {
+        "edit": {
+          "label": "bankSortCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "bankSortCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "joinedDate": {
+        "edit": {
+          "label": "joinedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "joinedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "utr": {
+        "edit": {
+          "label": "utr",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "utr",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "rate": {
+        "edit": {
+          "label": "rate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "rate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "degreeCertificate": {
+        "edit": {
+          "label": "degreeCertificate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "degreeCertificate",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "contractor": {
+        "edit": {
+          "label": "contractor",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "contractor",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "user": {
+        "edit": {
+          "label": "user",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "username"
+        },
+        "list": {
+          "label": "user",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subjects": {
+        "edit": {
+          "label": "subjects",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "subjects",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "city": {
+        "edit": {
+          "label": "city",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "city",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postcode": {
+        "edit": {
+          "label": "postcode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postcode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dbsCode": {
+        "edit": {
+          "label": "dbsCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dbsCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "gender": {
+        "edit": {
+          "label": "gender",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "gender",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "shortBio": {
+        "edit": {
+          "label": "shortBio",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "shortBio",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dbsDate": {
+        "edit": {
+          "label": "dbsDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dbsDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "interviewDate": {
+        "edit": {
+          "label": "interviewDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "interviewDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "offerDate": {
+        "edit": {
+          "label": "offerDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "offerDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "rejectedDate": {
+        "edit": {
+          "label": "rejectedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "rejectedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "barredDate": {
+        "edit": {
+          "label": "barredDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "barredDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "reapplyDate": {
+        "edit": {
+          "label": "reapplyDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "reapplyDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "offerRejectedDate": {
+        "edit": {
+          "label": "offerRejectedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "offerRejectedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "offerAcceptedDate": {
+        "edit": {
+          "label": "offerAcceptedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "offerAcceptedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "contractLink": {
+        "edit": {
+          "label": "contractLink",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "contractLink",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "teacherId",
+        "name",
+        "lastName"
+      ],
+      "edit": [
+        [
+          {
+            "name": "teacherId",
+            "size": 6
+          },
+          {
+            "name": "name",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "lastName",
+            "size": 6
+          },
+          {
+            "name": "status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "country",
+            "size": 6
+          },
+          {
+            "name": "email",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "email2",
+            "size": 6
+          },
+          {
+            "name": "phoneCountryCode",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phone",
+            "size": 6
+          },
+          {
+            "name": "phoneCountryCode2",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "phone2",
+            "size": 6
+          },
+          {
+            "name": "cv",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "coverLetter",
+            "size": 6
+          },
+          {
+            "name": "photo",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "bio",
+            "size": 6
+          },
+          {
+            "name": "linkedInProfile",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "interviewRecording",
+            "size": 6
+          },
+          {
+            "name": "qts",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "dbsCertification",
+            "size": 6
+          },
+          {
+            "name": "university",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "degree",
+            "size": 6
+          },
+          {
+            "name": "degreeGrade",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "signedContract",
+            "size": 6
+          },
+          {
+            "name": "passport",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "niNumber",
+            "size": 6
+          },
+          {
+            "name": "address1",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "proofOfAddress",
+            "size": 6
+          },
+          {
+            "name": "bankAccountNumber",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "bankSortCode",
+            "size": 6
+          },
+          {
+            "name": "joinedDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "utr",
+            "size": 6
+          },
+          {
+            "name": "rate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "degreeCertificate",
+            "size": 6
+          },
+          {
+            "name": "city",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "postcode",
+            "size": 6
+          },
+          {
+            "name": "dbsCode",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "gender",
+            "size": 6
+          },
+          {
+            "name": "shortBio",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "dbsDate",
+            "size": 4
+          },
+          {
+            "name": "interviewDate",
+            "size": 4
+          },
+          {
+            "name": "offerDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "rejectedDate",
+            "size": 4
+          },
+          {
+            "name": "barredDate",
+            "size": 4
+          },
+          {
+            "name": "reapplyDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "offerRejectedDate",
+            "size": 4
+          },
+          {
+            "name": "offerAcceptedDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "contractLink",
+            "size": 6
+          },
+          {
+            "name": "contractor",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "user",
+            "size": 6
+          },
+          {
+            "name": "subjects",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

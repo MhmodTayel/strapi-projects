@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topics",
+  "info": {
+    "singularName": "topic",
+    "pluralName": "topics",
+    "displayName": "Topic",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topicId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "years": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::year.year"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "exam_boards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam-board.exam-board"
+    },
+    "description": {
+      "type": "text"
+    },
+    "topic_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topic.topic"
+    },
+    "subject_level": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject-level.subject-level"
+    }
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::register.register",
+  "value": {
+    "uid": "api::register.register",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "recordingLink",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classDate": {
+        "edit": {
+          "label": "classDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "class": {
+        "edit": {
+          "label": "class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "classId"
+        },
+        "list": {
+          "label": "class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "teacher": {
+        "edit": {
+          "label": "teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parentNotes": {
+        "edit": {
+          "label": "parentNotes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parentNotes",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lessonFiles": {
+        "edit": {
+          "label": "lessonFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lessonFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "recordingLink": {
+        "edit": {
+          "label": "recordingLink",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "recordingLink",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "payAmount": {
+        "edit": {
+          "label": "payAmount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "payAmount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "teacherPaymentStatus": {
+        "edit": {
+          "label": "teacherPaymentStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "teacherPaymentStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register_students": {
+        "edit": {
+          "label": "register_students",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "internalNotes"
+        },
+        "list": {
+          "label": "register_students",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "curriculums": {
+        "edit": {
+          "label": "curriculums",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "topic"
+        },
+        "list": {
+          "label": "curriculums",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "recordingChat": {
+        "edit": {
+          "label": "recordingChat",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "recordingChat",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "recordingTranscript": {
+        "edit": {
+          "label": "recordingTranscript",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "recordingTranscript",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issueDescription": {
+        "edit": {
+          "label": "issueDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "issueDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issueApprovedByAdmin": {
+        "edit": {
+          "label": "issueApprovedByAdmin",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "issueApprovedByAdmin",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issue_reasons": {
+        "edit": {
+          "label": "issue_reasons",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "issue_reasons",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkType": {
+        "edit": {
+          "label": "homeworkType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkDeadline": {
+        "edit": {
+          "label": "homeworkDeadline",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkDeadline",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkFiles": {
+        "edit": {
+          "label": "homeworkFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkSolutions": {
+        "edit": {
+          "label": "homeworkSolutions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkSolutions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkMarks": {
+        "edit": {
+          "label": "homeworkMarks",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMarks",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework_locked_by_teacher": {
+        "edit": {
+          "label": "homework_locked_by_teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "homework_locked_by_teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkLockStartTime": {
+        "edit": {
+          "label": "homeworkLockStartTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkLockStartTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkLockEndTime": {
+        "edit": {
+          "label": "homeworkLockEndTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkLockEndTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isComplete": {
+        "edit": {
+          "label": "isComplete",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isComplete",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isCompleteLate": {
+        "edit": {
+          "label": "isCompleteLate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isCompleteLate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkMarkingBlocked": {
+        "edit": {
+          "label": "homeworkMarkingBlocked",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMarkingBlocked",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkMarkingComplete": {
+        "edit": {
+          "label": "homeworkMarkingComplete",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMarkingComplete",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkErrorReason": {
+        "edit": {
+          "label": "homeworkErrorReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkErrorReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "startTime": {
+        "edit": {
+          "label": "startTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "startTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "endTime": {
+        "edit": {
+          "label": "endTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "endTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkErrorStatus": {
+        "edit": {
+          "label": "homeworkErrorStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkErrorStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkErrorDate": {
+        "edit": {
+          "label": "homeworkErrorDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkErrorDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework_error_by": {
+        "edit": {
+          "label": "homework_error_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "homework_error_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework": {
+        "edit": {
+          "label": "homework",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "homework",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attendanceMarked": {
+        "edit": {
+          "label": "attendanceMarked",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attendanceMarked",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attendanceMarkedTime": {
+        "edit": {
+          "label": "attendanceMarkedTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attendanceMarkedTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attendance_marked_by": {
+        "edit": {
+          "label": "attendance_marked_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "attendance_marked_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attendanceLateDays": {
+        "edit": {
+          "label": "attendanceLateDays",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attendanceLateDays",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classTime": {
+        "edit": {
+          "label": "classTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "attendanceMarkedByAdmin": {
+        "edit": {
+          "label": "attendanceMarkedByAdmin",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "attendanceMarkedByAdmin",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "classDate",
+        "class",
+        "teacher"
+      ],
+      "edit": [
+        [
+          {
+            "name": "classDate",
+            "size": 4
+          },
+          {
+            "name": "parentNotes",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkType",
+            "size": 6
+          },
+          {
+            "name": "homeworkDeadline",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "homeworkFiles",
+            "size": 6
+          },
+          {
+            "name": "homeworkSolutions",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkMarks",
+            "size": 4
+          },
+          {
+            "name": "lessonFiles",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "recordingLink",
+            "size": 6
+          },
+          {
+            "name": "payAmount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "teacherPaymentStatus",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "recordingChat",
+            "size": 6
+          },
+          {
+            "name": "recordingTranscript",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "status",
+            "size": 6
+          },
+          {
+            "name": "issueDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "issueApprovedByAdmin",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "homeworkLockStartTime",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkLockEndTime",
+            "size": 6
+          },
+          {
+            "name": "isComplete",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "isCompleteLate",
+            "size": 4
+          },
+          {
+            "name": "homeworkMarkingBlocked",
+            "size": 4
+          },
+          {
+            "name": "homeworkMarkingComplete",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "homeworkErrorReason",
+            "size": 6
+          },
+          {
+            "name": "startTime",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "endTime",
+            "size": 4
+          },
+          {
+            "name": "homeworkErrorStatus",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkErrorDate",
+            "size": 6
+          },
+          {
+            "name": "class",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "teacher",
+            "size": 6
+          },
+          {
+            "name": "register_students",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "curriculums",
+            "size": 6
+          },
+          {
+            "name": "issue_reasons",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homework_locked_by_teacher",
+            "size": 6
+          },
+          {
+            "name": "homework_error_by",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homework",
+            "size": 6
+          },
+          {
+            "name": "attendanceMarked",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "attendanceMarkedTime",
+            "size": 6
+          },
+          {
+            "name": "attendance_marked_by",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "attendanceLateDays",
+            "size": 4
+          },
+          {
+            "name": "classTime",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "attendanceMarkedByAdmin",
+            "size": 4
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

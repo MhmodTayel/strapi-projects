@@ -1,0 +1,95 @@
+{
+  "key": "plugin_content_manager_configuration_components::default.teacher-payment-transaction",
+  "value": {
+    "uid": "default.teacher-payment-transaction",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "type",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "amount": {
+        "edit": {
+          "label": "amount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "amount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "systemGenerated": {
+        "edit": {
+          "label": "systemGenerated",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "systemGenerated",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "type",
+        "amount",
+        "systemGenerated"
+      ],
+      "edit": [
+        [
+          {
+            "name": "type",
+            "size": 4
+          },
+          {
+            "name": "amount",
+            "size": 4
+          },
+          {
+            "name": "systemGenerated",
+            "size": 4
+          }
+        ]
+      ]
+    },
+    "isComponent": true
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

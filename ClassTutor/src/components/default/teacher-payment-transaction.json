@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_default_teacher_payment_transactions",
+  "info": {
+    "displayName": "TeacherPaymentTransaction",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "lesson",
+        "marking",
+        "bonus",
+        "penalty",
+        "commission"
+      ],
+      "required": true
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "systemGenerated": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

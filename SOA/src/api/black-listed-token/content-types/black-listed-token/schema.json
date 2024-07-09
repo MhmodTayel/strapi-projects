@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "black_listed_tokens",
+  "info": {
+    "singularName": "black-listed-token",
+    "pluralName": "black-listed-tokens",
+    "displayName": "blackListedToken"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "token": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_custom_fields_social_media_accounts",
+  "info": {
+    "displayName": "Social Media Account"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true,
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "link": {
+      "type": "text",
+      "required": true,
+      "regex": "^(https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|www\\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\\.[^\\s]{2,}|https?:\\/\\/(?:www\\.|(?!www))[a-zA-Z0-9]+\\.[^\\s]{2,}|www\\.[a-zA-Z0-9]+\\.[^\\s]{2,})$"
+    },
+    "icon": {
+      "allowedTypes": ["images"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,283 @@
+diff --git a/node_modules/strapi-plugin-menus/admin/src/components/MenuRows/index.js b/node_modules/strapi-plugin-menus/admin/src/components/MenuRows/index.js
+index 45dd6c9..59f7a5a 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/components/MenuRows/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/components/MenuRows/index.js
+@@ -68,22 +68,6 @@ const MenuRows = ( { data, onClickClone, onClickDelete, onClickEdit } ) => {
+                   noBorder
+                 />
+               </Box>
+-              <Box paddingLeft={ 1 } { ...stopPropagation }>
+-                <IconButton
+-                  onClick={ () => onClickClone( row.id ) }
+-                  label={ formatMessage( { id: getTrad( 'ui.clone' ), defaultMessage: 'Clone' } ) }
+-                  icon={ <Duplicate /> }
+-                  noBorder
+-                />
+-              </Box>
+-              <Box paddingLeft={ 1 } { ...stopPropagation }>
+-                <IconButton
+-                  onClick={ () => onClickDelete( row.id ) }
+-                  label={ formatMessage( { id: getTrad( 'ui.delete' ), defaultMessage: 'Delete' } ) }
+-                  icon={ <Trash /> }
+-                  noBorder
+-                />
+-              </Box>
+             </Flex>
+           </Td>
+         </Tr>
+diff --git a/node_modules/strapi-plugin-menus/admin/src/constants.js b/node_modules/strapi-plugin-menus/admin/src/constants.js
+index 29be819..87bd75f 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/constants.js
++++ b/node_modules/strapi-plugin-menus/admin/src/constants.js
+@@ -14,14 +14,14 @@ export const URL_ABSOLUTE_REGEX = new RegExp(
+   '^(https?:\\/\\/)?'+
+   '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+
+   '((\\d{1,3}\\.){3}\\d{1,3}))'+
+-  '(\\:\\d+)?(\\/[-a-z\\d%_.~+@]*)*'+
++  '(\\:\\d+)?(\\/[-a-z\\d%_.~+\\u0621-\\u064A\\u0660-\\u0669 ]*)*'+
+   '(\\?[-a-z\\d%_.~+@;&=]*)?'+
+   '(\\#[-a-z\\d_]*)?$',
+   'i'
+ );
+ 
+ export const URL_RELATIVE_REGEX = new RegExp(
+-  '^(\\/[-a-z\\d%_.~+@]*)*'+
++  '^(\\/[-a-z\\d%_.~+\\u0621-\\u064A\\u0660-\\u0669 ]*)*'+
+   '(\\?[-a-z\\d%_.~+@;&=]*)?'+
+   '(\\#[-a-z\\d_]*)?$',
+   'i'
+diff --git a/node_modules/strapi-plugin-menus/admin/src/coreComponents/InputUID/index.js b/node_modules/strapi-plugin-menus/admin/src/coreComponents/InputUID/index.js
+index dfd663c..faf519a 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/coreComponents/InputUID/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/coreComponents/InputUID/index.js
+@@ -181,53 +181,6 @@ const InputUID = ({
+     <TextInput
+       disabled={disabled}
+       error={error}
+-      endAction={
+-        <EndActionWrapper>
+-          {availability && availability.isAvailable && !regenerateLabel && (
+-            <TextValidation alignItems="center" justifyContent="flex-end">
+-              <CheckCircle />
+-              <Typography textColor="success600" variant="pi">
+-                {formatMessage({
+-                  id: 'content-manager.components.uid.available',
+-                  defaultMessage: 'Available',
+-                })}
+-              </Typography>
+-            </TextValidation>
+-          )}
+-          {availability && !availability.isAvailable && !regenerateLabel && (
+-            <TextValidation notAvailable alignItems="center" justifyContent="flex-end">
+-              <ExclamationMarkCircle />
+-              <Typography textColor="danger600" variant="pi">
+-                {formatMessage({
+-                  id: 'content-manager.components.uid.unavailable',
+-                  defaultMessage: 'Unavailable',
+-                })}
+-              </Typography>
+-            </TextValidation>
+-          )}
+-          {regenerateLabel && (
+-            <TextValidation alignItems="center" justifyContent="flex-end">
+-              <Typography textColor="primary600" variant="pi">
+-                {regenerateLabel}
+-              </Typography>
+-            </TextValidation>
+-          )}
+-          <FieldActionWrapper
+-            onClick={() => generateUid.current()}
+-            label="regenerate"
+-            onMouseEnter={handleGenerateMouseEnter}
+-            onMouseLeave={handleGenerateMouseLeave}
+-          >
+-            {isLoading ? (
+-              <LoadingWrapper>
+-                <Loader />
+-              </LoadingWrapper>
+-            ) : (
+-              <Refresh />
+-            )}
+-          </FieldActionWrapper>
+-        </EndActionWrapper>
+-      }
+       hint={hint}
+       label={label}
+       labelAction={labelAction}
+diff --git a/node_modules/strapi-plugin-menus/admin/src/index.js b/node_modules/strapi-plugin-menus/admin/src/index.js
+index a466176..3fc84e6 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/index.js
+@@ -21,11 +21,15 @@ export default {
+         return component;
+       },
+       permissions: [
+-        // Uncomment to set the permissions of the plugin here
+-        // {
+-        //   action: '', // the action name should be plugin::plugin-name.actionType
+-        //   subject: null,
+-        // },
++     
++         {
++             action: 'plugin::menus.read',
++             subject: null,
++           },
++           {
++             action: 'plugin::menus.update',
++             subject: null,
++           },
+       ],
+     } );
+ 
+diff --git a/node_modules/strapi-plugin-menus/admin/src/pages/App/index.js b/node_modules/strapi-plugin-menus/admin/src/pages/App/index.js
+index 2e88412..a3219ae 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/pages/App/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/pages/App/index.js
+@@ -22,8 +22,6 @@ const App = () => {
+       <Layout>
+         <Switch>
+           <Route path={ `/plugins/${pluginId}` } component={ IndexView } exact />
+-          <Route path={ `/plugins/${pluginId}/create` } component={ EditView } exact />
+-          <Route path={ `/plugins/${pluginId}/clone/:id` } component={ EditView } exact />
+           <Route path={ `/plugins/${pluginId}/edit/:id` } component={ EditView } exact />
+           <Route path="" component={ NotFound } />
+         </Switch>
+diff --git a/node_modules/strapi-plugin-menus/admin/src/pages/EditView/form-layout.js b/node_modules/strapi-plugin-menus/admin/src/pages/EditView/form-layout.js
+index f348482..ed03554 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/pages/EditView/form-layout.js
++++ b/node_modules/strapi-plugin-menus/admin/src/pages/EditView/form-layout.js
+@@ -31,6 +31,7 @@ const menu = [
+         targetField: 'title',
+       },
+       required: true,
++      disabled: true,
+     },
+     grid: {
+       col: 6,
+diff --git a/node_modules/strapi-plugin-menus/admin/src/pages/EditView/index.js b/node_modules/strapi-plugin-menus/admin/src/pages/EditView/index.js
+index da0998c..8fb5db0 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/pages/EditView/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/pages/EditView/index.js
+@@ -179,12 +179,13 @@ const EditView = ( { history, location, match } ) => {
+         },
+       } );
+     },
+-    onError: () => {
++    onError: (err) => {
+       toggleNotification( {
+         type: 'warning',
+         message: {
+           id: getTrad( 'ui.error' ),
+           defaultMessage: 'An error occured',
++          values: { message: err.response?.data?.error?.message || 'An error occured'},
+         },
+       } );
+     },
+diff --git a/node_modules/strapi-plugin-menus/admin/src/pages/IndexView/index.js b/node_modules/strapi-plugin-menus/admin/src/pages/IndexView/index.js
+index db06504..f76ba12 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/pages/IndexView/index.js
++++ b/node_modules/strapi-plugin-menus/admin/src/pages/IndexView/index.js
+@@ -11,9 +11,7 @@ import {
+ } from '@strapi/helper-plugin';
+ import { useNotifyAT } from '@strapi/design-system';
+ import { Box } from '@strapi/design-system/Box';
+-import { Button } from '@strapi/design-system/Button';
+ import { ContentLayout, HeaderLayout } from '@strapi/design-system/Layout';
+-import Plus from '@strapi/icons/Plus';
+ 
+ import { api, getTrad, pluginId, pluginName } from '../../utils';
+ import { Layout, MenuRows, PaginationFooter } from '../../components';
+@@ -145,26 +143,6 @@ const IndexView = ( { history } ) => {
+     },
+   ];
+ 
+-  /**
+-   * @TODO - This primary action currently does not render when the `DynamicTable`
+-   * passes the `action` prop through to `EmptyStateLayout`. No idea why.
+-   */
+-  const PrimaryAction = ( {
+-    size = 'L',
+-    variant = 'default',
+-  } ) => (
+-    <Button
+-      onClick={ () => history.push( `/plugins/${pluginId}/create` ) }
+-      startIcon={ <Plus /> }
+-      variant={ variant }
+-      size={ size }
+-    >
+-      { formatMessage( {
+-        id: getTrad( 'ui.create.menu' ),
+-        defaultMessage: 'Create new menu',
+-      } ) }
+-    </Button>
+-  );
+ 
+   return (
+     <Layout
+@@ -183,7 +161,6 @@ const IndexView = ( { history } ) => {
+           id: getTrad( 'index.header.subtitle' ),
+           defaultMessage: 'Customize the structure of menus and menu items',
+         } ) }
+-        primaryAction={ <PrimaryAction /> }
+       />
+       <ContentLayout>
+         <Box paddingBottom={ 10 }>
+@@ -194,7 +171,6 @@ const IndexView = ( { history } ) => {
+                 isLoading={ isLoading }
+                 headers={ tableHeaders }
+                 rows={ data.data }
+-                action={ <PrimaryAction size="S" variant="secondary" /> }
+                 onConfirmDelete={ onConfirmDelete }
+               >
+                 <MenuRows
+@@ -211,7 +187,6 @@ const IndexView = ( { history } ) => {
+                 id: getTrad( 'index.state.empty' ),
+                 defaultMessage: 'No menus found',
+               } }
+-              action={ <PrimaryAction size="S" variant="secondary" /> }
+             />
+           ) }
+         </Box>
+diff --git a/node_modules/strapi-plugin-menus/admin/src/translations/en.json b/node_modules/strapi-plugin-menus/admin/src/translations/en.json
+index 9b0e923..304084b 100644
+--- a/node_modules/strapi-plugin-menus/admin/src/translations/en.json
++++ b/node_modules/strapi-plugin-menus/admin/src/translations/en.json
+@@ -12,7 +12,8 @@
+   "ui.delete.menuItem": "Delete menu item",
+   "ui.deleted.menu": "Menu has been deleted",
+   "ui.edit": "Edit",
+-  "ui.error": "An error occured",
++  "ui.error": "{message}",
++  "ui.deleteError": "You can't delete existing menus",
+   "ui.goBack": "Go back",
+   "ui.items": "{number, plural, =0 {items} one {item} other {items}}",
+   "ui.loaded": "Data has been loaded",
+diff --git a/node_modules/strapi-plugin-menus/server/index.js b/node_modules/strapi-plugin-menus/server/index.js
+index 23f5989..952f085 100644
+--- a/node_modules/strapi-plugin-menus/server/index.js
++++ b/node_modules/strapi-plugin-menus/server/index.js
+@@ -7,7 +7,23 @@ const routes = require( './routes' );
+ const services = require( './services' );
+ 
+ module.exports = {
+-  // bootstrap() {},
++  async bootstrap({ strapi }) { 
++      const actions = [
++        {
++          section: "plugins",
++          displayName: "Read",
++          uid: 'read',
++          pluginName: "menus",
++        },
++        {
++          section: "plugins",
++          displayName: "Update",
++          uid: 'update',
++          pluginName: "menus",
++        },
++      ];
++      await strapi.admin.services.permission.actionProvider.registerMany(actions);
++    },
+   config,
+   contentTypes,
+   controllers,

@@ -1,0 +1,271 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::email-log.email-log",
+  "value": {
+    "uid": "api::email-log.email-log",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "subject",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subject": {
+        "edit": {
+          "label": "subject",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "subject",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "sentTime": {
+        "edit": {
+          "label": "sentTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "sentTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fromName": {
+        "edit": {
+          "label": "fromName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fromName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "fromEmail": {
+        "edit": {
+          "label": "fromEmail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "fromEmail",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "toName": {
+        "edit": {
+          "label": "toName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "toName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "toEmail": {
+        "edit": {
+          "label": "toEmail",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "toEmail",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "errorLog": {
+        "edit": {
+          "label": "errorLog",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorLog",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "templateName": {
+        "edit": {
+          "label": "templateName",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "templateName",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "body": {
+        "edit": {
+          "label": "body",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "body",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "subject",
+        "sentTime",
+        "fromName",
+        "createdAt",
+        "toEmail",
+        "toName"
+      ],
+      "edit": [
+        [
+          {
+            "name": "subject",
+            "size": 6
+          },
+          {
+            "name": "sentTime",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "fromName",
+            "size": 6
+          },
+          {
+            "name": "fromEmail",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "toName",
+            "size": 6
+          },
+          {
+            "name": "toEmail",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "errorLog",
+            "size": 6
+          },
+          {
+            "name": "templateName",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "body",
+            "size": 12
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

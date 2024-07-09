@@ -1,0 +1,106 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homework_submissions",
+  "info": {
+    "singularName": "homework-submission",
+    "pluralName": "homework-submissions",
+    "displayName": "HomeworkSubmission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "register_student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register-student.register-student"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "homework": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::homework.homework",
+      "inversedBy": "homework_submissions"
+    },
+    "markingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "marked",
+        "error"
+      ]
+    },
+    "submissionFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "completionDate": {
+      "type": "datetime"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "marksAchieved": {
+      "type": "integer"
+    },
+    "understanding": {
+      "type": "enumeration",
+      "enum": [
+        "struggled",
+        "understood",
+        "mastered"
+      ]
+    },
+    "marking_teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "markedFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "errorReason": {
+      "type": "string"
+    },
+    "submitted": {
+      "type": "boolean"
+    },
+    "submittedLate": {
+      "type": "boolean"
+    },
+    "errorDate": {
+      "type": "datetime"
+    },
+    "error_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "error_resolved_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::admin.admin"
+    }
+  }
+}

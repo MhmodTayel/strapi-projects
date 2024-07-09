@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "Subject",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "type": {
+      "type": "string"
+    },
+    "colour": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "parent_subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subject.subject"
+    },
+    "isPrimarySubject": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "solutionRequiredGroup": {
+      "type": "boolean"
+    },
+    "solutionRequiredPrivate": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customers",
+  "info": {
+    "singularName": "customer",
+    "pluralName": "customers",
+    "displayName": "Customer",
+    "name": "customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_first": {
+      "type": "string",
+      "required": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "individual",
+        "company"
+      ],
+      "default": "individual",
+      "required": true
+    },
+    "agent_status": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "requested",
+        "docs_need_updating",
+        "approved",
+        "disapproved",
+        "retracted"
+      ],
+      "default": "none",
+      "required": true
+    },
+    "docs_need_updating_remarks": {
+      "type": "string"
+    },
+    "agent_status_disapproved_remarks": {
+      "type": "string"
+    },
+    "agent_status_retracted_remarks": {
+      "type": "string"
+    },
+    "name_last": {
+      "type": "string"
+    },
+    "company_name": {
+      "type": "string"
+    },
+    "state_issued_id_front": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "state_issued_id_back": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "holding_state_issued_id": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "law_abiding_statement": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "holding_law_abiding_statement": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "company_address_1": {
+      "type": "string"
+    },
+    "company_city": {
+      "type": "string"
+    },
+    "company_state": {
+      "type": "string"
+    },
+    "company_postcode": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "agent_allow_domestic_us_shipping": {
+      "type": "boolean",
+      "default": false
+    },
+    "label": {
+      "type": "string"
+    },
+    "label_with_id": {
+      "type": "string"
+    },
+    "use_legacy_pricing": {
+      "type": "boolean",
+      "default": false
+    },
+    "sales_team": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-team.sales-team"
+    },
+    "sales_team_associate_code": {
+      "type": "string"
+    },
+    "uuid": {
+      "type": "string",
+      "unique": true
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+    "kind": "collectionType",
+    "collectionName": "parents",
+    "info": {
+        "singularName": "parent",
+        "pluralName": "parents",
+        "displayName": "Parent",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "parentId": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "lastName": {
+            "type": "string"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": ["active", "inactive"],
+            "default": "active",
+            "required": true
+        },
+        "email": {
+            "type": "string",
+            "required": false
+        },
+        "email2": {
+            "type": "string"
+        },
+        "phoneCountryCode": {
+            "type": "string"
+        },
+        "phone": {
+            "type": "string"
+        },
+        "isPhonePrimary1": {
+            "type": "boolean",
+            "default": false
+        },
+        "phoneCountryCode2": {
+            "type": "string"
+        },
+        "phone2": {
+            "type": "string"
+        },
+        "isPhonePrimary2": {
+            "type": "boolean",
+            "default": false
+        },
+        "stripeCustomerId": {
+            "type": "string"
+        },
+        "receiveMarkettingEmails": {
+            "type": "boolean",
+            "default": true,
+            "required": true
+        },
+        "students": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::student.student",
+            "mappedBy": "parents"
+        },
+        "user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user",
+            "mappedBy": "parent"
+        },
+        "gender": {
+            "type": "string"
+        },
+        "avatarImageName": {
+            "type": "string"
+        },
+        "addressLine1": {
+            "type": "string"
+        },
+        "city": {
+            "type": "string"
+        },
+        "country": {
+            "type": "string"
+        },
+        "postcode": {
+            "type": "string"
+        },
+        "postponeReason": {
+            "type": "string"
+        },
+        "postponeDate": {
+            "type": "datetime"
+        },
+        "contractStatus": {
+            "type": "enumeration",
+            "enum": ["sent", "messaged", "called", "signed", "rejected", "manual"],
+            "required": false
+        },
+        "signedDate": {
+            "type": "date"
+        }
+    }
+}

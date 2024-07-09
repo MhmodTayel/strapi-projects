@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "billing_parent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::parent.parent"
+    },
+    "invoiceIdentifier": {
+      "type": "string"
+    },
+    "paymentIdentifier": {
+      "type": "string"
+    },
+    "paidDate": {
+      "type": "datetime"
+    },
+    "invoiceSentDate": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "sent",
+        "paid",
+        "cancelled",
+        "failed",
+        "overdue"
+      ]
+    },
+    "failedReason": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "refundAmount": {
+      "type": "decimal"
+    },
+    "invoice_items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invoice-item.invoice-item",
+      "mappedBy": "invoice"
+    },
+    "dueDate": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,176 @@
+version: '3.8'
+services:
+  strapi:
+    # image: git.serversadmins.com:5005/webdev/soa/strapi:development
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      VIRTUAL_HOST: http://localhost:1337
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: strapi-db
+      DATABASE_NAME: soa
+      DATABASE_USERNAME: strapi
+      DATABASE_PORT: 5432
+      JWT_SECRET: 'changeMe'
+      ADMIN_JWT_SECRET: 'changeMe'
+      APP_KEYS: 'changeMe'
+      API_TOKEN_SALT: 'changeMe'
+      DATABASE_PASSWORD: strapi
+      NODE_ENV: development
+      MINIO_ACCESS_KEY: admin
+      MINIO_SECRET_KEY: qY1iEPTFwB
+      MINIO_ENDPOINT: http://minio:9000
+      MINIO_BUCKET: bucket
+      RABBITMQ_URL: amqp://rabbit:sR4VdR32Dvo7@rabbitmq:5672
+      EMAIL_FROM: soa-noreply@serversadmins.com
+      EMAIL_HOST: mx.serversadmins.net
+      EMAIL_PORT: 587
+      EMAIL_USER: soa-noreply@serversadmins.com
+      EMAIL_PASS: P@ssw0rd
+      PORTAL_DOMAIN: http://localhost:3000
+      PAYMENT_MERCHANT_ID: TestSYNDICAT_ART
+      PAYMENT_API_USERNAME: Merchant.TestSYNDICAT_ART
+      PAYMENT_API_PASSWORD: f651b81105445d4933375cb4fdceab4c
+      FIREBASE_SHORT_LINK_KEY: AIzaSyBiCMHYqBXie22KPsrWUiaahJ377zTWbbI
+      ANDROID_PACKAGE_NAME: com.fixedmea.soaDev
+      IOS_BUNDLE_ID: com.fixedmea.soaDev
+      PAYMENT_WEBHOOK_SECRET: FF8650C0767F1AFA8DFB75C03D7F60F6
+      FCM_SERVER_KEY: AAAAcKQRd2M:APA91bEafeNsNa_JTG8XEmaL0GFiFYjcjCVvt8_lOPkUesyYnco7x6WSFXeY9A3LW1oTYafcwjAYulDhE7mRhNXTntIXpt6LaIRHJVjyx8yFMspTph_7H2lrwzhs2qA10kkYFNM4s8Ku
+      FIREBASE_CONFIG: >
+        {
+          "type": "service_account",
+          "project_id": "soa-mobile-59555",
+          "private_key_id": "28186ce869106747e422ee2bfe9bfa5bc94210df",
+          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBBDwnHtqvF0Jh\nvwErN9O0kirIArC/nQ01v80UeBE/ISNqSw+vRctPCnFCxp3AsC/PVwSpX60L2zrP\nepeMh7tERtXqR5V5030mGP/d2DcarVubUs3P72BTyxYYFek/4csA2s8H0D3UgtGp\no+/5VGTXamfdBAjVP1mGoVh+S08injN8jZkLpTD78os7mKXrk8NmNlK3WRNIiCrW\naGBM6eufuHWi7vovvyGmMwu6M9FN67eHrtlScD19KTTpZ5OoC2e9LYNyjOjHbWLI\nkR9kudd2ki52u8ZI6Sz/FfglNSckng7eK5ghWWvCwaGiGrat6YZdd+DG+/iqa8JZ\nr3fiMyC3AgMBAAECggEADBS9xx0RRwBHsWKJKjFWWOkFMHuqoHOuDf0xUuSo/7CN\nTOvh0XCm5w2aRTm1Sgg9Fdc2fXt1k1ZnefEMZ0lfmUhtvzo3yuZH4QiTi0krOco7\n/57RLwCmoNgHS/6jGNKDKEyJxM1t8U023k1aidqUbT9FvPmxq9dJPToAFfeUvm/Y\nonnmG8k2gvNBkuDvocg+/gyjFGI600yluXxErWALEecX6gbokYBGVgW1Dyf06XHn\n6rbpzmt6zMTTsyOlbvOB3SuZM1Lno/AMiTn3M0fjLHJWfIZlRSCAH8olgAUS72qx\ntJswYKyw7SVRCHtgwM85ERoL0jPeLcJazed45jwIYQKBgQDoX5bhPFp7bP+VGLvg\nRHQvgqpMszyQq2Z0aED8iNhb09G5E/lufeuWXuhaBNkC5kvJ2EdXhurqW+s424Xr\ndwkaDzq7i6iPVLaeYWNR4kf5TANZPCjfO0/B1uvjN0B3/LShKjuolGQM7GLKAeT7\nEG+TqC8xPC0PEBoYJzB+IrhuOQKBgQDUpDt0rYI7+e6PZzr6J/E44PLtXQY3oMjH\nZaqv7TaayKVYArz3YuOn19PM/U+RiAaxXBl2ulcw6hiij/tVZn8xzY+HMGcY/We6\ndoAH2KAlinKw2mjaGhhnhOL69QjYUKAXP41Ezytw8jCGIf58kh6W8n/sECHkYj4o\nfv3dTtYGbwKBgHIhyRyVpSdsMNhNTrHnTV2sgvKrMjsoRGk2b3zZxdLMZfzOZ7uy\nU00HDn5wVRpMfLsF5HyEAsvbG9xQTiWJ0Mmg40sMXF0R0aRW1w534rv6bsacesKy\nAgmGA1QVZi/IyftCoAy73axPSnJHne0GdJcEizFWihcU5Iwqa3H4obdZAoGBAKih\nubj1JLP1qBe3kRDzfhxSYLSWsiiJbNCcsrkj0Mr9Vgqu2TcDCHGB+qi1NlW+Xzhm\nRpdefWkALRs2PeZjC3nuf+WBIDG0PH+mHDCcvZwn6H6SJtbYHQRzYSIOEr6haeQl\n9R1dgiDnIE4vRUd7BaFFnOcTgB1DP/ITi7XnIFonAoGBANSqByNz0tuYesllg7SW\n48GZc2l49rC4o5xJqOzmssTXUbALtuzmjcq4Wc+3RdZhMggyum3IlyPsvW/st5hG\nPhphT01FGYlTEIIY0BLvv8oCCbcU63dnRlJhi0ebc4tNyGnNzUrfnt0zNqWqm790\nDJxyI2j0sooDxf3jcrY7q0Is\n-----END PRIVATE KEY-----\n",
+          "client_email": "firebase-adminsdk-6g5yd@soa-mobile-59555.iam.gserviceaccount.com",
+          "client_id": "102841607811078610939",
+          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+          "token_uri": "https://oauth2.googleapis.com/token",
+          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6g5yd%40soa-mobile-59555.iam.gserviceaccount.com",
+          "universe_domain": "googleapis.com"
+        }
+      FRONTEND_ORIGIN: '*'
+
+    volumes:
+      - ./:/app/
+    ports:
+      - '1337:1337'
+      - '8000:8000'
+    networks:
+      - strapi
+    depends_on:
+      strapi-db:
+        condition: service_healthy
+      minio:
+        condition: service_healthy
+      rabbitmq:
+        condition: service_healthy
+    command: ['strapi', 'develop']
+
+  strapi-db:
+    image: postgres:12.0-alpine
+    environment:
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: strapi
+      POSTGRES_DB: soa
+    healthcheck:
+      test: ['CMD', 'pg_isready', '--dbname=soa', '--username=strapi']
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    volumes:
+      - strapi-data:/var/lib/postgresql/data/
+    ports:
+      - '5432:5432'
+    networks:
+      - strapi
+
+  minio:
+    image: bitnami/minio:latest
+    restart: always
+    networks:
+      - strapi
+    volumes:
+      - minio:/data
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: qY1iEPTFwB
+      MINIO_DEFAULT_BUCKETS: bucket:public
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+  notifications:
+    image: git.serversadmins.com:5005/webdev/soa/notifications:development
+    restart: always
+    networks:
+      - strapi
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    environment:
+      RETRY_DELAY: 30000
+      PG_URL: postgres://strapi:strapi@strapi-db:5432/soa
+      RABBITMQ_URL: amqp://rabbit:sR4VdR32Dvo7@rabbitmq:5672
+      SMS_GATEWAY: >
+        {
+          "SMS_URL": "https://smsvas.vlserv.com/VLSMSPlatformResellerAPI/NewSendingAPI/api/SMSSender/SendSMSWithDLR",
+          "SMS_USER": "EgyArtistsAPI",
+          "SMS_PASS": "9&(SUh)j+a",
+          "SMS_SENDER": "EGY Artist",
+          "SMS_LANG": "e"
+        }
+      FIREBASE_CONFIG: >
+        {
+          "type": "service_account",
+          "project_id": "soa-mobile-59555",
+          "private_key_id": "28186ce869106747e422ee2bfe9bfa5bc94210df",
+          "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDBBDwnHtqvF0Jh\nvwErN9O0kirIArC/nQ01v80UeBE/ISNqSw+vRctPCnFCxp3AsC/PVwSpX60L2zrP\nepeMh7tERtXqR5V5030mGP/d2DcarVubUs3P72BTyxYYFek/4csA2s8H0D3UgtGp\no+/5VGTXamfdBAjVP1mGoVh+S08injN8jZkLpTD78os7mKXrk8NmNlK3WRNIiCrW\naGBM6eufuHWi7vovvyGmMwu6M9FN67eHrtlScD19KTTpZ5OoC2e9LYNyjOjHbWLI\nkR9kudd2ki52u8ZI6Sz/FfglNSckng7eK5ghWWvCwaGiGrat6YZdd+DG+/iqa8JZ\nr3fiMyC3AgMBAAECggEADBS9xx0RRwBHsWKJKjFWWOkFMHuqoHOuDf0xUuSo/7CN\nTOvh0XCm5w2aRTm1Sgg9Fdc2fXt1k1ZnefEMZ0lfmUhtvzo3yuZH4QiTi0krOco7\n/57RLwCmoNgHS/6jGNKDKEyJxM1t8U023k1aidqUbT9FvPmxq9dJPToAFfeUvm/Y\nonnmG8k2gvNBkuDvocg+/gyjFGI600yluXxErWALEecX6gbokYBGVgW1Dyf06XHn\n6rbpzmt6zMTTsyOlbvOB3SuZM1Lno/AMiTn3M0fjLHJWfIZlRSCAH8olgAUS72qx\ntJswYKyw7SVRCHtgwM85ERoL0jPeLcJazed45jwIYQKBgQDoX5bhPFp7bP+VGLvg\nRHQvgqpMszyQq2Z0aED8iNhb09G5E/lufeuWXuhaBNkC5kvJ2EdXhurqW+s424Xr\ndwkaDzq7i6iPVLaeYWNR4kf5TANZPCjfO0/B1uvjN0B3/LShKjuolGQM7GLKAeT7\nEG+TqC8xPC0PEBoYJzB+IrhuOQKBgQDUpDt0rYI7+e6PZzr6J/E44PLtXQY3oMjH\nZaqv7TaayKVYArz3YuOn19PM/U+RiAaxXBl2ulcw6hiij/tVZn8xzY+HMGcY/We6\ndoAH2KAlinKw2mjaGhhnhOL69QjYUKAXP41Ezytw8jCGIf58kh6W8n/sECHkYj4o\nfv3dTtYGbwKBgHIhyRyVpSdsMNhNTrHnTV2sgvKrMjsoRGk2b3zZxdLMZfzOZ7uy\nU00HDn5wVRpMfLsF5HyEAsvbG9xQTiWJ0Mmg40sMXF0R0aRW1w534rv6bsacesKy\nAgmGA1QVZi/IyftCoAy73axPSnJHne0GdJcEizFWihcU5Iwqa3H4obdZAoGBAKih\nubj1JLP1qBe3kRDzfhxSYLSWsiiJbNCcsrkj0Mr9Vgqu2TcDCHGB+qi1NlW+Xzhm\nRpdefWkALRs2PeZjC3nuf+WBIDG0PH+mHDCcvZwn6H6SJtbYHQRzYSIOEr6haeQl\n9R1dgiDnIE4vRUd7BaFFnOcTgB1DP/ITi7XnIFonAoGBANSqByNz0tuYesllg7SW\n48GZc2l49rC4o5xJqOzmssTXUbALtuzmjcq4Wc+3RdZhMggyum3IlyPsvW/st5hG\nPhphT01FGYlTEIIY0BLvv8oCCbcU63dnRlJhi0ebc4tNyGnNzUrfnt0zNqWqm790\nDJxyI2j0sooDxf3jcrY7q0Is\n-----END PRIVATE KEY-----\n",
+          "client_email": "firebase-adminsdk-6g5yd@soa-mobile-59555.iam.gserviceaccount.com",
+          "client_id": "102841607811078610939",
+          "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+          "token_uri": "https://oauth2.googleapis.com/token",
+          "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+          "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-6g5yd%40soa-mobile-59555.iam.gserviceaccount.com",
+          "universe_domain": "googleapis.com"
+        }
+
+  rabbitmq:
+    image: bitnami/rabbitmq:3.10
+    restart: always
+    environment:
+      - RABBITMQ_USERNAME=rabbit
+      - RABBITMQ_PASSWORD=sR4VdR32Dvo7
+      - RABBITMQ_DISK_FREE_LIMIT=100000000
+    expose:
+      - 5672
+    ports:
+      - '5673:5672'
+      - '15673:15672'
+    volumes:
+      - rabbitmq-data:/bitnami
+    networks:
+      - strapi
+    healthcheck:
+      test: ['CMD', 'rabbitmqctl', 'node_health_check']
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  strapi-data:
+  minio:
+  rabbitmq-data:
+
+networks:
+  strapi:
+    driver: bridge

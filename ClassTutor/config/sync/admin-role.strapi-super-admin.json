@@ -1,0 +1,3218 @@
+{
+  "name": "Super Admin",
+  "code": "strapi-super-admin",
+  "description": "Super Admins can access and manage all features and settings.",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::admin-setting.admin-setting",
+      "properties": {
+        "fields": [
+          "teacherInterviewLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::admin-setting.admin-setting",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::admin-setting.admin-setting",
+      "properties": {
+        "fields": [
+          "teacherInterviewLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::admin-setting.admin-setting",
+      "properties": {
+        "fields": [
+          "teacherInterviewLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::admin.admin",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::admin.admin",
+      "properties": {
+        "fields": [
+          "name",
+          "user"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::class-teacher.class-teacher",
+      "properties": {
+        "fields": [
+          "classId",
+          "teacher",
+          "class",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay",
+          "rateCalculated",
+          "meeting_account"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::class.class",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay",
+          "rateCalculated",
+          "meeting_account"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::class.class",
+      "properties": {
+        "fields": [
+          "classId",
+          "type",
+          "startDate",
+          "endDate",
+          "zoomAccount",
+          "zoomPassword",
+          "zoomLink",
+          "zoomMeetingId",
+          "zoomMeetingPasscode",
+          "startTime",
+          "endTime",
+          "rate",
+          "status",
+          "teacher",
+          "subject",
+          "year",
+          "progress",
+          "dayOfWeek",
+          "yearDisplay",
+          "rateCalculated",
+          "meeting_account"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::contractor.contractor",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::contractor.contractor",
+      "properties": {
+        "fields": [
+          "name",
+          "teachers"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::curriculum.curriculum",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::curriculum.curriculum",
+      "properties": {
+        "fields": [
+          "topic",
+          "topicCategory",
+          "subject",
+          "weighting"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::education-level.education-level",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::education-level.education-level",
+      "properties": {
+        "fields": [
+          "name",
+          "otherName",
+          "order"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::email-log.email-log",
+      "properties": {
+        "fields": [
+          "subject",
+          "sentTime",
+          "fromName",
+          "fromEmail",
+          "toName",
+          "toEmail",
+          "errorLog",
+          "templateName",
+          "body"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::email-log.email-log",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::email-log.email-log",
+      "properties": {
+        "fields": [
+          "subject",
+          "sentTime",
+          "fromName",
+          "fromEmail",
+          "toName",
+          "toEmail",
+          "errorLog",
+          "templateName",
+          "body"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::email-log.email-log",
+      "properties": {
+        "fields": [
+          "subject",
+          "sentTime",
+          "fromName",
+          "fromEmail",
+          "toName",
+          "toEmail",
+          "errorLog",
+          "templateName",
+          "body"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::event-message.event-message",
+      "properties": {
+        "fields": [
+          "eventCode",
+          "receiverId",
+          "message",
+          "template",
+          "entity",
+          "entityId",
+          "eventType",
+          "persist",
+          "messageValues"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::event-message.event-message",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::event-message.event-message",
+      "properties": {
+        "fields": [
+          "eventCode",
+          "receiverId",
+          "message",
+          "template",
+          "entity",
+          "entityId",
+          "eventType",
+          "persist",
+          "messageValues"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::event-message.event-message",
+      "properties": {
+        "fields": [
+          "eventCode",
+          "receiverId",
+          "message",
+          "template",
+          "entity",
+          "entityId",
+          "eventType",
+          "persist",
+          "messageValues"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::family-link.family-link",
+      "properties": {
+        "fields": [
+          "parents",
+          "students"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::family-link.family-link",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::family-link.family-link",
+      "properties": {
+        "fields": [
+          "parents",
+          "students"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::family-link.family-link",
+      "properties": {
+        "fields": [
+          "parents",
+          "students"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::homework-submission.homework-submission",
+      "properties": {
+        "fields": [
+          "name",
+          "register_student",
+          "student",
+          "homework",
+          "markingStatus",
+          "submissionFiles",
+          "completionDate",
+          "comment",
+          "marksAchieved",
+          "understanding",
+          "marking_teacher",
+          "markedFiles",
+          "errorReason",
+          "submitted",
+          "submittedLate",
+          "errorDate",
+          "error_by",
+          "error_resolved_by"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::homework-submission.homework-submission",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::homework-submission.homework-submission",
+      "properties": {
+        "fields": [
+          "name",
+          "register_student",
+          "student",
+          "homework",
+          "markingStatus",
+          "submissionFiles",
+          "completionDate",
+          "comment",
+          "marksAchieved",
+          "understanding",
+          "marking_teacher",
+          "markedFiles",
+          "errorReason",
+          "submitted",
+          "submittedLate",
+          "errorDate",
+          "error_by",
+          "error_resolved_by"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::homework-submission.homework-submission",
+      "properties": {
+        "fields": [
+          "name",
+          "register_student",
+          "student",
+          "homework",
+          "markingStatus",
+          "submissionFiles",
+          "completionDate",
+          "comment",
+          "marksAchieved",
+          "understanding",
+          "marking_teacher",
+          "markedFiles",
+          "errorReason",
+          "submitted",
+          "submittedLate",
+          "errorDate",
+          "error_by",
+          "error_resolved_by"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::homework.homework",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "type",
+          "deadline",
+          "questions",
+          "solutions",
+          "marksTotal",
+          "locked_by_teacher",
+          "lockStartTime",
+          "lockEndTime",
+          "markingBlocked",
+          "markingComplete",
+          "errorReason",
+          "errorStatus",
+          "errorDate",
+          "error_by",
+          "created_by_teacher",
+          "homework_submissions"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::homework.homework",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::homework.homework",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "type",
+          "deadline",
+          "questions",
+          "solutions",
+          "marksTotal",
+          "locked_by_teacher",
+          "lockStartTime",
+          "lockEndTime",
+          "markingBlocked",
+          "markingComplete",
+          "errorReason",
+          "errorStatus",
+          "errorDate",
+          "error_by",
+          "created_by_teacher",
+          "homework_submissions"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::homework.homework",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "type",
+          "deadline",
+          "questions",
+          "solutions",
+          "marksTotal",
+          "locked_by_teacher",
+          "lockStartTime",
+          "lockEndTime",
+          "markingBlocked",
+          "markingComplete",
+          "errorReason",
+          "errorStatus",
+          "errorDate",
+          "error_by",
+          "created_by_teacher",
+          "homework_submissions"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::id-config.id-config",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::id-config.id-config",
+      "properties": {
+        "fields": [
+          "classId",
+          "studentId",
+          "teacherId",
+          "parentId"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::invoice-item.invoice-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "invoice"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::invoice-item.invoice-item",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::invoice-item.invoice-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "invoice"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::invoice-item.invoice-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "invoice"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::invoice.invoice",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "billing_parent",
+          "invoiceIdentifier",
+          "paymentIdentifier",
+          "paidDate",
+          "invoiceSentDate",
+          "status",
+          "failedReason",
+          "notes",
+          "amount",
+          "refundAmount",
+          "invoice_items",
+          "dueDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::invoice.invoice",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::invoice.invoice",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "billing_parent",
+          "invoiceIdentifier",
+          "paymentIdentifier",
+          "paidDate",
+          "invoiceSentDate",
+          "status",
+          "failedReason",
+          "notes",
+          "amount",
+          "refundAmount",
+          "invoice_items",
+          "dueDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::invoice.invoice",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "billing_parent",
+          "invoiceIdentifier",
+          "paymentIdentifier",
+          "paidDate",
+          "invoiceSentDate",
+          "status",
+          "failedReason",
+          "notes",
+          "amount",
+          "refundAmount",
+          "invoice_items",
+          "dueDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::issue-reason.issue-reason",
+      "properties": {
+        "fields": [
+          "name",
+          "group"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::meeting-account.meeting-account",
+      "properties": {
+        "fields": [
+          "name",
+          "password"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::meeting-account.meeting-account",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::meeting-account.meeting-account",
+      "properties": {
+        "fields": [
+          "name",
+          "password"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::meeting-account.meeting-account",
+      "properties": {
+        "fields": [
+          "name",
+          "password"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::meeting-recording.meeting-recording",
+      "properties": {
+        "fields": [
+          "name",
+          "meetingType",
+          "class",
+          "register",
+          "date",
+          "recordingLink",
+          "account",
+          "noRecording",
+          "status",
+          "meetingChat",
+          "meetingTranscript",
+          "visible",
+          "students",
+          "agents",
+          "teachers",
+          "systemGenerated",
+          "reason",
+          "transcriptFiles",
+          "chatFiles"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::meeting-recording.meeting-recording",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::meeting-recording.meeting-recording",
+      "properties": {
+        "fields": [
+          "name",
+          "meetingType",
+          "class",
+          "register",
+          "date",
+          "recordingLink",
+          "account",
+          "noRecording",
+          "status",
+          "meetingChat",
+          "meetingTranscript",
+          "visible",
+          "students",
+          "agents",
+          "teachers",
+          "systemGenerated",
+          "reason",
+          "transcriptFiles",
+          "chatFiles"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::meeting-recording.meeting-recording",
+      "properties": {
+        "fields": [
+          "name",
+          "meetingType",
+          "class",
+          "register",
+          "date",
+          "recordingLink",
+          "account",
+          "noRecording",
+          "status",
+          "meetingChat",
+          "meetingTranscript",
+          "visible",
+          "students",
+          "agents",
+          "teachers",
+          "systemGenerated",
+          "reason",
+          "transcriptFiles",
+          "chatFiles"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::notice.notice",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "fromDate",
+          "toDate",
+          "subTitle",
+          "iconImage",
+          "backgroundColour",
+          "foregroundColour",
+          "classes",
+          "allClasses",
+          "enabled",
+          "targetTeacher",
+          "targetParent",
+          "targetStudent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::notice.notice",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::notice.notice",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "fromDate",
+          "toDate",
+          "subTitle",
+          "iconImage",
+          "backgroundColour",
+          "foregroundColour",
+          "classes",
+          "allClasses",
+          "enabled",
+          "targetTeacher",
+          "targetParent",
+          "targetStudent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::notice.notice",
+      "properties": {
+        "fields": [
+          "title",
+          "description",
+          "fromDate",
+          "toDate",
+          "subTitle",
+          "iconImage",
+          "backgroundColour",
+          "foregroundColour",
+          "classes",
+          "allClasses",
+          "enabled",
+          "targetTeacher",
+          "targetParent",
+          "targetStudent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName",
+          "addressLine1",
+          "city",
+          "country",
+          "postcode",
+          "postponeReason",
+          "postponeDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::parent.parent",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName",
+          "addressLine1",
+          "city",
+          "country",
+          "postcode",
+          "postponeReason",
+          "postponeDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::parent.parent",
+      "properties": {
+        "fields": [
+          "parentId",
+          "name",
+          "lastName",
+          "status",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "stripeCustomerId",
+          "receiveMarkettingEmails",
+          "students",
+          "user",
+          "gender",
+          "avatarImageName",
+          "addressLine1",
+          "city",
+          "country",
+          "postcode",
+          "postponeReason",
+          "postponeDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::payment-subscription-item.payment-subscription-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "payment_subscription"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::payment-subscription-item.payment-subscription-item",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::payment-subscription-item.payment-subscription-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "payment_subscription"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::payment-subscription-item.payment-subscription-item",
+      "properties": {
+        "fields": [
+          "name",
+          "student_class",
+          "multiClassDiscount",
+          "scholarshipDiscount",
+          "managementDiscount",
+          "classRate",
+          "total",
+          "payment_subscription"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::payment-subscription.payment-subscription",
+      "properties": {
+        "fields": [
+          "name",
+          "paymentDate",
+          "student",
+          "billing_parent",
+          "payment_subscription_items"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::payment-subscription.payment-subscription",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::payment-subscription.payment-subscription",
+      "properties": {
+        "fields": [
+          "name",
+          "paymentDate",
+          "student",
+          "billing_parent",
+          "payment_subscription_items"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::payment-subscription.payment-subscription",
+      "properties": {
+        "fields": [
+          "name",
+          "paymentDate",
+          "student",
+          "billing_parent",
+          "payment_subscription_items"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles",
+          "homeworkErrorReason",
+          "homeworkSubmitted",
+          "homeworkSubmittedLate",
+          "freeTrialCancelled",
+          "student_class",
+          "issueStatus",
+          "dateSentIssue",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "issue_resolved_by",
+          "issueSendToParent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::register-student.register-student",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles",
+          "homeworkErrorReason",
+          "homeworkSubmitted",
+          "homeworkSubmittedLate",
+          "freeTrialCancelled",
+          "student_class",
+          "issueStatus",
+          "dateSentIssue",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "issue_resolved_by",
+          "issueSendToParent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::register-student.register-student",
+      "properties": {
+        "fields": [
+          "name",
+          "register",
+          "student",
+          "freeTrial",
+          "engagement",
+          "understanding",
+          "issueDescription",
+          "starStudent",
+          "feedbackTodaysLesson",
+          "feedbackBeforeLessonTopic",
+          "feedbackAfterLessonTopic",
+          "feedbackTodayTeacher",
+          "internalNotes",
+          "parentNotes",
+          "markerPaid",
+          "hasAttended",
+          "hasLeftEarly",
+          "isLate",
+          "issue_reasons",
+          "homeworkMarkingStatus",
+          "homeworkSubmissionFiles",
+          "homeworkCompletionDate",
+          "homeworkComment",
+          "homeworkMark",
+          "homeworkUnderstanding",
+          "homework_marking_teacher",
+          "homeworkMarkedFiles",
+          "homeworkErrorReason",
+          "homeworkSubmitted",
+          "homeworkSubmittedLate",
+          "freeTrialCancelled",
+          "student_class",
+          "issueStatus",
+          "dateSentIssue",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "issue_resolved_by",
+          "issueSendToParent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "name",
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks",
+          "homework_locked_by_teacher",
+          "homeworkLockStartTime",
+          "homeworkLockEndTime",
+          "isComplete",
+          "isCompleteLate",
+          "homeworkMarkingBlocked",
+          "homeworkMarkingComplete",
+          "homeworkErrorReason",
+          "startTime",
+          "endTime",
+          "homeworkErrorStatus",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "homework",
+          "attendanceMarked",
+          "attendanceMarkedTime",
+          "attendance_marked_by",
+          "attendanceLateDays",
+          "classTime",
+          "attendanceMarkedByAdmin"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::register.register",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "name",
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks",
+          "homework_locked_by_teacher",
+          "homeworkLockStartTime",
+          "homeworkLockEndTime",
+          "isComplete",
+          "isCompleteLate",
+          "homeworkMarkingBlocked",
+          "homeworkMarkingComplete",
+          "homeworkErrorReason",
+          "startTime",
+          "endTime",
+          "homeworkErrorStatus",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "homework",
+          "attendanceMarked",
+          "attendanceMarkedTime",
+          "attendance_marked_by",
+          "attendanceLateDays",
+          "classTime",
+          "attendanceMarkedByAdmin"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::register.register",
+      "properties": {
+        "fields": [
+          "name",
+          "classDate",
+          "class",
+          "teacher",
+          "parentNotes",
+          "lessonFiles",
+          "recordingLink",
+          "payAmount",
+          "teacherPaymentStatus",
+          "register_students",
+          "curriculums",
+          "recordingChat",
+          "recordingTranscript",
+          "status",
+          "issueDescription",
+          "issueApprovedByAdmin",
+          "issue_reasons",
+          "homeworkType",
+          "homeworkDeadline",
+          "homeworkFiles",
+          "homeworkSolutions",
+          "homeworkMarks",
+          "homework_locked_by_teacher",
+          "homeworkLockStartTime",
+          "homeworkLockEndTime",
+          "isComplete",
+          "isCompleteLate",
+          "homeworkMarkingBlocked",
+          "homeworkMarkingComplete",
+          "homeworkErrorReason",
+          "startTime",
+          "endTime",
+          "homeworkErrorStatus",
+          "homeworkErrorDate",
+          "homework_error_by",
+          "homework",
+          "attendanceMarked",
+          "attendanceMarkedTime",
+          "attendance_marked_by",
+          "attendanceLateDays",
+          "classTime",
+          "attendanceMarkedByAdmin"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::sales-management-note.sales-management-note",
+      "properties": {
+        "fields": [
+          "text",
+          "student",
+          "agent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::sales-management-note.sales-management-note",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::sales-management-note.sales-management-note",
+      "properties": {
+        "fields": [
+          "text",
+          "student",
+          "agent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::sales-management-note.sales-management-note",
+      "properties": {
+        "fields": [
+          "text",
+          "student",
+          "agent"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::scholarship.scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "discount"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::scholarship.scholarship",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::scholarship.scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "discount"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::scholarship.scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "discount"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student-class-log.student-class-log",
+      "properties": {
+        "fields": [
+          "name",
+          "status",
+          "rawData",
+          "student_class",
+          "previousRawData"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student-class-log.student-class-log",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student-class-log.student-class-log",
+      "properties": {
+        "fields": [
+          "name",
+          "status",
+          "rawData",
+          "student_class",
+          "previousRawData"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student-class-log.student-class-log",
+      "properties": {
+        "fields": [
+          "name",
+          "status",
+          "rawData",
+          "student_class",
+          "previousRawData"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student-class.student-class",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "class",
+          "status",
+          "billing_parent",
+          "agents",
+          "trialDate",
+          "classDate",
+          "subject",
+          "year",
+          "cancelReason",
+          "payment",
+          "trialMissedReason",
+          "scholarshipDiscount",
+          "source",
+          "type",
+          "postponeReason",
+          "postponeDate",
+          "changeRequestDate",
+          "changedDate",
+          "cancellationRequestDate",
+          "cancelledDate",
+          "student_scholarship",
+          "paymentFailed",
+          "paymentWriteOff",
+          "invalid",
+          "firstPaymentDate",
+          "invoiceSentDate",
+          "restartDate",
+          "cancellationPending",
+          "joinedDate",
+          "paymentOverdueDate",
+          "paymentFailedDate",
+          "changeReason",
+          "classType"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student-class.student-class",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student-class.student-class",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "class",
+          "status",
+          "billing_parent",
+          "agents",
+          "trialDate",
+          "classDate",
+          "subject",
+          "year",
+          "cancelReason",
+          "payment",
+          "trialMissedReason",
+          "scholarshipDiscount",
+          "source",
+          "type",
+          "postponeReason",
+          "postponeDate",
+          "changeRequestDate",
+          "changedDate",
+          "cancellationRequestDate",
+          "cancelledDate",
+          "student_scholarship",
+          "paymentFailed",
+          "paymentWriteOff",
+          "invalid",
+          "firstPaymentDate",
+          "invoiceSentDate",
+          "restartDate",
+          "cancellationPending",
+          "joinedDate",
+          "paymentOverdueDate",
+          "paymentFailedDate",
+          "changeReason",
+          "classType"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student-class.student-class",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "class",
+          "status",
+          "billing_parent",
+          "agents",
+          "trialDate",
+          "classDate",
+          "subject",
+          "year",
+          "cancelReason",
+          "payment",
+          "trialMissedReason",
+          "scholarshipDiscount",
+          "source",
+          "type",
+          "postponeReason",
+          "postponeDate",
+          "changeRequestDate",
+          "changedDate",
+          "cancellationRequestDate",
+          "cancelledDate",
+          "student_scholarship",
+          "paymentFailed",
+          "paymentWriteOff",
+          "invalid",
+          "firstPaymentDate",
+          "invoiceSentDate",
+          "restartDate",
+          "cancellationPending",
+          "joinedDate",
+          "paymentOverdueDate",
+          "paymentFailedDate",
+          "changeReason",
+          "classType"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student-feed.student-feed",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "type",
+          "register",
+          "register_student",
+          "class",
+          "student"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student-feed.student-feed",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student-feed.student-feed",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "type",
+          "register",
+          "register_student",
+          "class",
+          "student"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student-feed.student-feed",
+      "properties": {
+        "fields": [
+          "name",
+          "title",
+          "type",
+          "register",
+          "register_student",
+          "class",
+          "student"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student-scholarship.student-scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "scholarship",
+          "status",
+          "amount",
+          "lastFormSentDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student-scholarship.student-scholarship",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student-scholarship.student-scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "scholarship",
+          "status",
+          "amount",
+          "lastFormSentDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student-scholarship.student-scholarship",
+      "properties": {
+        "fields": [
+          "name",
+          "student",
+          "scholarship",
+          "status",
+          "amount",
+          "lastFormSentDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "subjectsIntro",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName",
+          "student_classes",
+          "status",
+          "howDidYouHearAboutUsQuestion",
+          "howDidYouHearAboutUsAnswer",
+          "how_did_you_hear_parent",
+          "how_did_you_hear_agent",
+          "dateOfBirth",
+          "postponeReason",
+          "postponeDate",
+          "reports",
+          "isPupilPremium",
+          "isFsm",
+          "isEal",
+          "agents",
+          "primary_parent",
+          "postponeNotifyDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::student.student",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "subjectsIntro",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName",
+          "student_classes",
+          "status",
+          "howDidYouHearAboutUsQuestion",
+          "howDidYouHearAboutUsAnswer",
+          "how_did_you_hear_parent",
+          "how_did_you_hear_agent",
+          "dateOfBirth",
+          "postponeReason",
+          "postponeDate",
+          "reports",
+          "isPupilPremium",
+          "isFsm",
+          "isEal",
+          "agents",
+          "primary_parent",
+          "postponeNotifyDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::student.student",
+      "properties": {
+        "fields": [
+          "studentId",
+          "name",
+          "lastName",
+          "email",
+          "phoneCountryCode",
+          "phone",
+          "y11GraduationYear",
+          "parents",
+          "schoolName",
+          "learningEducationAuthority",
+          "subjectsIntro",
+          "isSen",
+          "senRequirements",
+          "subjects",
+          "year",
+          "user",
+          "gender",
+          "avatarImageName",
+          "student_classes",
+          "status",
+          "howDidYouHearAboutUsQuestion",
+          "howDidYouHearAboutUsAnswer",
+          "how_did_you_hear_parent",
+          "how_did_you_hear_agent",
+          "dateOfBirth",
+          "postponeReason",
+          "postponeDate",
+          "reports",
+          "isPupilPremium",
+          "isFsm",
+          "isEal",
+          "agents",
+          "primary_parent",
+          "postponeNotifyDate"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "colour",
+          "code",
+          "order",
+          "parent_subject",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::subject.subject",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "colour",
+          "code",
+          "order",
+          "parent_subject",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::subject.subject",
+      "properties": {
+        "fields": [
+          "name",
+          "type",
+          "colour",
+          "code",
+          "order",
+          "parent_subject",
+          "isPrimarySubject"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher-capability.teacher-capability",
+      "properties": {
+        "fields": [
+          "teacher",
+          "education_level",
+          "subject",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "name",
+          "teacher",
+          "date",
+          "dueDate",
+          "paidDate",
+          "totalAmount",
+          "class",
+          "status",
+          "register",
+          "systemGenerated",
+          "notes",
+          "transactions.type",
+          "transactions.amount",
+          "transactions.systemGenerated",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "name",
+          "teacher",
+          "date",
+          "dueDate",
+          "paidDate",
+          "totalAmount",
+          "class",
+          "status",
+          "register",
+          "systemGenerated",
+          "notes",
+          "transactions.type",
+          "transactions.amount",
+          "transactions.systemGenerated",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher-payment.teacher-payment",
+      "properties": {
+        "fields": [
+          "name",
+          "teacher",
+          "date",
+          "dueDate",
+          "paidDate",
+          "totalAmount",
+          "class",
+          "status",
+          "register",
+          "systemGenerated",
+          "notes",
+          "transactions.type",
+          "transactions.amount",
+          "transactions.systemGenerated",
+          "type"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate",
+          "interviewDate",
+          "offerDate",
+          "rejectedDate",
+          "barredDate",
+          "reapplyDate",
+          "offerRejectedDate",
+          "offerAcceptedDate",
+          "contractLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::teacher.teacher",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate",
+          "interviewDate",
+          "offerDate",
+          "rejectedDate",
+          "barredDate",
+          "reapplyDate",
+          "offerRejectedDate",
+          "offerAcceptedDate",
+          "contractLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::teacher.teacher",
+      "properties": {
+        "fields": [
+          "teacherId",
+          "name",
+          "lastName",
+          "status",
+          "country",
+          "email",
+          "email2",
+          "phoneCountryCode",
+          "phone",
+          "phoneCountryCode2",
+          "phone2",
+          "cv",
+          "coverLetter",
+          "photo",
+          "bio",
+          "linkedInProfile",
+          "interviewRecording",
+          "qts",
+          "dbsCertification",
+          "university",
+          "degree",
+          "degreeGrade",
+          "signedContract",
+          "passport",
+          "niNumber",
+          "address1",
+          "proofOfAddress",
+          "bankAccountNumber",
+          "bankSortCode",
+          "joinedDate",
+          "utr",
+          "rate",
+          "degreeCertificate",
+          "contractor",
+          "user",
+          "subjects",
+          "city",
+          "postcode",
+          "dbsCode",
+          "gender",
+          "shortBio",
+          "dbsDate",
+          "interviewDate",
+          "offerDate",
+          "rejectedDate",
+          "barredDate",
+          "reapplyDate",
+          "offerRejectedDate",
+          "offerAcceptedDate",
+          "contractLink"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::user-type.user-type",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::user-type.user-type",
+      "properties": {
+        "fields": [
+          "name"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber",
+          "isALevels"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "api::year.year",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber",
+          "isALevels"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::year.year",
+      "properties": {
+        "fields": [
+          "name",
+          "shortName",
+          "otherName",
+          "order",
+          "yearNumber",
+          "isALevels"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.access",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.regenerate",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::api-tokens.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::marketplace.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::project-settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::project-settings.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::roles.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::roles.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::roles.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::roles.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.access",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.regenerate",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::transfer.tokens.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::users.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::users.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::users.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::users.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::webhooks.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::webhooks.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::webhooks.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "admin::webhooks.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::config-sync.menu-link",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::config-sync.settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.collection-types.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.components.configure-layout",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role",
+          "user_types",
+          "signupToken",
+          "passwordResetToken",
+          "parent",
+          "student",
+          "teacher",
+          "admin",
+          "source",
+          "additionalPermission"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.delete",
+      "subject": "plugin::users-permissions.user",
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role",
+          "user_types",
+          "signupToken",
+          "passwordResetToken",
+          "parent",
+          "student",
+          "teacher",
+          "admin",
+          "source",
+          "additionalPermission"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "username",
+          "email",
+          "provider",
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role",
+          "user_types",
+          "signupToken",
+          "passwordResetToken",
+          "parent",
+          "student",
+          "teacher",
+          "admin",
+          "source",
+          "additionalPermission"
+        ]
+      },
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-manager.single-types.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::content-type-builder.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::documentation.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::documentation.settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::documentation.settings.regenerate",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::documentation.settings.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::email.settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::i18n.locale.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::i18n.locale.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::i18n.locale.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::i18n.locale.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.assets.copy-link",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.assets.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.assets.download",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.assets.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.configure-view",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::upload.settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.advanced-settings.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.advanced-settings.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.email-templates.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.email-templates.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.providers.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.providers.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.roles.create",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.roles.delete",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.roles.read",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    },
+    {
+      "action": "plugin::users-permissions.roles.update",
+      "subject": null,
+      "properties": {},
+      "conditions": [],
+      "actionParameters": {}
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+    "kind": "collectionType",
+    "collectionName": "async_mail_templates",
+    "info": {
+        "singularName": "async-mail-template",
+        "pluralName": "async-mail-templates",
+        "displayName": "Async Mail Templates"
+    },
+    "options": {
+        "draftAndPublish": false,
+        "comment": ""
+    },
+    "attributes": {
+        "uid": {
+            "type": "string",
+            "unique": true
+        },
+        "subject": {
+            "type": "text"
+        },
+        "text": {
+            "type": "text"
+        },
+        "html": {
+            "type": "richtext"
+        }
+    }
+}

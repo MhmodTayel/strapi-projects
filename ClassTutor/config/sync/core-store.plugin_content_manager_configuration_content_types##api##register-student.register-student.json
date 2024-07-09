@@ -1,0 +1,824 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::register-student.register-student",
+  "value": {
+    "uid": "api::register-student.register-student",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 100,
+      "mainField": "internalNotes",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register": {
+        "edit": {
+          "label": "register",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "register",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student": {
+        "edit": {
+          "label": "student",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "studentId"
+        },
+        "list": {
+          "label": "student",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "freeTrial": {
+        "edit": {
+          "label": "freeTrial",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "freeTrial",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "engagement": {
+        "edit": {
+          "label": "engagement",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "engagement",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "understanding": {
+        "edit": {
+          "label": "understanding",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "understanding",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issueDescription": {
+        "edit": {
+          "label": "issueDescription",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "issueDescription",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "starStudent": {
+        "edit": {
+          "label": "starStudent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "starStudent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "feedbackTodaysLesson": {
+        "edit": {
+          "label": "feedbackTodaysLesson",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "feedbackTodaysLesson",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "feedbackBeforeLessonTopic": {
+        "edit": {
+          "label": "feedbackBeforeLessonTopic",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "feedbackBeforeLessonTopic",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "feedbackAfterLessonTopic": {
+        "edit": {
+          "label": "feedbackAfterLessonTopic",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "feedbackAfterLessonTopic",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "feedbackTodayTeacher": {
+        "edit": {
+          "label": "feedbackTodayTeacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "feedbackTodayTeacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "internalNotes": {
+        "edit": {
+          "label": "internalNotes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "internalNotes",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "parentNotes": {
+        "edit": {
+          "label": "parentNotes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "parentNotes",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "markerPaid": {
+        "edit": {
+          "label": "markerPaid",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "markerPaid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "hasAttended": {
+        "edit": {
+          "label": "hasAttended",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "hasAttended",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "hasLeftEarly": {
+        "edit": {
+          "label": "hasLeftEarly",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "hasLeftEarly",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "isLate": {
+        "edit": {
+          "label": "isLate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "isLate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issue_reasons": {
+        "edit": {
+          "label": "issue_reasons",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "issue_reasons",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkMarkingStatus": {
+        "edit": {
+          "label": "homeworkMarkingStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMarkingStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkSubmissionFiles": {
+        "edit": {
+          "label": "homeworkSubmissionFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkSubmissionFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkCompletionDate": {
+        "edit": {
+          "label": "homeworkCompletionDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkCompletionDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkComment": {
+        "edit": {
+          "label": "homeworkComment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkComment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkMark": {
+        "edit": {
+          "label": "homeworkMark",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMark",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkUnderstanding": {
+        "edit": {
+          "label": "homeworkUnderstanding",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkUnderstanding",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework_marking_teacher": {
+        "edit": {
+          "label": "homework_marking_teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "homework_marking_teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkMarkedFiles": {
+        "edit": {
+          "label": "homeworkMarkedFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkMarkedFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "homeworkErrorReason": {
+        "edit": {
+          "label": "homeworkErrorReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkErrorReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkSubmitted": {
+        "edit": {
+          "label": "homeworkSubmitted",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkSubmitted",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkSubmittedLate": {
+        "edit": {
+          "label": "homeworkSubmittedLate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkSubmittedLate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "freeTrialCancelled": {
+        "edit": {
+          "label": "freeTrialCancelled",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "freeTrialCancelled",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student_class": {
+        "edit": {
+          "label": "student_class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "student_class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issueStatus": {
+        "edit": {
+          "label": "issueStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "issueStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dateSentIssue": {
+        "edit": {
+          "label": "dateSentIssue",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dateSentIssue",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homeworkErrorDate": {
+        "edit": {
+          "label": "homeworkErrorDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "homeworkErrorDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework_error_by": {
+        "edit": {
+          "label": "homework_error_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "homework_error_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issue_resolved_by": {
+        "edit": {
+          "label": "issue_resolved_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "issue_resolved_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "issueSendToParent": {
+        "edit": {
+          "label": "issueSendToParent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "issueSendToParent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "register",
+        "student",
+        "freeTrial"
+      ],
+      "edit": [
+        [
+          {
+            "name": "freeTrial",
+            "size": 4
+          },
+          {
+            "name": "engagement",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "understanding",
+            "size": 6
+          },
+          {
+            "name": "issueDescription",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "starStudent",
+            "size": 4
+          },
+          {
+            "name": "feedbackTodaysLesson",
+            "size": 4
+          },
+          {
+            "name": "feedbackBeforeLessonTopic",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "feedbackAfterLessonTopic",
+            "size": 4
+          },
+          {
+            "name": "feedbackTodayTeacher",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "internalNotes",
+            "size": 6
+          },
+          {
+            "name": "parentNotes",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkMarkingStatus",
+            "size": 6
+          },
+          {
+            "name": "homeworkSubmissionFiles",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkCompletionDate",
+            "size": 4
+          },
+          {
+            "name": "homeworkComment",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkMark",
+            "size": 4
+          },
+          {
+            "name": "homeworkUnderstanding",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "markerPaid",
+            "size": 4
+          },
+          {
+            "name": "hasAttended",
+            "size": 4
+          },
+          {
+            "name": "hasLeftEarly",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "isLate",
+            "size": 4
+          },
+          {
+            "name": "homeworkMarkedFiles",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homeworkSubmitted",
+            "size": 4
+          },
+          {
+            "name": "homeworkSubmittedLate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "freeTrialCancelled",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "homeworkErrorReason",
+            "size": 6
+          },
+          {
+            "name": "issueStatus",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "dateSentIssue",
+            "size": 6
+          },
+          {
+            "name": "homeworkErrorDate",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "register",
+            "size": 6
+          },
+          {
+            "name": "student",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "homework_marking_teacher",
+            "size": 6
+          },
+          {
+            "name": "issue_reasons",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "student_class",
+            "size": 6
+          },
+          {
+            "name": "homework_error_by",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "issue_resolved_by",
+            "size": 6
+          },
+          {
+            "name": "issueSendToParent",
+            "size": 4
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

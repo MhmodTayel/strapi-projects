@@ -1,0 +1,514 @@
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssetActions.js b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssetActions.js
+index caa9f86..3097048 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssetActions.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssetActions.js
+@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
+ import { CarouselActions, IconButton } from '@strapi/design-system';
+ import { prefixFileUrlWithBackendUrl } from '@strapi/helper-plugin';
+ import { useIntl } from 'react-intl';
+-import { Plus, Trash, Pencil } from '@strapi/icons';
++import { Plus, Trash, Pencil, Eye } from '@strapi/icons';
+ import getTrad from '../../../utils/getTrad';
+ import { CopyLinkButton } from '../../CopyLinkButton';
+ import { AssetDefinition } from '../../../constants';
+ 
+-export const CarouselAssetActions = ({ asset, onDeleteAsset, onAddAsset, onEditAsset }) => {
++export const CarouselAssetActions = ({ asset, onDeleteAsset, onAddAsset, onEditAsset, onPreviewAssets }) => {
+   const { formatMessage } = useIntl();
+ 
+   return (
+@@ -47,6 +47,18 @@ export const CarouselAssetActions = ({ asset, onDeleteAsset, onAddAsset, onEditA
+           onClick={onEditAsset}
+         />
+       )}
++
++      {onPreviewAssets && (
++        <IconButton
++          label={formatMessage({
++            id: getTrad('control-card.preview'),
++            defaultMessage: 'Preview',
++          })}
++          icon={<Eye />}
++          onClick={onPreviewAssets}
++        />
++      )}
++
+     </CarouselActions>
+   );
+ };
+@@ -55,6 +67,7 @@ CarouselAssetActions.defaultProps = {
+   onAddAsset: undefined,
+   onDeleteAsset: undefined,
+   onEditAsset: undefined,
++  onPreviewAssets: undefined,
+ };
+ 
+ CarouselAssetActions.propTypes = {
+@@ -62,4 +75,5 @@ CarouselAssetActions.propTypes = {
+   onAddAsset: PropTypes.func,
+   onEditAsset: PropTypes.func,
+   onDeleteAsset: PropTypes.func,
++  onPreviewAssets: PropTypes.func,
+ };
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssets.js b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssets.js
+index 9218097..d9ced42 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssets.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/Carousel/CarouselAssets.js
+@@ -8,7 +8,7 @@ import { CarouselAssetActions } from './CarouselAssetActions';
+ import { CarouselAsset } from './CarouselAsset';
+ import { EmptyStateAsset } from './EmptyStateAsset';
+ import { EditAssetDialog } from '../../EditAssetDialog';
+-
++import { PreviewAllMediaCarousel } from '../../PreviewAllMediaCarousel'
+ export const CarouselAssets = ({
+   assets,
+   disabled,
+@@ -29,7 +29,7 @@ export const CarouselAssets = ({
+ }) => {
+   const { formatMessage } = useIntl();
+   const [isEditingAsset, setIsEditingAsset] = useState(false);
+-
++  const [isPreviewAll, setIsPreviewAll] = useState(false);
+   const currentAsset = assets[selectedAssetIndex];
+ 
+   return (
+@@ -59,6 +59,7 @@ export const CarouselAssets = ({
+               onDeleteAsset={disabled ? undefined : onDeleteAsset}
+               onAddAsset={disabled ? undefined : onAddAsset}
+               onEditAsset={onEditAsset ? () => setIsEditingAsset(true) : undefined}
++              onPreviewAssets={()=> setIsPreviewAll(true)}
+             />
+           ) : undefined
+         }
+@@ -111,6 +112,16 @@ export const CarouselAssets = ({
+           trackedLocation={trackedLocation}
+         />
+       )}
++      {isPreviewAll && (
++        <PreviewAllMediaCarousel
++          onClose={() => {
++            setIsPreviewAll(false);
++            document.body.classList.remove('active-modal')
++          }}
++          assets={assets}
++          
++        />
++      )}
+     </>
+   );
+ };
+@@ -142,4 +153,5 @@ CarouselAssets.propTypes = {
+   required: PropTypes.bool,
+   selectedAssetIndex: PropTypes.number.isRequired,
+   trackedLocation: PropTypes.string,
++  onPreviewAssets: PropTypes.func.isRequired,
+ };
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/index.js b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/index.js
+index 280c595..9db06c2 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/index.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/MediaLibraryInput/index.js
+@@ -10,7 +10,6 @@ import { EditFolderDialog } from '../EditFolderDialog';
+ import { UploadAssetDialog } from '../UploadAssetDialog/UploadAssetDialog';
+ import getAllowedFiles from '../../utils/getAllowedFiles';
+ import getTrad from '../../utils/getTrad';
+-
+ const STEPS = {
+   AssetSelect: 'SelectAsset',
+   AssetUpload: 'UploadAsset',
+@@ -217,6 +216,7 @@ export const MediaLibraryInput = ({
+       {step === STEPS.FolderCreate && (
+         <EditFolderDialog onClose={() => setStep(STEPS.AssetSelect)} parentFolderId={folderId} />
+       )}
++
+     </>
+   );
+ };
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.css b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.css
+new file mode 100644
+index 0000000..3e8e7ea
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.css
+@@ -0,0 +1,14 @@
++.video-item {
++ width: 800px;
++}
++.item {
++    max-width: 100%;
++}
++
++.pdf-container {
++    display: flex;
++    flex-direction: column;
++    gap: 10px;
++    /* overflow: scroll; */
++    height: 100%;
++}
+\ No newline at end of file
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.js b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.js
+new file mode 100644
+index 0000000..1bce625
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/Items.js
+@@ -0,0 +1,30 @@
++import React, { useState } from "react";
++import PDFFileConverter from './PDFFileConverter';
++import './Items.css'
++export default function Modal({ asset }) {
++    
++    const assetTypes = {
++        Image: 'image',
++        VIDEO: 'video',
++        FILE: 'application',
++        AUDIO: 'audio'
++    }
++    const assetType = asset?.mime.split('/')[0];
++
++    return (
++        <>
++        {assetType === assetTypes.Image &&
++        <img src={asset.url} alt="image" className="item"/>
++        }
++        {assetType === assetTypes.VIDEO &&
++        <video className="item video-item" type={asset.mime} controls controlsList="nodownload noplaybackrate"> <source src={asset.url} /> </video>
++        }
++        {assetType === assetTypes.AUDIO &&
++        <audio className="item" controls src={asset.url} controlsList="nodownload noplaybackrate" />
++        }
++        {assetType === assetTypes.FILE &&
++            <PDFFileConverter pdfUrl={asset.url} />
++        }
++        </>
++    )
++}
+\ No newline at end of file
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/PDFFileConverter.js b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/PDFFileConverter.js
+new file mode 100644
+index 0000000..43025de
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewItem/PDFFileConverter.js
+@@ -0,0 +1,77 @@
++import React, {
++    FC, useEffect, useMemo, useState,
++   } from 'react';
++import {
++getDocument, GlobalWorkerOptions, version,
++} from 'pdfjs-dist';
++
++import './Items.css'
++
++GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${version}/pdf.worker.min.js`;
++
++const PDFFileConverter = ({ pdfUrl }) => {
++
++    const [loading, setLoading] = useState(false);
++    const [imageUrls, setImageUrls] = useState([]);
++
++    useEffect(() => {
++    setLoading(false);
++    }, [imageUrls]);
++
++    const renderPage = async (data) => {
++    setLoading(true);
++    const imagesList = [];
++    const canvas = document.createElement('canvas');
++    canvas.setAttribute('className', 'canv');
++    const pdf = await getDocument({ data }).promise;
++    for (let num = 1; num <= pdf.numPages; num++) {
++        const page = await pdf.getPage(num);
++        const viewport = page.getViewport({ scale: 1.5 });
++        canvas.height = viewport.height;
++        canvas.width = viewport.width;
++        const renderContext = {
++        canvasContext: canvas.getContext('2d'),
++        viewport,
++        };
++        await page.render(renderContext).promise;
++        const img = canvas.toDataURL('image/png');
++        imagesList.push(img);
++    }
++    setImageUrls(imagesList);
++    };
++
++    const UrlUploader = (url) => {
++    fetch(url).then((response) => {
++        response.blob().then((blob) => {
++        const reader = new FileReader();
++        reader.onload = (event) => {
++            const data = window.atob(event.target.result.replace(/.*base64,/, ''));
++            renderPage(data);
++        };
++        reader.readAsDataURL(blob);
++        });
++    });
++    };
++
++    useMemo(() => {
++    UrlUploader(pdfUrl);
++    }, []);
++
++
++    return imageUrls.length > 0 ? (
++    <div className='pdf-container'>
++        {imageUrls.map((url, index) => (
++        <img
++            key={String(index + 1)}
++            src={url}
++            alt={`Page ${index + 1}`}
++            width={500}
++            height={500}
++            
++        />
++        ))}
++    </div>
++    ) : null;
++};
++
++export default PDFFileConverter;
+\ No newline at end of file
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.css b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.css
+new file mode 100644
+index 0000000..4b71b47
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.css
+@@ -0,0 +1,143 @@
++body.active-modal {
++    overflow-y: hidden;
++}
++
++.modal-header {
++    height: 7%;
++    width: 100%;
++    position: fixed;
++    z-index: 11;
++    background-color: rgba(36, 35, 35, 0.8) ;
++    display: flex;
++    justify-content: space-between;
++    align-items: center;
++    color: aliceblue;
++    padding-inline: 20px;
++    top: 0;
++}
++
++.icon {
++    font-size: 17px;
++}
++.asset-name {
++    flex-basis: 30%;
++    display: flex;
++    gap: 10px;
++}
++.asset-no {
++    flex: 1;
++    text-align: center;
++}
++.close-modal-wrapper {
++    flex-basis: 30%;
++    text-align: end;
++}
++.modal, .overlay {
++    /* width: 100vw;
++    height: 100vh;
++    z-index: 10;
++    top: 0;
++    left: 0;
++    right: 0;
++    bottom: 0;
++    position: fixed;
++    padding-block: 10%; */
++    width: 100vw;
++    height: 100vh;
++    z-index: 10;
++    top: 0;
++    left: 0;
++    right: 0;
++    bottom: 0;
++    position: fixed;
++    padding-block: 6%;
++}
++
++.overlay {
++    background: rgba(38, 38, 38, 0.8);
++
++}
++.modal-content {
++
++    /* position: relative;
++    z-index: 11;
++    width: 80%;
++    height: 100%;
++    display: flex;
++    margin-inline: auto;
++    justify-content: center;
++    align-items: center; */
++    position: relative;
++    z-index: 11;
++    width: 100%;
++    height: 100%;
++    display: flex;
++    justify-content: center;
++    align-items: center;
++    overflow-y: auto;
++}
++
++.close-modal {
++    padding: 5px 7px;
++    color: aliceblue;
++    font-weight: bolder;
++    min-height:30px; 
++    min-width: 30px;
++}
++.close-modal:hover {
++    background-color: rgba(87, 85, 85, 0.8);
++    border-radius: 50%;
++}
++.arrow {
++    position: fixed;
++    z-index: 12;
++    top: 48%;
++    color: aliceblue;
++    min-height:50px; 
++    min-width: 50px;
++}
++.left-arrow {  
++    left: 1%;  
++}
++
++.right-arrow {  
++    right: 1%; 
++}
++
++.left-arrow:hover, .right-arrow:hover {
++    background-color: rgba(54, 53, 53, 0.8);
++    border-radius: 50%;
++}
++
++.modal-footer {
++    height: 7%;
++    width: 100%;
++    bottom: 0;
++    position: fixed;
++    z-index: 11;
++    background-color: rgba(36, 35, 35, 0.8) ;
++    display: flex;
++    justify-content: center;
++    align-items: center;
++    gap: 20px;
++}
++
++.slide-circle {
++    width: 10px;
++    height: 10px;
++    border-radius: 50%;
++    display: inline-block;
++}
++.active-dot span{
++    background-color: aliceblue;
++    
++}
++
++.inactive-dot span{
++    background-color: rgba(87, 85, 85, 0.8);
++   
++}
++
++.inactive-dot:hover span {
++    background-color: aliceblue;
++}
+\ No newline at end of file
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.js b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.js
+new file mode 100644
+index 0000000..e6a20e2
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/components/PreviewModal/Modal.js
+@@ -0,0 +1,63 @@
++import React, { useState } from "react";
++import Items from "../PreviewItem/Items"
++import "./Modal.css";
++
++export default function Modal({ onClose, assets }) {
++  document.body.classList.add('active-modal')
++  const [currentIndex, setCurrentIndex] = useState(0);
++
++  const goToPrevious = () => {
++    const isFirstSlide = currentIndex === 0;
++    const newIndex = isFirstSlide ? assets.length - 1 : currentIndex - 1;
++    setCurrentIndex(newIndex);
++  };
++
++  const goToNext = () => {
++    const isLastSlide = currentIndex === assets.length - 1;
++    const newIndex = isLastSlide ? 0 : currentIndex + 1;
++    setCurrentIndex(newIndex);
++  };
++
++  const goToSlide = (slideIndex) => {
++    setCurrentIndex(slideIndex);
++  };
++  return (
++    <>
++      
++        <div className="modal">
++          <div onClick={onClose} className="overlay"></div>
++          <div className="modal-header">
++            <p className="asset-name"> 
++              {assets[currentIndex].name}
++            </p>
++            <p className="asset-no">{currentIndex + 1} / {assets.length}</p>
++      
++            <div class='close-modal-wrapper'><button class="close-modal" onClick={onClose}
++              >X</button></div>
++          </div>
++           {(assets.length > 1) && <button type="button" onClick={goToPrevious} className="arrow left-arrow">
++            ❰
++          </button>}
++          {(assets.length > 1) && <button type="button" onClick={goToNext} className="arrow right-arrow">
++            ❱
++          </button>}
++        
++          <div className="modal-content">
++            <Items asset={assets[currentIndex]}/>
++          </div>
++          <div className="modal-footer">
++            { (assets.length > 1) && assets.map((_, slideIndex) => (
++                <button type="button" className={currentIndex === slideIndex ? 'active-dot' : 'inactive-dot'}
++                  key={slideIndex}
++                  onClick={() => goToSlide(slideIndex)}
++                >
++                  <span className="slide-circle"/>
++                </button>
++            ))}
++          </div>
++        </div>
++      
++      
++    </>
++  );
++}
+\ No newline at end of file
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/index.js b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/index.js
+new file mode 100644
+index 0000000..97bacdb
+--- /dev/null
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/PreviewAllMediaCarousel/index.js
+@@ -0,0 +1,21 @@
++/**
++ *
++ * PreviewAllMedia
++ *
++ */
++
++import React, { useRef, useState } from 'react';
++import Modal from './components/PreviewModal/Modal'
++  
++export const PreviewAllMediaCarousel = ({
++  onClose,  
++  assets 
++}) => {
++
++return (
++  <>
++      <Modal assets={assets} onClose={onClose}/>
++  </>
++  
++ ); 
++};

@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "admin_settings",
+  "info": {
+    "singularName": "admin-setting",
+    "pluralName": "admin-settings",
+    "displayName": "AdminSetting",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teacherInterviewLink": {
+      "type": "string"
+    },
+    "maxFileSize": {
+      "default": 250,
+      "type": "integer"
+    },
+    "payRates": {
+      "type": "json"
+    }
+  }
+}

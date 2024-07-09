@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_logs",
+  "info": {
+    "singularName": "email-log",
+    "pluralName": "email-logs",
+    "displayName": "EmailLog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subject": {
+      "type": "string",
+      "required": true
+    },
+    "sentTime": {
+      "type": "datetime"
+    },
+    "fromName": {
+      "type": "string",
+      "required": true
+    },
+    "fromEmail": {
+      "type": "string",
+      "required": true
+    },
+    "toName": {
+      "type": "string",
+      "required": true
+    },
+    "toEmail": {
+      "type": "string",
+      "required": true
+    },
+    "errorLog": {
+      "type": "text"
+    },
+    "templateName": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::html-viewer.html-viewer",
+      "required": true
+    }
+  }
+}

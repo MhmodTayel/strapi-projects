@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "years",
+  "info": {
+    "singularName": "year",
+    "pluralName": "years",
+    "displayName": "Year",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shortName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "otherName": {
+      "type": "string",
+      "unique": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "yearNumber": {
+      "type": "string",
+      "unique": true
+    },
+    "isALevels": {
+      "type": "boolean"
+    },
+    "education_level": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::education-level.education-level",
+      "inversedBy": "years"
+    }
+  }
+}

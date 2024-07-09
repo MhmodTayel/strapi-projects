@@ -1,0 +1,53 @@
+diff --git a/node_modules/strapi-wechat-miniprogram-auth/server/services/wechat.js b/node_modules/strapi-wechat-miniprogram-auth/server/services/wechat.js
+index 6c6ec3b..03cb86b 100644
+--- a/node_modules/strapi-wechat-miniprogram-auth/server/services/wechat.js
++++ b/node_modules/strapi-wechat-miniprogram-auth/server/services/wechat.js
+@@ -55,7 +55,9 @@ module.exports = ({ strapi }) => ({
+           return reject({ error: true, message: "Missing credentials" });
+         }
+ 
+-        let resData = await axios.get(`https://api.weixin.qq.com/sns/jscode2session?appid=${app_id}&secret=${app_secret}&js_code=${code}&grant_type=authorization_code`)
++        let resData = await axios.get(`https://api.weixin.qq.com/sns/oauth2/access_token?appid=${app_id}&secret=${app_secret}&code=${code}&grant_type=authorization_code`)
++
++
+         if (resData.status !== 200) {
+           return reject({ error: true, message: "Error occur when request to wechat api" });
+         }
+@@ -63,7 +65,10 @@ module.exports = ({ strapi }) => ({
+           return reject({ error: true, message: resData.data });
+         }
+ 
+-        const { openid } = resData.data;
++        const { openid,access_token } = resData.data;
++        
++        let userData = await axios.get(`https://api.weixin.qq.com/sns/userinfo?access_token=${access_token}&openid=${openid}`)
++
+         const user = await strapi.db.query('plugin::users-permissions.user').findOne({ where: { openid } });
+         if (!user) {
+           let randomPass = this.makeRandomPassword(10);
+@@ -72,20 +77,21 @@ module.exports = ({ strapi }) => ({
+             data: {
+               password,
+               openid,
+-              wechatUserInfo: userInfo,
++              username:userData.data.nickname,
++              wechatUserInfo: {...userInfo,...userData.data},
+               confirmed: true,
+               blocked: false,
+               role: 1,
+-              provider: "local"
++              provider: "weChat"
+             }
+           })
+           return resolve({
+-            token: strapi.plugin('users-permissions').service('jwt').issue({ id: newUser.id }),
++            jwt: strapi.plugin('users-permissions').service('jwt').issue({ id: newUser.id }),
+             user: strapi.service('admin::user').sanitizeUser(newUser),
+           })
+         }
+         resolve({
+-          token: strapi.plugin('users-permissions').service('jwt').issue({ id: user.id }),
++          jwt: strapi.plugin('users-permissions').service('jwt').issue({ id: user.id }),
+           user: strapi.service('admin::user').sanitizeUser(user),
+         })
+       } catch (error) {

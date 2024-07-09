@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teacher_payments",
+  "info": {
+    "singularName": "teacher-payment",
+    "pluralName": "teacher-payments",
+    "displayName": "TeacherPayment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "dueDate": {
+      "type": "date"
+    },
+    "paidDate": {
+      "type": "date"
+    },
+    "totalAmount": {
+      "type": "decimal"
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "paid",
+        "due",
+        "blocked"
+      ],
+      "default": "pending"
+    },
+    "register": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register.register"
+    },
+    "systemGenerated": {
+      "type": "boolean"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "transactions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "default.teacher-payment-transaction",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "lesson",
+        "bonus"
+      ],
+      "default": "lesson",
+      "required": true
+    }
+  }
+}

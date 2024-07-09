@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_validation_validations",
+  "info": {
+    "displayName": "validation",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "error_msg": {
+      "type": "string",
+      "required": true
+    },
+    "field": {
+      "type": "customField",
+      "options": [
+        "الاسم الحركي:nickname",
+        "القسم الفرعي:division",
+        "نوع العضوية:membership_type",
+        "تاريخ الميلاد:birth_date",
+        "الطول:height",
+        "الوزن:weight",
+        "لون العين:eye_color",
+        "لون الشعر:hair_color",
+        "لون البشره:skin_color",
+        "اللغات:languages",
+        "المواهب:talent",
+        "الآلات الموسيقية:talent_instruments",
+        "الفنون التشكيلية:talent_art",
+        "المواهب الاخري:another_talent",
+        "المرفقات:attachments",
+        "هل تتحدث اى لهجات اخرى؟:accents",
+        "هل تقود؟:drive",
+        "اللهجات الاخري:another_accents",
+        "نوع المركبة:vehicle",
+        "الرخصة امامي:license_front",
+        "الرخصة خلفي:license_back",
+        "هل تجيد الرقص؟:dance",
+        "المهارات الرياضيه:sports",
+        "المهارات الرياضيه الاخري:another_sports",
+        "الاعمال السابقة:previous_works",
+        "الدراما التى تحب كتابتها؟:drama_you_like_to_write",
+        "فيسبوك:facebook",
+        "تويتر:twitter",
+        "انستجرام:instagram",
+        "فيمو:vemo",
+        "يوتيوب:youtube",
+        " (السيرك) وظيفة العضو:member_profession_circus",
+        " (فنون شعبية) وظيفة العضو:member_profession_folk_art",
+        "(بالية) وظيفة العضو:member_profession_ballet",
+        "نوع لعبة اخر:another_game_type",
+        "الشروط و الأحكام :terms_and_conditions",
+        "كارنية النقابة امامي:syndicate_card_front",
+        "بطاقة الهوية الشخصية الامامية:national_id_front",
+        "الحد الأدنى للفئة العمرية:min_playable_age",
+        "الحد الاقصي للفئة العمرية:max_playable_age",
+        "كارنية النقابة خلفي:syndicate_card_back",
+        "بطاقة الهوية الشخصية الخلفية:national_id_back",
+        "نوع اللعبة:game_type"
+      ],
+      "customField": "plugin::multi-select.multi-select",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+build
+**/.eslintrc.js
+**/*.example.*
+tests
+src/plugins

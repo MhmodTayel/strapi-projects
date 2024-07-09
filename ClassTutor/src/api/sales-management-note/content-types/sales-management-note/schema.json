@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_management_notes",
+  "info": {
+    "singularName": "sales-management-note",
+    "pluralName": "sales-management-notes",
+    "displayName": "SalesManagementNote"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "agent": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::admin.admin"
+    }
+  }
+}

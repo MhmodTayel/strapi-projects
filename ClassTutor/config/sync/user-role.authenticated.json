@@ -1,0 +1,487 @@
+{
+  "name": "Authenticated",
+  "description": "Default role given to authenticated user.",
+  "type": "authenticated",
+  "permissions": [
+    {
+      "action": "api::account.account.create"
+    },
+    {
+      "action": "api::account.account.getAccountByEmail"
+    },
+    {
+      "action": "api::account.account.getAccountByPasswordResetToken"
+    },
+    {
+      "action": "api::account.account.getAccountByToken"
+    },
+    {
+      "action": "api::account.account.passwordChange"
+    },
+    {
+      "action": "api::account.account.passwordReset"
+    },
+    {
+      "action": "api::account.account.recaptchaVerification"
+    },
+    {
+      "action": "api::account.account.signupFreeTrial"
+    },
+    {
+      "action": "api::admin-setting.admin-setting.find"
+    },
+    {
+      "action": "api::admin.admin.find"
+    },
+    {
+      "action": "api::admin.admin.findOne"
+    },
+    {
+      "action": "api::class-teacher.class-teacher.find"
+    },
+    {
+      "action": "api::class-teacher.class-teacher.findOne"
+    },
+    {
+      "action": "api::class.class.create"
+    },
+    {
+      "action": "api::class.class.find"
+    },
+    {
+      "action": "api::class.class.findOne"
+    },
+    {
+      "action": "api::class.class.getSummary"
+    },
+    {
+      "action": "api::class.class.update"
+    },
+    {
+      "action": "api::curriculum.curriculum.find"
+    },
+    {
+      "action": "api::curriculum.curriculum.findOne"
+    },
+    {
+      "action": "api::education-level.education-level.find"
+    },
+    {
+      "action": "api::education-level.education-level.findOne"
+    },
+    {
+      "action": "api::event-message.event-message.test"
+    },
+    {
+      "action": "api::family-link.family-link.canUnLinkByEntityId"
+    },
+    {
+      "action": "api::family-link.family-link.canUnLinkByEntityId"
+    },
+    {
+      "action": "api::family-link.family-link.createOrUpdate"
+    },
+    {
+      "action": "api::family-link.family-link.find"
+    },
+    {
+      "action": "api::family-link.family-link.findByEntityId"
+    },
+    {
+      "action": "api::family-link.family-link.findOne"
+    },
+    {
+      "action": "api::family-link.family-link.unLinkByEntityId"
+    },
+    {
+      "action": "api::family-link.family-link.update"
+    },
+    {
+      "action": "api::helper.helper.cancelInvoice"
+    },
+    {
+      "action": "api::helper.helper.getSubjectRate"
+    },
+    {
+      "action": "api::helper.helper.payInvoice"
+    },
+    {
+      "action": "api::helper.helper.sendInvoice"
+    },
+    {
+      "action": "api::homework-submission.homework-submission.create"
+    },
+    {
+      "action": "api::homework-submission.homework-submission.delete"
+    },
+    {
+      "action": "api::homework-submission.homework-submission.find"
+    },
+    {
+      "action": "api::homework-submission.homework-submission.findOne"
+    },
+    {
+      "action": "api::homework-submission.homework-submission.update"
+    },
+    {
+      "action": "api::homework.homework.assignToTeacher"
+    },
+    {
+      "action": "api::homework.homework.create"
+    },
+    {
+      "action": "api::homework.homework.delete"
+    },
+    {
+      "action": "api::homework.homework.find"
+    },
+    {
+      "action": "api::homework.homework.findOne"
+    },
+    {
+      "action": "api::homework.homework.get"
+    },
+    {
+      "action": "api::homework.homework.update"
+    },
+    {
+      "action": "api::id-config.id-config.peekNewId"
+    },
+    {
+      "action": "api::invoice-item.invoice-item.create"
+    },
+    {
+      "action": "api::invoice-item.invoice-item.delete"
+    },
+    {
+      "action": "api::invoice-item.invoice-item.find"
+    },
+    {
+      "action": "api::invoice-item.invoice-item.findOne"
+    },
+    {
+      "action": "api::invoice-item.invoice-item.update"
+    },
+    {
+      "action": "api::invoice.invoice.create"
+    },
+    {
+      "action": "api::invoice.invoice.delete"
+    },
+    {
+      "action": "api::invoice.invoice.find"
+    },
+    {
+      "action": "api::invoice.invoice.findOne"
+    },
+    {
+      "action": "api::invoice.invoice.update"
+    },
+    {
+      "action": "api::issue-reason.issue-reason.find"
+    },
+    {
+      "action": "api::meeting-account.meeting-account.create"
+    },
+    {
+      "action": "api::meeting-account.meeting-account.delete"
+    },
+    {
+      "action": "api::meeting-account.meeting-account.find"
+    },
+    {
+      "action": "api::meeting-account.meeting-account.findOne"
+    },
+    {
+      "action": "api::meeting-account.meeting-account.update"
+    },
+    {
+      "action": "api::meeting-recording.meeting-recording.create"
+    },
+    {
+      "action": "api::meeting-recording.meeting-recording.delete"
+    },
+    {
+      "action": "api::meeting-recording.meeting-recording.find"
+    },
+    {
+      "action": "api::meeting-recording.meeting-recording.findOne"
+    },
+    {
+      "action": "api::meeting-recording.meeting-recording.update"
+    },
+    {
+      "action": "api::notice.notice.create"
+    },
+    {
+      "action": "api::notice.notice.find"
+    },
+    {
+      "action": "api::notice.notice.findOne"
+    },
+    {
+      "action": "api::notice.notice.getForUser"
+    },
+    {
+      "action": "api::notice.notice.update"
+    },
+    {
+      "action": "api::parent.parent.create"
+    },
+    {
+      "action": "api::parent.parent.find"
+    },
+    {
+      "action": "api::parent.parent.findOne"
+    },
+    {
+      "action": "api::parent.parent.update"
+    },
+    {
+      "action": "api::payment-subscription-item.payment-subscription-item.create"
+    },
+    {
+      "action": "api::payment-subscription-item.payment-subscription-item.delete"
+    },
+    {
+      "action": "api::payment-subscription-item.payment-subscription-item.find"
+    },
+    {
+      "action": "api::payment-subscription-item.payment-subscription-item.findOne"
+    },
+    {
+      "action": "api::payment-subscription-item.payment-subscription-item.update"
+    },
+    {
+      "action": "api::payment-subscription.payment-subscription.create"
+    },
+    {
+      "action": "api::payment-subscription.payment-subscription.delete"
+    },
+    {
+      "action": "api::payment-subscription.payment-subscription.find"
+    },
+    {
+      "action": "api::payment-subscription.payment-subscription.findOne"
+    },
+    {
+      "action": "api::payment-subscription.payment-subscription.update"
+    },
+    {
+      "action": "api::register-student.register-student.bulkUpdate"
+    },
+    {
+      "action": "api::register-student.register-student.find"
+    },
+    {
+      "action": "api::register-student.register-student.findOne"
+    },
+    {
+      "action": "api::register-student.register-student.update"
+    },
+    {
+      "action": "api::register.register.addTrialStudent"
+    },
+    {
+      "action": "api::register.register.assignHomeworksToTeacher"
+    },
+    {
+      "action": "api::register.register.changeTeacher"
+    },
+    {
+      "action": "api::register.register.changeTeacher"
+    },
+    {
+      "action": "api::register.register.find"
+    },
+    {
+      "action": "api::register.register.findOne"
+    },
+    {
+      "action": "api::register.register.getHomework"
+    },
+    {
+      "action": "api::register.register.getNextLessonDate"
+    },
+    {
+      "action": "api::register.register.processRegisters"
+    },
+    {
+      "action": "api::register.register.removeTrialStudent"
+    },
+    {
+      "action": "api::register.register.upcomingLessons"
+    },
+    {
+      "action": "api::register.register.update"
+    },
+    {
+      "action": "api::register.register.updateClassStatus"
+    },
+    {
+      "action": "api::register.register.updateClassStatus"
+    },
+    {
+      "action": "api::register.register.updateLessonStatus"
+    },
+    {
+      "action": "api::sales-management-note.sales-management-note.create"
+    },
+    {
+      "action": "api::sales-management-note.sales-management-note.delete"
+    },
+    {
+      "action": "api::sales-management-note.sales-management-note.find"
+    },
+    {
+      "action": "api::sales-management-note.sales-management-note.findOne"
+    },
+    {
+      "action": "api::sales-management-note.sales-management-note.update"
+    },
+    {
+      "action": "api::schedule.schedule.getForStudent"
+    },
+    {
+      "action": "api::schedule.schedule.getForTeacher"
+    },
+    {
+      "action": "api::scholarship.scholarship.find"
+    },
+    {
+      "action": "api::scholarship.scholarship.findOne"
+    },
+    {
+      "action": "api::student-class.student-class.confirmPayment"
+    },
+    {
+      "action": "api::student-class.student-class.create"
+    },
+    {
+      "action": "api::student-class.student-class.delete"
+    },
+    {
+      "action": "api::student-class.student-class.find"
+    },
+    {
+      "action": "api::student-class.student-class.findOne"
+    },
+    {
+      "action": "api::student-class.student-class.getClassesForSales"
+    },
+    {
+      "action": "api::student-class.student-class.update"
+    },
+    {
+      "action": "api::student-feed.student-feed.getFeed"
+    },
+    {
+      "action": "api::student-scholarship.student-scholarship.create"
+    },
+    {
+      "action": "api::student-scholarship.student-scholarship.delete"
+    },
+    {
+      "action": "api::student-scholarship.student-scholarship.find"
+    },
+    {
+      "action": "api::student-scholarship.student-scholarship.findOne"
+    },
+    {
+      "action": "api::student-scholarship.student-scholarship.update"
+    },
+    {
+      "action": "api::student.student.create"
+    },
+    {
+      "action": "api::student.student.find"
+    },
+    {
+      "action": "api::student.student.findOne"
+    },
+    {
+      "action": "api::student.student.update"
+    },
+    {
+      "action": "api::subject.subject.find"
+    },
+    {
+      "action": "api::subject.subject.findOne"
+    },
+    {
+      "action": "api::teacher-capability.teacher-capability.getForTeacher"
+    },
+    {
+      "action": "api::teacher-capability.teacher-capability.updateForTeacher"
+    },
+    {
+      "action": "api::teacher-payment.teacher-payment.create"
+    },
+    {
+      "action": "api::teacher-payment.teacher-payment.delete"
+    },
+    {
+      "action": "api::teacher-payment.teacher-payment.find"
+    },
+    {
+      "action": "api::teacher-payment.teacher-payment.findOne"
+    },
+    {
+      "action": "api::teacher-payment.teacher-payment.update"
+    },
+    {
+      "action": "api::teacher.teacher.create"
+    },
+    {
+      "action": "api::teacher.teacher.find"
+    },
+    {
+      "action": "api::teacher.teacher.findOne"
+    },
+    {
+      "action": "api::teacher.teacher.update"
+    },
+    {
+      "action": "api::upload.upload.customUpload"
+    },
+    {
+      "action": "api::user-type.user-type.find"
+    },
+    {
+      "action": "api::year.year.find"
+    },
+    {
+      "action": "api::year.year.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.destroy"
+    },
+    {
+      "action": "plugin::upload.content-api.find"
+    },
+    {
+      "action": "plugin::upload.content-api.findOne"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.refreshToken"
+    },
+    {
+      "action": "plugin::users-permissions.user.find"
+    },
+    {
+      "action": "plugin::users-permissions.user.findOne"
+    },
+    {
+      "action": "plugin::users-permissions.user.me"
+    },
+    {
+      "action": "plugin::users-permissions.user.update"
+    }
+  ]
+}

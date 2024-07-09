@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_work_their_works",
+  "info": {
+    "displayName": "theirWork",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "film": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$",
+      "required": true
+    },
+    "year": {
+      "type": "string",
+      "regex": "^[0-9]{4}$",
+      "required": true
+    }
+  }
+}

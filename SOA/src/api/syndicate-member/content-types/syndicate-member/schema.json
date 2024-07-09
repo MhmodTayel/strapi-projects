@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "syndicate_members",
+  "info": {
+    "singularName": "syndicate-member",
+    "pluralName": "syndicate-members",
+    "displayName": "قاعده بيانات الاعضاء",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "syndicateID": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "mobile": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "member"
+    },
+    "division": {
+      "type": "enumeration",
+      "enum": [
+        "نقد",
+        "مكياج",
+        "مساعد اخراج مسرحى",
+        "كتاب مسرح",
+        "فنون شعبية",
+        "عرائس",
+        "سيرك",
+        "ديكور",
+        "تمثيل",
+        "تلقين",
+        "باليه",
+        "اخراج مسرحى",
+        "اخراج اذاعى",
+        "ادارة مسرحية"
+      ],
+      "required": true
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "renewalRequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soa-request-renewal.soa-request-renewal",
+      "mappedBy": "member"
+    },
+    "renewalRequestStatus": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "processing",
+        "done"
+      ],
+      "default": "none"
+    }
+  }
+}

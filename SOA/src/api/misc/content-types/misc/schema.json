@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "miscs",
+  "info": {
+    "singularName": "misc",
+    "pluralName": "miscs",
+    "displayName": "misc",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "androidMobileVersion": {
+      "type": "string",
+      "required": true
+    },
+    "iosMobileVersion": {
+      "type": "string",
+      "required": true
+    },
+    "disableOTP": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

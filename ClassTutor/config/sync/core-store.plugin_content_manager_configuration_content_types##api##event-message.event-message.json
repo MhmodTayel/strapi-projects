@@ -1,0 +1,270 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::event-message.event-message",
+  "value": {
+    "uid": "api::event-message.event-message",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "eventCode",
+      "defaultSortBy": "eventCode",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "eventCode": {
+        "edit": {
+          "label": "eventCode",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "eventCode",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "receiverId": {
+        "edit": {
+          "label": "receiverId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "receiverId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "message": {
+        "edit": {
+          "label": "message",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "message",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "template": {
+        "edit": {
+          "label": "template",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "template",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "entity": {
+        "edit": {
+          "label": "entity",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "entity",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "entityId": {
+        "edit": {
+          "label": "entityId",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "entityId",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "eventType": {
+        "edit": {
+          "label": "eventType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "eventType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "persist": {
+        "edit": {
+          "label": "persist",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "persist",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "messageValues": {
+        "edit": {
+          "label": "messageValues",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "messageValues",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "eventCode",
+        "createdAt",
+        "updatedAt"
+      ],
+      "edit": [
+        [
+          {
+            "name": "eventCode",
+            "size": 6
+          },
+          {
+            "name": "receiverId",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "message",
+            "size": 6
+          },
+          {
+            "name": "entity",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "entityId",
+            "size": 6
+          },
+          {
+            "name": "eventType",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "persist",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "messageValues",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "template",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

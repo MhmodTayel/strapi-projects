@@ -1,0 +1,224 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registers",
+  "info": {
+    "singularName": "register",
+    "pluralName": "registers",
+    "displayName": "Register",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "classDate": {
+      "type": "date",
+      "required": true
+    },
+    "class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::class.class"
+    },
+    "teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "parentNotes": {
+      "type": "text"
+    },
+    "lessonFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "recordingLink": {
+      "type": "string"
+    },
+    "payAmount": {
+      "type": "decimal"
+    },
+    "teacherPaymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "approved",
+        "paid"
+      ],
+      "default": "pending",
+      "required": true
+    },
+    "register_students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::register-student.register-student",
+      "mappedBy": "register"
+    },
+    "recordingChat": {
+      "type": "text"
+    },
+    "recordingTranscript": {
+      "type": "text"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "upcoming",
+        "open",
+        "missing",
+        "completed",
+        "absent",
+        "cancelled"
+      ],
+      "default": "upcoming"
+    },
+    "issueDescription": {
+      "type": "text"
+    },
+    "issueApprovedByAdmin": {
+      "type": "boolean"
+    },
+    "issue_reasons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::issue-reason.issue-reason"
+    },
+    "homeworkType": {
+      "type": "enumeration",
+      "enum": [
+        "homework",
+        "hotAssessment",
+        "coldAssessment"
+      ],
+      "default": "homework",
+      "required": true
+    },
+    "homeworkDeadline": {
+      "type": "datetime"
+    },
+    "homeworkFiles": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "homeworkSolutions": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "homeworkMarks": {
+      "type": "integer"
+    },
+    "homework_locked_by_teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "homeworkLockStartTime": {
+      "type": "datetime"
+    },
+    "homeworkLockEndTime": {
+      "type": "datetime"
+    },
+    "isComplete": {
+      "type": "boolean",
+      "default": false
+    },
+    "isCompleteLate": {
+      "type": "boolean"
+    },
+    "homeworkMarkingBlocked": {
+      "type": "boolean"
+    },
+    "homeworkMarkingComplete": {
+      "type": "boolean"
+    },
+    "homeworkErrorReason": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "time"
+    },
+    "endTime": {
+      "type": "time"
+    },
+    "homeworkErrorStatus": {
+      "type": "enumeration",
+      "enum": [
+        "not_applicable",
+        "pending",
+        "resolved",
+        "stuck"
+      ]
+    },
+    "homeworkErrorDate": {
+      "type": "datetime"
+    },
+    "homework_error_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "homework": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::homework.homework",
+      "mappedBy": "register"
+    },
+    "attendanceMarked": {
+      "type": "boolean",
+      "default": false
+    },
+    "attendanceMarkedTime": {
+      "type": "datetime"
+    },
+    "attendance_marked_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "attendanceLateDays": {
+      "type": "integer"
+    },
+    "classTime": {
+      "type": "datetime"
+    },
+    "attendanceMarkedByAdmin": {
+      "type": "boolean"
+    },
+    "hasHomework": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "class_topics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-topic.class-topic",
+      "mappedBy": "register"
+    },
+    "materialProvided": {
+      "type": "boolean"
+    }
+  }
+}

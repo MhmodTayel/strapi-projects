@@ -1,0 +1,364 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profiles",
+  "info": {
+    "singularName": "profile",
+    "pluralName": "profiles",
+    "displayName": "حسابات اعضاء النقابة",
+    "description": "profiles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nickname": {
+      "type": "string",
+      "maxLength": 100,
+      "required": true,
+      "regex": "[\u0600-\u065f]|[\u0750-\u077f]|[\ufb50-\ufbc1]|[\ufbd3-\ufd3f]|[\ufd50-\ufd8f]|[\ufd92-\ufdc7]|[\ufe70-\ufefc]|[\uFDF0-\uFDFD]",
+      "unique": true
+    },
+    "nickname_En": {
+      "type": "string",
+      "maxLength": 100,
+      "regex": "^(?!\\s+$)[A-Za-z\\s]+$",
+      "unique": true,
+      "required": true
+    },
+    "division": {
+      "type": "enumeration",
+      "enum": [
+        "نقد",
+        "مكياج",
+        "مساعد اخراج مسرحى",
+        "كتاب مسرح",
+        "فنون شعبية",
+        "عرائس",
+        "سيرك",
+        "ديكور",
+        "تمثيل",
+        "تلقين",
+        "باليه",
+        "اخراج مسرحى",
+        "اخراج اذاعى",
+        "ادارة مسرحية"
+      ]
+    },
+    "membership_type": {
+      "type": "enumeration",
+      "enum": ["عامل", "منتسب", "تصريح سنوى"],
+      "required": true
+    },
+    "birth_date": {
+      "type": "date",
+      "required": true
+    },
+    "height": {
+      "type": "decimal",
+      "required": true,
+      "max": 1000
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true,
+      "max": 1000
+    },
+    "eye_color": {
+      "type": "enumeration",
+      "enum": ["اسود", "بني", "بني غامق", "بني فاتح", "ازرق", "اخضر", "رمادي"],
+      "required": true
+    },
+    "hair_color": {
+      "type": "enumeration",
+      "enum": [
+        "اسود",
+        "بني",
+        "بني فاتح",
+        "بني غامق",
+        "اصفر",
+        "احمر",
+        "ابيض",
+        "رمادي"
+      ],
+      "required": true
+    },
+    "skin_color": {
+      "type": "enumeration",
+      "enum": [
+        "الفاتحة جداً",
+        "البيضاء",
+        "المتوسطة أو الحنطية",
+        "الداكنة",
+        "الداكنة جداً"
+      ],
+      "required": true
+    },
+    "languages": {
+      "type": "customField",
+      "options": [
+        "العربية",
+        "الإنجليزية",
+        "الإسبانية",
+        "الفرنسية",
+        "الألمانية",
+        "الإيطالية",
+        "الروسية",
+        "الصينية",
+        "اليابانية",
+        "البرتغالية",
+        "الهندية",
+        "البنغالية",
+        "العبرية",
+        "السويدية",
+        "النرويجية",
+        "الدنماركية",
+        "الفارسية",
+        "الأفريقية",
+        "الأوردية",
+        "الهولندية",
+        "التركية",
+        "اليونانية",
+        "البولندية",
+        "الكورية",
+        "الفيتنامية",
+        "الأوكرانية",
+        "الفنلندية",
+        "الهنغارية",
+        "التايلاندية",
+        "الرومانية"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "talent": {
+      "type": "customField",
+      "options": ["تمثيل", "رقص", "غناء", "عزف", "فنون تشكيليه", "اخري"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "talent_instruments": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "talent_art": {
+      "type": "customField",
+      "options": ["رسم", "نحت"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "another_talent": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": ["images", "files", "videos", "audios"]
+    },
+    "accents": {
+      "type": "boolean",
+      "required": false
+    },
+    "drive": {
+      "type": "boolean",
+      "required": false
+    },
+    "another_accents": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "vehicle": {
+      "type": "customField",
+      "options": ["سياره", "موتوسيكل", "دراجه هوائيه", "اخري"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "license_front": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "license_back": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images", "files"]
+    },
+    "dance": {
+      "type": "boolean",
+      "required": false
+    },
+    "sports": {
+      "type": "customField",
+      "options": [
+        "كرة قدم",
+        "سباحه",
+        "ركوب خيل",
+        "العاب قوي",
+        "رمايه",
+        "العاب قتاليه",
+        "اخري"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "another_sports": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "previous_works": {
+      "type": "text",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "drama_you_like_to_write": {
+      "type": "text",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "facebook": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "twitter": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "instagram": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "vemo": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "youtube": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "member_profession_circus": {
+      "type": "customField",
+      "options": ["لاعب / لاعبة", "مدرب / مدربة"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "member_profession_folk_art": {
+      "type": "customField",
+      "options": ["راقص/راقصة", "مصمم استعرضات"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "member_profession_ballet": {
+      "type": "customField",
+      "options": ["راقص/راقصة", "مصمم استعرضات"],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "another_game_type": {
+      "type": "string",
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "terms_and_conditions": {
+      "type": "boolean",
+      "required": true
+    },
+    "validation": {
+      "type": "component",
+      "repeatable": true,
+      "component": "validation.validation"
+    },
+    "syndicate_card_front": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "national_id_front": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "profile"
+    },
+    "min_playable_age": {
+      "type": "integer"
+    },
+    "max_playable_age": {
+      "type": "integer"
+    },
+    "syndicate_card_back": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "national_id_back": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "تم الرفض",
+        "تم الموافقة",
+        "تم التسليم من قبل العضو (قيد المراجعة)"
+      ]
+    },
+    "game_type": {
+      "type": "customField",
+      "options": [
+        "حيوانات مفترسة",
+        "حيوانات اليفة",
+        "ثعابين",
+        "مشرف فنى",
+        "ادارة فنية",
+        "مقدم/مقدمة برامج",
+        "دراجات نارية( كرة الموت )",
+        "ترابيز",
+        "المشى على السلك",
+        "جونجلير",
+        "ميزان طائر",
+        "بسكليت",
+        "سلالم متحركة",
+        "مشى على الكورة",
+        "الساحر",
+        "التنشين بالسلاح الأبيض",
+        "البلانسات",
+        "المهرج",
+        "الكاوتشوك",
+        "الديابلو",
+        "الحبل المعلق",
+        "الشرائط الهوائية",
+        "العمود الصينى",
+        "المطبخ الصينى",
+        "الحربة الصينية",
+        "التوازن على الزجاجة",
+        "التوازن على البسكليت",
+        "السيف والخنجر",
+        "المكعب الفضائي",
+        "البامبوك",
+        "الاكروبات",
+        "السلم الهوائي",
+        "الانتبوت",
+        "الدودة الشقية",
+        "الكرابيج",
+        "العقلة الثابتة",
+        "القوة الخارقة",
+        "الماسكات",
+        "الراجل الطويل",
+        "فاير شو",
+        "لايت شو",
+        "اخري"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "snapchat": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    },
+    "tikTok": {
+      "type": "string",
+      "regex": "^https?://(?:www\\.|(?!www))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)+[a-zA-Z0-9_\\-.,@?^=%&:/~+#]*$"
+    }
+  }
+}

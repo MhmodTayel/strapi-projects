@@ -1,0 +1,148 @@
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/AssetCard/ImageAssetCard.js b/node_modules/@strapi/plugin-upload/admin/src/components/AssetCard/ImageAssetCard.js
+index cbdb78d..67cd93e 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/AssetCard/ImageAssetCard.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/AssetCard/ImageAssetCard.js
+@@ -17,7 +17,7 @@ export const ImageAssetCard = ({ height, width, thumbnail, size, alt, ...props }
+ 
+   return (
+     <AssetCardBase {...props} subtitle={height && width && ` - ${width}✕${height}`} variant="Image">
+-      <CardAsset src={urlWithCacheBusting} size={size} alt={alt} />
++      <CardAsset src={thumbnail} size={size} alt={alt} />
+     </AssetCardBase>
+   );
+ };
+diff --git a/node_modules/@strapi/plugin-upload/admin/src/components/AssetDialog/index.js b/node_modules/@strapi/plugin-upload/admin/src/components/AssetDialog/index.js
+index db452e7..5561217 100644
+--- a/node_modules/@strapi/plugin-upload/admin/src/components/AssetDialog/index.js
++++ b/node_modules/@strapi/plugin-upload/admin/src/components/AssetDialog/index.js
+@@ -82,7 +82,6 @@ export const AssetDialog = ({
+     isLoading: isLoadingAssets,
+     error: errorAssets,
+   } = useAssets({ skipWhen: !canRead, query: queryObject });
+-
+   const {
+     data: folders,
+     isLoading: isLoadingFolders,
+diff --git a/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js b/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
+index 8ad4d27..9f66724 100644
+--- a/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
++++ b/node_modules/@strapi/plugin-upload/server/controllers/admin-upload.js
+@@ -4,7 +4,7 @@ const _ = require('lodash');
+ const { ApplicationError } = require('@strapi/utils').errors;
+ const { mapAsync } = require('@strapi/utils');
+ const { getService } = require('../utils');
+-const { ACTIONS, FILE_MODEL_UID } = require('../constants');
++const { ACTIONS, FILE_MODEL_UID,FOLDER_MODEL_UID } = require('../constants');
+ const validateUploadBody = require('./validation/admin/upload');
+ const { findEntityAndCheckPermissions } = require('./utils/find-entity-and-check-permissions');
+ 
+@@ -77,7 +77,6 @@ module.exports = {
+ 
+     const data = await validateUploadBody(body);
+     const uploadedFiles = await uploadService.upload({ data, files }, { user });
+-
+     // Sign file urls for private providers
+     const signedFiles = await mapAsync(uploadedFiles, getService('file').signFileUrls);
+ 
+@@ -89,7 +88,33 @@ module.exports = {
+       query: { id },
+       request: { files: { files } = {} },
+     } = ctx;
++    const fileInfo = JSON.parse(ctx.request.body.fileInfo)
++    const folderId = fileInfo.folder
++    
++    const folder = await strapi.entityService.findOne(FOLDER_MODEL_UID, folderId)
+ 
++    async function getFolderPathNames(obj) {
++      if (!obj || !obj.path) {
++        return '';
++      }
++      const pathSegments = obj.path.split('/').filter(segment => segment !== '');
++      const folderNames = [];
++    
++      for (const folderId of pathSegments) {
++        const folderInfo = await await strapi.query('plugin::upload.folder').findOne({
++          where: {
++            pathId: folderId,
++          },
++        });
++        if (folderInfo) {
++          folderNames.push(folderInfo.name);
++        }
++      }
++    
++      return folderNames.join('/');
++    }
++    const path = await getFolderPathNames(folder)
++    ctx.request.body.path = path    
+     if (_.isEmpty(files) || files.size === 0) {
+       if (id) {
+         return this.updateFileInfo(ctx);
+@@ -98,6 +123,7 @@ module.exports = {
+       throw new ApplicationError('Files are empty');
+     }
+ 
++    
+     await (id ? this.replaceFile : this.uploadFiles)(ctx);
+   },
+ };
+diff --git a/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js b/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
+index 0d47663..36ca7f2 100644
+--- a/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
++++ b/node_modules/@strapi/plugin-upload/server/controllers/validation/admin/upload.js
+@@ -6,6 +6,7 @@ const { getService } = require('../../../utils');
+ 
+ const fileInfoSchema = yup.object({
+   name: yup.string().nullable(),
++  path: yup.string().nullable(),
+   alternativeText: yup.string().nullable(),
+   caption: yup.string().nullable(),
+   folder: yup
+diff --git a/node_modules/@strapi/plugin-upload/server/services/file.js b/node_modules/@strapi/plugin-upload/server/services/file.js
+index 5695552..c3bd37d 100644
+--- a/node_modules/@strapi/plugin-upload/server/services/file.js
++++ b/node_modules/@strapi/plugin-upload/server/services/file.js
+@@ -4,6 +4,17 @@ const { cloneDeep } = require('lodash/fp');
+ const { mapAsync } = require('@strapi/utils');
+ const { FOLDER_MODEL_UID, FILE_MODEL_UID } = require('../constants');
+ const { getService } = require('../utils');
++const { S3Client, GetObjectCommand } = require('@aws-sdk/client-s3');
++const { getSignedUrl } = require('@aws-sdk/s3-request-presigner');
++
++const s3Configuration = {
++  credentials: {
++    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
++    secretAccessKey: process.env.AWS_ACCESS_SECRET,
++  },
++  region: process.env.AWS_REGION,
++};
++const s3 = new S3Client(s3Configuration);
+ 
+ const getFolderPath = async (folderId) => {
+   if (!folderId) return '/';
+@@ -34,9 +45,22 @@ const signFileUrls = async (file) => {
+   }
+ 
+   const signUrl = async (file) => {
+-    const signedUrl = await provider.getSignedUrl(file);
+-    file.url = signedUrl.url;
+-  };
++    if ( providerConfig !== "aws-s3"){
++      const signedUrl = await provider.getSignedUrl(file);
++      file.url = signedUrl.url;
++    } else {
++      const key = file.url.split(`${process.env.AWS_BUCKET}/`)[1];
++      const signedUrl = await getSignedUrl(
++        s3,
++        new GetObjectCommand({
++          Bucket: process.env.AWS_BUCKET,
++          Key: key,
++        }),
++        { expiresIn: +process.env.AWS_SIGNED_URL_EXPIRES }
++      );
++      file.url = signedUrl;
++    }
++   };
+ 
+   const signedFile = cloneDeep(file);
+ 

@@ -1,0 +1,100 @@
+{
+  "name": "Finance",
+  "code": "finance-lnkaea9q",
+  "description": "Only have access to service plugin",
+  "permissions": [
+    {
+      "action": "plugin::content-manager.explorer.create",
+      "subject": "api::syndicate-member.syndicate-member",
+      "properties": {
+        "fields": [
+          "name",
+          "syndicateID",
+          "mobile",
+          "active",
+          "user",
+          "division",
+          "disabled"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "api::syndicate-member.syndicate-member",
+      "properties": {
+        "fields": [
+          "name",
+          "syndicateID",
+          "mobile",
+          "active",
+          "user",
+          "division",
+          "disabled"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.update",
+      "subject": "api::syndicate-member.syndicate-member",
+      "properties": {
+        "fields": [
+          "name",
+          "syndicateID",
+          "mobile",
+          "active",
+          "user",
+          "division",
+          "disabled"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::content-manager.explorer.read",
+      "subject": "plugin::users-permissions.user",
+      "properties": {
+        "fields": [
+          "password",
+          "resetPasswordToken",
+          "confirmationToken",
+          "confirmed",
+          "blocked",
+          "role",
+          "username",
+          "email",
+          "arabicName",
+          "phone",
+          "syndicateID",
+          "division",
+          "provider",
+          "avatar",
+          "englishName",
+          "profile",
+          "OTP",
+          "jwtKey",
+          "user_notifications",
+          "addedFromAdminPortal",
+          "renewalRequests",
+          "renewalRequestStatus",
+          "pushTokens",
+          "member"
+        ]
+      },
+      "conditions": []
+    },
+    {
+      "action": "plugin::services.services.read",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    },
+    {
+      "action": "plugin::services.services.update",
+      "subject": null,
+      "properties": {},
+      "conditions": []
+    }
+  ]
+}

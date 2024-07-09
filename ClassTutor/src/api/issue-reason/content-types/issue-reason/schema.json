@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "issue_reasons",
+  "info": {
+    "singularName": "issue-reason",
+    "pluralName": "issue-reasons",
+    "displayName": "IssueReason",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "student",
+        "class"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_subscription_items",
+  "info": {
+    "singularName": "payment-subscription-item",
+    "pluralName": "payment-subscription-items",
+    "displayName": "PaymentSubscriptionItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "student_class": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student-class.student-class"
+    },
+    "multiClassDiscount": {
+      "type": "decimal"
+    },
+    "scholarshipDiscount": {
+      "type": "decimal"
+    },
+    "managementDiscount": {
+      "type": "decimal"
+    },
+    "classRate": {
+      "type": "decimal"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "payment_subscription": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::payment-subscription.payment-subscription",
+      "inversedBy": "payment_subscription_items"
+    }
+  }
+}

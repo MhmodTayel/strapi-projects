@@ -1,0 +1,445 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::homework.homework",
+  "value": {
+    "uid": "api::homework.homework",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register": {
+        "edit": {
+          "label": "register",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "register",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "deadline": {
+        "edit": {
+          "label": "deadline",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "deadline",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "questions": {
+        "edit": {
+          "label": "questions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "questions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "solutions": {
+        "edit": {
+          "label": "solutions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "solutions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "marksTotal": {
+        "edit": {
+          "label": "marksTotal",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "marksTotal",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "locked_by_teacher": {
+        "edit": {
+          "label": "locked_by_teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "locked_by_teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lockStartTime": {
+        "edit": {
+          "label": "lockStartTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lockStartTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "lockEndTime": {
+        "edit": {
+          "label": "lockEndTime",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "lockEndTime",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "markingBlocked": {
+        "edit": {
+          "label": "markingBlocked",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "markingBlocked",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "markingComplete": {
+        "edit": {
+          "label": "markingComplete",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "markingComplete",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "errorReason": {
+        "edit": {
+          "label": "errorReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "errorStatus": {
+        "edit": {
+          "label": "errorStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "errorDate": {
+        "edit": {
+          "label": "errorDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "error_by": {
+        "edit": {
+          "label": "error_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "error_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "created_by_teacher": {
+        "edit": {
+          "label": "created_by_teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "created_by_teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework_submissions": {
+        "edit": {
+          "label": "homework_submissions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "homework_submissions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "register",
+        "type"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "register",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "created_by_teacher",
+            "size": 6
+          },
+          {
+            "name": "homework_submissions",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "type",
+            "size": 6
+          },
+          {
+            "name": "deadline",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "solutions",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "marksTotal",
+            "size": 4
+          },
+          {
+            "name": "locked_by_teacher",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "lockStartTime",
+            "size": 6
+          },
+          {
+            "name": "lockEndTime",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "markingBlocked",
+            "size": 4
+          },
+          {
+            "name": "markingComplete",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "errorReason",
+            "size": 6
+          },
+          {
+            "name": "errorStatus",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "errorDate",
+            "size": 6
+          },
+          {
+            "name": "error_by",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "questions",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

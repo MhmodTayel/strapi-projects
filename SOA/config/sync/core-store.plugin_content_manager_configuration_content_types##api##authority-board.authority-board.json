@@ -1,0 +1,206 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::authority-board.authority-board",
+  "value": {
+    "uid": "api::authority-board.authority-board",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "تسلسل",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "boardDate": {
+        "edit": {
+          "label": "تاريخ المجلس",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "boardDate",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "soaHead": {
+        "edit": {
+          "label": "نقيب الممثلين",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "soaHead",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "firstAgent": {
+        "edit": {
+          "label": "وكيل اول",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "firstAgent",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "secondAgent": {
+        "edit": {
+          "label": "وكيل ثانى",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "secondAgent",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "financialSecretary": {
+        "edit": {
+          "label": "امين الصندوق",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "financialSecretary",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "soaTreasurer": {
+        "edit": {
+          "label": "سكرتير عام النقابة",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "soaTreasurer",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "restBoardMembers": {
+        "edit": {
+          "label": "باقي اعضاء المجلس",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "restBoardMembers",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "تاريخ الانشاء",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "تاريخ التعديل",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "edit": [
+        [
+          {
+            "name": "boardDate",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "soaHead",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "firstAgent",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "secondAgent",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "financialSecretary",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "soaTreasurer",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "restBoardMembers",
+            "size": 12
+          }
+        ]
+      ],
+      "list": [
+        "id",
+        "boardDate",
+        "soaHead",
+        "firstAgent"
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

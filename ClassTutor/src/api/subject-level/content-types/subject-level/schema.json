@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subject_levels",
+  "info": {
+    "singularName": "subject-level",
+    "pluralName": "subject-levels",
+    "displayName": "SubjectLevel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "push_tokens",
+  "info": {
+    "singularName": "push-token",
+    "pluralName": "push-tokens",
+    "displayName": "Push Token",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "token": {
+      "type": "string",
+      "unique": true
+    },
+    "talent": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "pushTokens"
+    },
+    "locale": {
+      "type": "enumeration",
+      "enum": [
+        "en",
+        "ar-EG"
+      ]
+    },
+    "dramaMaker": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::drama-maker.drama-maker",
+      "inversedBy": "pushTokens"
+    }
+  }
+}

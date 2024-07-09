@@ -1,0 +1,349 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::teacher-payment.teacher-payment",
+  "value": {
+    "uid": "api::teacher-payment.teacher-payment",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "id",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "teacher": {
+        "edit": {
+          "label": "teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "date": {
+        "edit": {
+          "label": "date",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "date",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "dueDate": {
+        "edit": {
+          "label": "dueDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "dueDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "paidDate": {
+        "edit": {
+          "label": "paidDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "paidDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "totalAmount": {
+        "edit": {
+          "label": "totalAmount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "totalAmount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "class": {
+        "edit": {
+          "label": "class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "classId"
+        },
+        "list": {
+          "label": "class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register": {
+        "edit": {
+          "label": "register",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "register",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "systemGenerated": {
+        "edit": {
+          "label": "systemGenerated",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "systemGenerated",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "notes": {
+        "edit": {
+          "label": "notes",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "notes",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "transactions": {
+        "edit": {
+          "label": "transactions",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "transactions",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "teacher",
+        "date",
+        "dueDate"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "paidDate",
+            "size": 4
+          },
+          {
+            "name": "teacher",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "class",
+            "size": 6
+          },
+          {
+            "name": "date",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "register",
+            "size": 6
+          },
+          {
+            "name": "systemGenerated",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "dueDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "notes",
+            "size": 6
+          },
+          {
+            "name": "totalAmount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "transactions",
+            "size": 12
+          }
+        ],
+        [
+          {
+            "name": "type",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

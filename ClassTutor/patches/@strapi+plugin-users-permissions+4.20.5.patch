@@ -1,0 +1,43 @@
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js b/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
+index 451a44d..46c95ba 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/controllers/auth.js
+@@ -35,6 +35,7 @@ const sanitizeUser = (user, ctx) => {
+   return sanitize.contentAPI.output(user, userSchema, { auth });
+ };
+ 
++
+ module.exports = {
+   async callback(ctx) {
+     const provider = ctx.params.provider || 'local';
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/services/user.js b/node_modules/@strapi/plugin-users-permissions/server/services/user.js
+index 27cf71a..b9096e8 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/services/user.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/services/user.js
+@@ -122,6 +122,7 @@ module.exports = ({ strapi }) => ({
+       settings.object = await userPermissionService.template(settings.object, {
+         USER: sanitizedUserInfo,
+       });
++      console.log({message:settings.message})
+     } catch {
+       strapi.log.error(
+         '[plugin::users-permissions.sendConfirmationEmail]: Failed to generate a template for "user confirmation email". Please make sure your email template is valid and does not contain invalid characters or patterns'
+diff --git a/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js b/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
+index 7ff3421..c7395a3 100644
+--- a/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
++++ b/node_modules/@strapi/plugin-users-permissions/server/strategies/users-permissions.js
+@@ -29,11 +29,10 @@ const authenticate = async (ctx) => {
+       }
+ 
+       const advancedSettings = await getAdvancedSettings();
+-
+       // User not confirmed
+-      if (advancedSettings.email_confirmation && !user.confirmed) {
+-        return { error: 'Invalid credentials' };
+-      }
++      // if (advancedSettings.email_confirmation && !user.confirmed) {
++      //   return { error: 'Invalid credentials' };
++      // }
+ 
+       // User blocked
+       if (user.blocked) {

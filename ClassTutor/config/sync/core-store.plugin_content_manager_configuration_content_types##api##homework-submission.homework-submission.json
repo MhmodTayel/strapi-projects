@@ -1,0 +1,444 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::homework-submission.homework-submission",
+  "value": {
+    "uid": "api::homework-submission.homework-submission",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "name",
+      "defaultSortOrder": "ASC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "register_student": {
+        "edit": {
+          "label": "register_student",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "register_student",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student": {
+        "edit": {
+          "label": "student",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "studentId"
+        },
+        "list": {
+          "label": "student",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "homework": {
+        "edit": {
+          "label": "homework",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "homework",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "markingStatus": {
+        "edit": {
+          "label": "markingStatus",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "markingStatus",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "submissionFiles": {
+        "edit": {
+          "label": "submissionFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "submissionFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "completionDate": {
+        "edit": {
+          "label": "completionDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "completionDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "comment": {
+        "edit": {
+          "label": "comment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "comment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "marksAchieved": {
+        "edit": {
+          "label": "marksAchieved",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "marksAchieved",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "understanding": {
+        "edit": {
+          "label": "understanding",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "understanding",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "marking_teacher": {
+        "edit": {
+          "label": "marking_teacher",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "marking_teacher",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "markedFiles": {
+        "edit": {
+          "label": "markedFiles",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "markedFiles",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "errorReason": {
+        "edit": {
+          "label": "errorReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "submitted": {
+        "edit": {
+          "label": "submitted",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "submitted",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "submittedLate": {
+        "edit": {
+          "label": "submittedLate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "submittedLate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "errorDate": {
+        "edit": {
+          "label": "errorDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "errorDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "error_by": {
+        "edit": {
+          "label": "error_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "teacherId"
+        },
+        "list": {
+          "label": "error_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "error_resolved_by": {
+        "edit": {
+          "label": "error_resolved_by",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "error_resolved_by",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "register_student",
+        "student"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "register_student",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "student",
+            "size": 6
+          },
+          {
+            "name": "homework",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "markingStatus",
+            "size": 6
+          },
+          {
+            "name": "submissionFiles",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "completionDate",
+            "size": 6
+          },
+          {
+            "name": "comment",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "marksAchieved",
+            "size": 4
+          },
+          {
+            "name": "understanding",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "marking_teacher",
+            "size": 6
+          },
+          {
+            "name": "markedFiles",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "errorReason",
+            "size": 6
+          },
+          {
+            "name": "submitted",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "submittedLate",
+            "size": 4
+          },
+          {
+            "name": "errorDate",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "error_by",
+            "size": 6
+          },
+          {
+            "name": "error_resolved_by",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

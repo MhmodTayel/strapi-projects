@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "student_scholarships",
+  "info": {
+    "singularName": "student-scholarship",
+    "pluralName": "student-scholarships",
+    "displayName": "StudentScholarship"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::student.student"
+    },
+    "scholarship": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::scholarship.scholarship"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "inactive",
+        "awaitingSubmission",
+        "awaitingApproval",
+        "eligible",
+        "ineligible"
+      ],
+      "default": "inactive",
+      "required": true
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "lastFormSentDate": {
+      "type": "date"
+    }
+  }
+}

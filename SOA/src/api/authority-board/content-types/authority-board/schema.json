@@ -1,0 +1,97 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authority_boards",
+  "info": {
+    "singularName": "authority-board",
+    "pluralName": "authority-boards",
+    "displayName": "مجلس النقابة",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "boardDate": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.date-range",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "soaHead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "firstAgent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "secondAgent": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "financialSecretary": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "soaTreasurer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "restBoardMembers": {
+      "type": "component",
+      "repeatable": true,
+      "component": "custom-fields.authority-board-member",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

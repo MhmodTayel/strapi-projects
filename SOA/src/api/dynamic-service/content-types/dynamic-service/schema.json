@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dynamic_services",
+  "info": {
+    "singularName": "dynamic-service",
+    "pluralName": "dynamic-services",
+    "displayName": "dynamicService",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "activities": {
+      "type": "json",
+      "required": true
+    },
+    "dictionary": {
+      "type": "json"
+    },
+    "tableHeaders": {
+      "type": "json",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "fields": {
+      "type": "json"
+    },
+    "userFields": {
+      "type": "json",
+      "required": true
+    }
+  }
+}

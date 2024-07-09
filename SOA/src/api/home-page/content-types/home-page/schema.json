@@ -1,0 +1,80 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "الصفحه الرئيسيه",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "slider": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::new.new",
+      "required": true
+    },
+    "latestNews": {
+      "type": "string",
+      "required": true,
+      "default": "أخر الأخبار",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NewsTitle1": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "multi-fields.news",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NewsTitle2": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "multi-fields.news",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NewsTitle3": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "multi-fields.news",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "NewsTitle4": {
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "multi-fields.news",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

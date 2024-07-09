@@ -1,0 +1,52 @@
+{
+  "name": "Public",
+  "description": "Default role given to unauthenticated user.",
+  "type": "public",
+  "permissions": [
+    {
+      "action": "api::account.account.create"
+    },
+    {
+      "action": "api::account.account.getAccountByEmail"
+    },
+    {
+      "action": "api::account.account.getAccountByPasswordResetToken"
+    },
+    {
+      "action": "api::account.account.getAccountByToken"
+    },
+    {
+      "action": "api::account.account.passwordChange"
+    },
+    {
+      "action": "api::account.account.passwordReset"
+    },
+    {
+      "action": "api::account.account.recaptchaVerification"
+    },
+    {
+      "action": "api::account.account.signupFreeTrial"
+    },
+    {
+      "action": "api::education-level.education-level.find"
+    },
+    {
+      "action": "api::subject.subject.find"
+    },
+    {
+      "action": "api::upload.upload.customUpload"
+    },
+    {
+      "action": "api::year.year.find"
+    },
+    {
+      "action": "plugin::upload.content-api.upload"
+    },
+    {
+      "action": "plugin::users-permissions.auth.callback"
+    },
+    {
+      "action": "plugin::users-permissions.auth.refreshToken"
+    }
+  ]
+}

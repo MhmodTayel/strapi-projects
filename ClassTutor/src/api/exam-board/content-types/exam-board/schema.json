@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exam_boards",
+  "info": {
+    "singularName": "exam-board",
+    "pluralName": "exam-boards",
+    "displayName": "ExamBoard",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "code": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    }
+  }
+}

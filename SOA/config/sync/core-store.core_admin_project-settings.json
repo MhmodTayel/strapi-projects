@@ -1,0 +1,28 @@
+{
+  "key": "core_admin_project-settings",
+  "value": {
+    "menuLogo": {
+      "name": "logo (2).png",
+      "hash": "logo_2_fce60d4fda",
+      "url": "http://minio:9000/bucket/logo_2_fce60d4fda.png",
+      "width": 158,
+      "height": 120,
+      "ext": ".png",
+      "size": 25.17,
+      "provider": "aws-s3"
+    },
+    "authLogo": {
+      "name": "logo (2).png",
+      "hash": "logo_2_c366f46318",
+      "url": "http://minio:9000/bucket/logo_2_c366f46318.png",
+      "width": 158,
+      "height": 120,
+      "ext": ".png",
+      "size": 25.17,
+      "provider": "aws-s3"
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

@@ -1,0 +1,45 @@
+version: '3.8'
+# name: class-tutor
+services:
+    api:
+        container_name: class-tutor-api
+        build: .
+        image: strapi:latest
+        restart: unless-stopped
+        ports:
+            - 1337:1337
+        networks:
+            - class-tutor
+        depends_on:
+            - db
+        volumes:
+            - ./database:/opt/app/database
+            - ./config:/opt/app/config
+            - ./src:/opt/app/src
+            - ./utils:/opt/app/utils
+            - ./templates:/opt/app/templates
+            - ./public:/opt/app/public
+            - ./package.json:/opt/package.json
+            - ./yarn.lock:/opt/yarn.lock
+            - ./.env:/opt/app/.env
+            - ./patches:/opt/app/patches
+        env_file: .env
+    db:
+        container_name: class-tutor-db
+        image: postgres
+        restart: always
+        volumes:
+            - ./db:/var/lib/postgresql
+        ports:
+            - 5432:5432
+        networks:
+            - class-tutor
+        environment:
+            POSTGRES_USER: ${DATABASE_USERNAME}
+            POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+            POSTGRES_DB: ${DATABASE_NAME}
+
+networks:
+    class-tutor:
+        name: class-tutor
+        driver: bridge

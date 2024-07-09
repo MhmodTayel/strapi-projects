@@ -1,0 +1,169 @@
+{
+  "kind": "collectionType",
+  "collectionName": "up_users",
+  "info": {
+    "name": "user",
+    "description": "",
+    "singularName": "user",
+    "pluralName": "users",
+    "displayName": "اعضاء النقابة"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "password": {
+      "type": "password",
+      "minLength": 8,
+      "private": true,
+      "searchable": false,
+      "required": false,
+      "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#_])[A-Za-z\\d@$!%*?&#_]{8,}$"
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "private": true,
+      "searchable": false
+    },
+    "confirmationToken": {
+      "type": "string",
+      "private": true,
+      "searchable": false
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role",
+      "inversedBy": "users"
+    },
+    "username": {
+      "type": "string",
+      "minLength": 2,
+      "unique": true,
+      "required": true,
+      "maxLength": 100,
+      "regex": "^(?=.*[a-zA-Z])(?![0-9]*$)[a-zA-Z0-9._-]{2,100}$"
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "required": false,
+      "unique": true
+    },
+    "arabicName": {
+      "type": "string",
+      "required": true,
+      "minLength": 2,
+      "maxLength": 100,
+      "regex": "^(?! )[\\u0621-\\u064A\\sﻻﻵ]{2,100}$"
+    },
+    "phone": {
+      "type": "string",
+      "regex": "^01[0125][0-9]{8}$",
+      "required": true,
+      "unique": true
+    },
+    "syndicateID": {
+      "type": "string",
+      "regex": "^[0-9]+$",
+      "required": true,
+      "unique": true
+    },
+    "division": {
+      "type": "enumeration",
+      "enum": [
+        "نقد",
+        "مكياج",
+        "مساعد اخراج مسرحى",
+        "كتاب مسرح",
+        "فنون شعبية",
+        "عرائس",
+        "سيرك",
+        "ديكور",
+        "تمثيل",
+        "تلقين",
+        "باليه",
+        "اخراج مسرحى",
+        "اخراج اذاعى",
+        "ادارة مسرحية"
+      ],
+      "required": true
+    },
+    "provider": {
+      "type": "string"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "englishName": {
+      "type": "string",
+      "regex": "^[A-Za-z\\s]+$",
+      "maxLength": 100,
+      "minLength": 2
+    },
+    "profile": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "user"
+    },
+    "OTP": {
+      "type": "json",
+      "private": true
+    },
+    "jwtKey": {
+      "type": "string",
+      "private": true
+    },
+    "user_notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "user"
+    },
+    "addedFromAdminPortal": {
+      "type": "boolean",
+      "default": true
+    },
+    "renewalRequests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::soa-request-renewal.soa-request-renewal",
+      "mappedBy": "user"
+    },
+    "renewalRequestStatus": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "processing",
+        "done"
+      ],
+      "default": "none"
+    },
+    "pushTokens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::push-token.push-token",
+      "mappedBy": "talent"
+    },
+    "member": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::syndicate-member.syndicate-member",
+      "inversedBy": "user"
+    }
+  }
+}

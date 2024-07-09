@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_custom_fields_date_ranges",
+  "info": {
+    "displayName": "dateRange",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "from": {
+      "type": "date",
+      "required": true,
+      "unique": true
+    },
+    "to": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

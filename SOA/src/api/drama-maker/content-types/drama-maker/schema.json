@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "drama_makers",
+  "info": {
+    "singularName": "drama-maker",
+    "pluralName": "drama-makers",
+    "displayName": "صانعي الاعمال",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "regex": "^(?! )[\\u0621-\\u064A\\sﻻﻵ]{2,100}$"
+    },
+    "username": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "maxLength": 100,
+      "regex": "^(?=.*[a-zA-Z])(?![0-9]*$)[a-zA-Z0-9._-]{2,100}$"
+    },
+    "profession": {
+      "type": "string",
+      "maxLength": 100,
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "provider": {
+      "type": "string",
+      "default": "local"
+    },
+    "password": {
+      "type": "password",
+      "minLength": 8,
+      "private": true,
+      "searchable": false,
+      "required": false,
+      "regex": "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&#_])[A-Za-z\\d@$!%*?&#_]{8,}$"
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "private": true
+    },
+    "OTP": {
+      "type": "json",
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false
+    },
+    "addedFromAdminPortal": {
+      "type": "boolean",
+      "default": true
+    },
+    "role": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.role"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "jwtKey": {
+      "type": "string",
+      "private": true
+    },
+    "user_notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "drama_maker"
+    },
+    "pushTokens": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::push-token.push-token",
+      "mappedBy": "dramaMaker"
+    },
+    "englishName": {
+      "type": "string",
+      "regex": "^[A-Za-z\\s]+$",
+      "maxLength": 100,
+      "minLength": 2
+    }
+  },
+  "indexes": [
+    {
+      "name": "drama_maker_index",
+      "columns": ["email"],
+      "type": "unique"
+    }
+  ]
+}

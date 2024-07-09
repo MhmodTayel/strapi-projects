@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subject_topics",
+  "info": {
+    "singularName": "subject-topic",
+    "pluralName": "subject-topics",
+    "displayName": "SubjectTopics"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+      "name": {
+          "type": "string",
+          "required": true
+      },
+      "type": {
+          "type": "string"
+      },
+      "parent_topic": {
+          "type": "relation",
+          "relation": "oneToOne",
+          "target": "api::subject-topic.subject-topic"
+      }
+  }
+}

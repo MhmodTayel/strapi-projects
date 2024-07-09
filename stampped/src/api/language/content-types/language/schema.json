@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "languages",
+  "info": {
+    "singularName": "language",
+    "pluralName": "languages",
+    "displayName": "Language",
+    "name": "language"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "locale_name": {
+      "pluginOptions": {},
+      "type": "string",
+      "required": true
+    },
+    "Icon_image": {
+      "type": "media",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "multiple": false,
+      "required": true
+    },
+    "order": {
+      "pluginOptions": {},
+      "type": "integer",
+      "min": 0
+    },
+    "enabled": {
+      "pluginOptions": {},
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

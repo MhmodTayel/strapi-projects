@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ads",
+  "info": {
+    "singularName": "ad",
+    "pluralName": "ads",
+    "displayName": "الإعلانات",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 100,
+      "regex": "^(?=.*[A-Za-z\\u0600-\\u06FFﻻ])[\\w\\u0600-\\u06FFﻻ\\s\\S]+$"
+    },
+    "Source": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::source.source",
+      "required": true
+    },
+    "Placement": {
+      "type": "enumeration",
+      "enum": [
+        "Main LB",
+        "First MPU",
+        "Second MPU",
+        "Third MPU",
+        "LB Home 1",
+        "LB Home 2",
+        "LB Home 3",
+        "About us LB",
+        "About us LB 2",
+        "Left TO",
+        "Right TO",
+        "About us MPU Mobile",
+        "LB Main Mobile",
+        "LB Home 1 Mobile",
+        "LB Home 2 Mobile",
+        "MPU Home 3 Mobile",
+        "First MPU Mobile",
+        "Second MPU Mobile",
+        "Third MPU Mobile"
+      ],
+      "required": true
+    },
+    "Code": {
+      "type": "richtext",
+      "required": true,
+      "regex": "^<(html|script|div|iframe).*?<\\/\\1>$"
+    }
+  }
+}

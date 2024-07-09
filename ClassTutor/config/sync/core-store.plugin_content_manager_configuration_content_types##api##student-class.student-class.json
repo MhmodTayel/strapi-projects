@@ -1,0 +1,768 @@
+{
+  "key": "plugin_content_manager_configuration_content_types::api::student-class.student-class",
+  "value": {
+    "uid": "api::student-class.student-class",
+    "settings": {
+      "bulkable": true,
+      "filterable": true,
+      "searchable": true,
+      "pageSize": 10,
+      "mainField": "name",
+      "defaultSortBy": "id",
+      "defaultSortOrder": "DESC"
+    },
+    "metadatas": {
+      "id": {
+        "edit": {},
+        "list": {
+          "label": "id",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "name": {
+        "edit": {
+          "label": "name",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "name",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student": {
+        "edit": {
+          "label": "student",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "studentId"
+        },
+        "list": {
+          "label": "student",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "class": {
+        "edit": {
+          "label": "class",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "classId"
+        },
+        "list": {
+          "label": "class",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "status": {
+        "edit": {
+          "label": "status",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "status",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "billing_parent": {
+        "edit": {
+          "label": "billing_parent",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "parentId"
+        },
+        "list": {
+          "label": "billing_parent",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "agents": {
+        "edit": {
+          "label": "agents",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "agents",
+          "searchable": false,
+          "sortable": false
+        }
+      },
+      "trialDate": {
+        "edit": {
+          "label": "trialDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "trialDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classDate": {
+        "edit": {
+          "label": "classDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "subject": {
+        "edit": {
+          "label": "subject",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "subject",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "year": {
+        "edit": {
+          "label": "year",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "year",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cancelReason": {
+        "edit": {
+          "label": "cancelReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cancelReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "payment": {
+        "edit": {
+          "label": "payment",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "payment",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "trialMissedReason": {
+        "edit": {
+          "label": "trialMissedReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "trialMissedReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "scholarshipDiscount": {
+        "edit": {
+          "label": "scholarshipDiscount",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "scholarshipDiscount",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "source": {
+        "edit": {
+          "label": "source",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "source",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "type": {
+        "edit": {
+          "label": "type",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "type",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeReason": {
+        "edit": {
+          "label": "postponeReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "postponeDate": {
+        "edit": {
+          "label": "postponeDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "postponeDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "changeRequestDate": {
+        "edit": {
+          "label": "changeRequestDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "changeRequestDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "changedDate": {
+        "edit": {
+          "label": "changedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "changedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cancellationRequestDate": {
+        "edit": {
+          "label": "cancellationRequestDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cancellationRequestDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cancelledDate": {
+        "edit": {
+          "label": "cancelledDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cancelledDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "student_scholarship": {
+        "edit": {
+          "label": "student_scholarship",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true,
+          "mainField": "name"
+        },
+        "list": {
+          "label": "student_scholarship",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "paymentFailed": {
+        "edit": {
+          "label": "paymentFailed",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "paymentFailed",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "paymentWriteOff": {
+        "edit": {
+          "label": "paymentWriteOff",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "paymentWriteOff",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "invalid": {
+        "edit": {
+          "label": "invalid",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "invalid",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "firstPaymentDate": {
+        "edit": {
+          "label": "firstPaymentDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "firstPaymentDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "invoiceSentDate": {
+        "edit": {
+          "label": "invoiceSentDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "invoiceSentDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "restartDate": {
+        "edit": {
+          "label": "restartDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "restartDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "cancellationPending": {
+        "edit": {
+          "label": "cancellationPending",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "cancellationPending",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "joinedDate": {
+        "edit": {
+          "label": "joinedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "joinedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "paymentOverdueDate": {
+        "edit": {
+          "label": "paymentOverdueDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "paymentOverdueDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "paymentFailedDate": {
+        "edit": {
+          "label": "paymentFailedDate",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "paymentFailedDate",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "changeReason": {
+        "edit": {
+          "label": "changeReason",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "changeReason",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "classType": {
+        "edit": {
+          "label": "classType",
+          "description": "",
+          "placeholder": "",
+          "visible": true,
+          "editable": true
+        },
+        "list": {
+          "label": "classType",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdAt": {
+        "edit": {
+          "label": "createdAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "createdAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedAt": {
+        "edit": {
+          "label": "updatedAt",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true
+        },
+        "list": {
+          "label": "updatedAt",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "createdBy": {
+        "edit": {
+          "label": "createdBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "createdBy",
+          "searchable": true,
+          "sortable": true
+        }
+      },
+      "updatedBy": {
+        "edit": {
+          "label": "updatedBy",
+          "description": "",
+          "placeholder": "",
+          "visible": false,
+          "editable": true,
+          "mainField": "firstname"
+        },
+        "list": {
+          "label": "updatedBy",
+          "searchable": true,
+          "sortable": true
+        }
+      }
+    },
+    "layouts": {
+      "list": [
+        "id",
+        "name",
+        "student",
+        "class",
+        "status"
+      ],
+      "edit": [
+        [
+          {
+            "name": "name",
+            "size": 6
+          },
+          {
+            "name": "status",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "trialDate",
+            "size": 4
+          },
+          {
+            "name": "classDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "cancelReason",
+            "size": 6
+          },
+          {
+            "name": "payment",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "trialMissedReason",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "scholarshipDiscount",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "source",
+            "size": 6
+          },
+          {
+            "name": "type",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "postponeReason",
+            "size": 6
+          },
+          {
+            "name": "postponeDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "changeRequestDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "changedDate",
+            "size": 4
+          },
+          {
+            "name": "cancellationRequestDate",
+            "size": 4
+          },
+          {
+            "name": "cancelledDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "paymentFailed",
+            "size": 4
+          },
+          {
+            "name": "paymentWriteOff",
+            "size": 4
+          },
+          {
+            "name": "invalid",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "firstPaymentDate",
+            "size": 4
+          },
+          {
+            "name": "invoiceSentDate",
+            "size": 4
+          },
+          {
+            "name": "restartDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "cancellationPending",
+            "size": 4
+          },
+          {
+            "name": "joinedDate",
+            "size": 4
+          },
+          {
+            "name": "paymentOverdueDate",
+            "size": 4
+          }
+        ],
+        [
+          {
+            "name": "paymentFailedDate",
+            "size": 4
+          },
+          {
+            "name": "changeReason",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "student",
+            "size": 6
+          },
+          {
+            "name": "class",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "billing_parent",
+            "size": 6
+          },
+          {
+            "name": "agents",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "subject",
+            "size": 6
+          },
+          {
+            "name": "year",
+            "size": 6
+          }
+        ],
+        [
+          {
+            "name": "student_scholarship",
+            "size": 6
+          },
+          {
+            "name": "classType",
+            "size": 6
+          }
+        ]
+      ]
+    }
+  },
+  "type": "object",
+  "environment": null,
+  "tag": null
+}

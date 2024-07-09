@@ -1,0 +1,111 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homeworks",
+  "info": {
+    "singularName": "homework",
+    "pluralName": "homeworks",
+    "displayName": "Homework",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "register": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::register.register",
+      "inversedBy": "homework"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "homework",
+        "hotAssessment",
+        "coldAssessment"
+      ],
+      "default": "homework",
+      "required": false
+    },
+    "deadline": {
+      "type": "datetime"
+    },
+    "questions": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "solutions": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "marksTotal": {
+      "type": "integer",
+      "default": 100
+    },
+    "locked_by_teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "lockStartTime": {
+      "type": "datetime"
+    },
+    "lockEndTime": {
+      "type": "datetime"
+    },
+    "markingBlocked": {
+      "type": "boolean"
+    },
+    "markingComplete": {
+      "type": "boolean"
+    },
+    "errorReason": {
+      "type": "string"
+    },
+    "errorStatus": {
+      "type": "enumeration",
+      "enum": [
+        "not_applicable",
+        "pending",
+        "resolved",
+        "stuck"
+      ]
+    },
+    "errorDate": {
+      "type": "datetime"
+    },
+    "error_by": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "created_by_teacher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::teacher.teacher"
+    },
+    "homework_submissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::homework-submission.homework-submission",
+      "mappedBy": "homework"
+    }
+  }
+}
